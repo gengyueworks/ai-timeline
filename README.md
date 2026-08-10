@@ -1,5 +1,7 @@
 # AI Timeline
 
+**English** · [简体中文](./README.zh-CN.md)
+
 A source-backed, bilingual chronology of artificial intelligence—from the theoretical foundations of computation to modern models and agents.
 
 **Live demo:** https://gengyueworks.github.io/ai-timeline/
@@ -13,6 +15,17 @@ A source-backed, bilingual chronology of artificial intelligence—from the theo
 - Static HTML and JSON; no framework or build step required
 
 The public edition is intentionally useful on its own. It provides a working timeline, a documented schema, verifiable sources, minimal dictionary links, and enough coverage to trace the major technical and cultural shifts in AI history.
+
+
+## Why this timeline, and why this perspective?
+
+AI history is often told as a short sequence of famous American laboratories and frontier-model launches. That history matters, but it is not the whole map.
+
+This project is maintained by a Chinese liberal-arts writer learning AI in public. I came to the field through reading, writing, and an almost unreasonable hunger to understand how one idea led to the next: not only the celebrated breakthroughs, but also the forgotten detours, infrastructure shifts, open-source communities, and moments when a technology changed ordinary life.
+
+Being based in China gives the archive another useful vantage point. The timeline deliberately makes Chinese and East Asian open-model routes visible alongside the global story—including GLM, Qwen, DeepSeek, Kimi, LongCat, domestic compute, and the developer communities around them. This is not a nationalist ranking and not a vendor showcase. It is an attempt to correct a blind spot: a global AI history should be able to see important work wherever it happens.
+
+The result is both an archive and a learning practice: a writer's way of entering the technical world by tracing every connection, checking sources, and turning scattered releases into a chronology that other curious people can follow.
 
 ## Repository structure
 
@@ -88,6 +101,11 @@ AI Timeline 是一份有来源依据的双语 AI 编年史，从计算理论起�
 本仓库公开时间轴前端、数据结构、来源标准和代表性数据。完整数据、深度中文叙事、人物关联、学习路径与 AI 词典深度词卡不在本仓库的开放范围内。
 
 时间轴回答 AI 历史上“发生了什么”；若想进一步理解某个概念“意味着什么”，可以访问配套的 [AI 祛魅词典](https://gengyueworks.github.io/ai-dictionary/)。词典是独立的付费项目，但时间轴本身可以免费完整使用。
+
+
+### 为什么是这个视角？
+
+我是一个来自中国的文科写作者，依靠阅读、写作和对知识的强烈好奇进入 AI 世界。时间轴不仅记录欧美实验室与明星公司，也有意识地让智谱、通义千问、DeepSeek、Kimi、LongCat、国产算力和东亚开放模型生态进入全球叙事。这不是厂商排名，而是希望一部全球 AI 历史能看见重要工作发生在不同地方。
 
 ### 授权范围
 

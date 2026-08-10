@@ -6,6 +6,18 @@ A source-backed, bilingual chronology of artificial intelligence—from the theo
 
 **Live demo:** https://gengyueworks.github.io/ai-timeline/
 
+## Why this project exists
+
+This timeline began as a by-product of learning.
+
+I love AI, but what draws me most is the feeling of exploration: following one idea into another, discovering how an old paper reappears inside a new product, and gradually seeing a vast field become a map. AI can feel like a sea of stars—brilliant, crowded, and almost impossible to hold in one view. A chronology gives me a way to travel through it without losing the connections between ideas.
+
+The value of the project is therefore not simply that it collects dates. It turns a stream of papers, models, products, infrastructure shifts, debates, and cultural moments into a source-backed path that people can follow. It helps a curious reader see what came before a breakthrough, what changed after it, and where to continue learning. I maintain it both as an archive for others and as a record of my own attempt to understand the field more deeply.
+
+I came to AI as a liberal-arts writer rather than a computer scientist. That background makes me attentive to language, context, forgotten branches, and the moment when a technical idea enters ordinary life. I do not expect this timeline to be the final or only map; it is one carefully maintained route through a much larger world.
+
+Every map is drawn from somewhere. I live in China and read across Chinese- and English-language sources, so I sometimes notice open models, infrastructure projects, and developer communities that receive less attention in English-language summaries. When they are historically relevant, I include them alongside work from the rest of the world. This is not an argument for one country or company, only a natural part of keeping the view open, plural, and as complete as I can make it.
+
 ## At a glance
 
 - **263** events in the maintained full collection
@@ -17,15 +29,6 @@ A source-backed, bilingual chronology of artificial intelligence—from the theo
 The public edition is intentionally useful on its own. It provides a working timeline, a documented schema, verifiable sources, minimal dictionary links, and enough coverage to trace the major technical and cultural shifts in AI history.
 
 
-## Why this timeline, and why this perspective?
-
-AI history is often told as a short sequence of famous American laboratories and frontier-model launches. That history matters, but it is not the whole map.
-
-This project is maintained by a Chinese liberal-arts writer learning AI in public. I came to the field through reading, writing, and an almost unreasonable hunger to understand how one idea led to the next: not only the celebrated breakthroughs, but also the forgotten detours, infrastructure shifts, open-source communities, and moments when a technology changed ordinary life.
-
-Being based in China gives the archive another useful vantage point. The timeline deliberately makes Chinese and East Asian open-model routes visible alongside the global story—including GLM, Qwen, DeepSeek, Kimi, LongCat, domestic compute, and the developer communities around them. This is not a nationalist ranking and not a vendor showcase. It is an attempt to correct a blind spot: a global AI history should be able to see important work wherever it happens.
-
-The result is both an archive and a learning practice: a writer's way of entering the technical world by tracing every connection, checking sources, and turning scattered releases into a chronology that other curious people can follow.
 
 ## Repository structure
 
@@ -80,9 +83,10 @@ See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for validation rules and editorial cr
 
 - **Source code:** MIT License.
 - **Public dataset (`ai-timeline-public.json`):** CC BY-NC 4.0.
-- **Full timeline data, in-depth Chinese narratives, and dictionary entries:** not included in this repository and remain under full copyright unless otherwise stated.
+- **What this repository includes:** the timeline page, interactive code, data schema, validation rules, and 99 source-backed representative events — each with a curated card summary, an event overview, a behind-the-scenes narrative, and a "why it matters" note, so the timeline is fully readable on its own.
+- **What this repository does not include:** the complete 263-event dataset, learning paths, relationship graphs, research drafts, and the full AI dictionary cards and paid content — these remain under full copyright unless otherwise stated.
 
-The source code is licensed under MIT. The public dataset is CC BY-NC 4.0. Full timeline data, in-depth Chinese narratives, and dictionary entries are not covered by these licenses and remain under full copyright unless otherwise stated.
+The source code is licensed under MIT. The public dataset is CC BY-NC 4.0. The full timeline data, learning paths, and dictionary entries are not covered by these licenses and remain under full copyright unless otherwise stated.
 
 For commercial use of the dataset, please open an issue describing the intended use.
 
@@ -103,9 +107,11 @@ AI Timeline 是一份有来源依据的双语 AI 编年史，从计算理论起�
 时间轴回答 AI 历史上“发生了什么”；若想进一步理解某个概念“意味着什么”，可以访问配套的 [AI 祛魅词典](https://gengyueworks.github.io/ai-dictionary/)。词典是独立的付费项目，但时间轴本身可以免费完整使用。
 
 
-### 为什么是这个视角？
+### 为什么做这条时间轴？
 
-我是一个来自中国的文科写作者，依靠阅读、写作和对知识的强烈好奇进入 AI 世界。时间轴不仅记录欧美实验室与明星公司，也有意识地让智谱、通义千问、DeepSeek、Kimi、LongCat、国产算力和东亚开放模型生态进入全球叙事。这不是厂商排名，而是希望一部全球 AI 历史能看见重要工作发生在不同地方。
+这个项目最初只是我学习 AI 时自然长出来的副产品。AI 对我来说像一片星辰大海；时间轴让我能够沿着论文、模型、产品和社会影响继续探索，同时记住每条路线从哪里出发。它不只是日期集合，而是一条有来源、可追溯的学习路径。
+
+我是文科写作者，也生活在中国，因此会同时阅读中英文资料，自然注意到一些不同的研究、开放模型和开发者社区。它们会在确实重要时与世界其他地方的节点一起出现。这不是替任何国家或公司争位置，而是我保持开放视野、诚实记录所见的一部分。
 
 ### 授权范围
 

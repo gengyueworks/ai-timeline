@@ -1,0 +1,30 @@
+# Private/full datasets
+ai-timeline-data.json
+ai-timeline-data-full.json
+*full*.json
+
+# Paid dictionary content
+ai-dictionary*.json
+!ai-timeline-public.json
+
+# Research and drafts
+drafts/
+research/
+private/
+*.bak
+*.backup
+*.tmp
+*~
+
+# Local configuration
+.env
+.env.*
+.DS_Store
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+
+# Local previews and exports
+preview*.png
+*.zip

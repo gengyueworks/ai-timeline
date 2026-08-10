@@ -1,0 +1,1396 @@
+{
+  "updated_at": "2026-08-10",
+  "schema_version": "ai-timeline-public-v1.0",
+  "full_collection_size": 263,
+  "public_event_count": 75,
+  "date_range": "1936–2026-08",
+  "license": "CC BY-NC 4.0",
+  "events": [
+    {
+      "id": "ai-001",
+      "year": 1936,
+      "date": "1936",
+      "date_precision": "year",
+      "title_zh": "图灵发表《论可计算数》——计算机的理论蓝图",
+      "title_en": "Turing's On Computable Numbers",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1936 年，艾伦·图灵发表《论可计算数及其在判定问题上的应用》。为了证明希尔伯特判定问题无解，他设想了一种假想机器——无限长纸带、读写头、简单规则表——这就是图灵机，所有现代计算机的抽象蓝图。",
+      "source_name": "A. M. Turing, Proceedings of the London Mathematical Society (1936)",
+      "source_url": "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf",
+      "related_terms": [
+        "alan-turing",
+        "on-computable-numbers",
+        "turing-test"
+      ]
+    },
+    {
+      "id": "ai-002",
+      "year": 1940,
+      "date": "1940-03-18",
+      "date_precision": "day",
+      "title_zh": "Turing Bombe 在布莱切利园首次部署",
+      "title_en": "Turing Bombe First Deployed at Bletchley Park",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1940 年 3 月 18 日，由艾伦·图灵设计、英国制表机公司（BTM）Harold \"Doc\" Keen 团队制造的第一台 Bombe 机器（绰号 \"Victory\"）在布莱切利园 1 号小屋正式投入运行，用于破译德军 Enigma 密码机。 Bombe 通过同时模拟多台 Enigma、用 \"crib\"（已推测出的明文片段）反向搜索转子设置，把数百万种可能性压缩到可以在数小时内穷举的范围。",
+      "source_name": "Bletchley Park Trust - Bombe History / TNMOC Bombe Rebuild",
+      "source_url": "https://www.tnmoc.org/bh-6-enter-turing-and-welchman",
+      "related_terms": [
+        "alan-turing",
+        "bombe",
+        "enigma"
+      ]
+    },
+    {
+      "id": "ai-003",
+      "year": 1943,
+      "date": "1943",
+      "date_precision": "year",
+      "title_zh": "McCulloch-Pitts 神经元：神经活动的逻辑演算",
+      "title_en": "McCulloch-Pitts Neuron: A Logical Calculus of Nervous Activity",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1943 年，神经生理学家 Warren McCulloch 和 20 岁的自学逻辑学家 Walter Pitts 发表 《A Logical Calculus of the Ideas Immanent in Nervous Activity》（Bulletin of Mathematical Biophysics, 5: 115–133）。",
+      "source_name": "Bulletin of Mathematical Biophysics, 5:115-133 / Stanford Encyclopedia of Philosophy",
+      "source_url": "https://link.springer.com/article/10.1007/BF02478259",
+      "related_terms": [
+        "neural-network",
+        "deep-learning"
+      ]
+    },
+    {
+      "id": "ai-004",
+      "year": 1945,
+      "date": "1945-06-30",
+      "date_precision": "day",
+      "title_zh": "von Neumann《EDVAC 报告初稿》：存储程序架构的起源",
+      "title_en": "First Draft of a Report on the EDVAC",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1945 年 6 月 30 日，John von Neumann 完成《First Draft of a Report on the EDVAC》，由 ENIAC 项目安全官 Herman Goldstine 誊成 101 页打字稿并复印约 24 份分发给 EDVAC 项目核心成员（von Neumann 手写了原稿，Goldstine 据此誊写）。",
+      "source_name": "Moore School / Computer History Archive (Knuth Collection)",
+      "source_url": "https://archive.computerhistory.org/resources/text/Knuth_Don_X4100/PDF_index/k-8-pdf/k-8-u2593-Draft-EDVAC.pdf",
+      "related_terms": [
+        "john-von-neumann"
+      ]
+    },
+    {
+      "id": "ai-005",
+      "year": 1946,
+      "date": "1946-02-14",
+      "date_precision": "day",
+      "title_zh": "ENIAC 公开宣告：第一台通用电子数字计算机",
+      "title_en": "ENIAC Public Announcement",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1946 年 2 月 14 日，宾夕法尼亚大学 Moore 电机工程学院公开宣告 ENIAC（Electronic Numerical Integrator and Computer）建造完成。 这台由 John Mauchly 和 J. Presper Eckert 领导设计的机器重 30 吨、占地 167 平方米、含 17,468 个真空管和 5 百万个焊点，能在一秒内完成 5,000 次加法…",
+      "source_name": "University of Pennsylvania ENIAC Archives / IEEE Milestones",
+      "source_url": "https://www.computerhistory.org/timeline/1945-2/",
+      "related_terms": []
+    },
+    {
+      "id": "ai-006",
+      "year": 1948,
+      "date": "1948",
+      "date_precision": "year",
+      "title_zh": "Wiener《Cybernetics》出版：动物与机器的控制与通信",
+      "title_en": "Norbert Wiener Publishes Cybernetics",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1948 年，Norbert Wiener 的《Cybernetics: Or Control and Communication in the Animal and the Machine》由巴黎 Hermann 出版社和纽约 John Wiley & Sons 出版（MIT Press 版本是 1961 年第二版）。",
+      "source_name": "Hermann / Wiley 1948 / Britannica - Cybernetics",
+      "source_url": "https://mitpress.mit.edu/9780262730099/cybernetics/",
+      "related_terms": [
+        "cybernetics",
+        "norbert-wiener",
+        "feedback-loop"
+      ]
+    },
+    {
+      "id": "ai-007",
+      "year": 1948,
+      "date": "1948-07",
+      "date_precision": "month",
+      "title_zh": "Shannon《A Mathematical Theory of Communication》发表",
+      "title_en": "Shannon's Mathematical Theory of Communication",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1948 年 7 月和 10 月，Claude Shannon 在 Bell System Technical Journal 分两期发表 《A Mathematical Theory of Communication》。",
+      "source_name": "Bell System Technical Journal 27(3):379-423, 27(4):623-656 / IEEE",
+      "source_url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf",
+      "related_terms": [
+        "information-theory",
+        "claude-shannon",
+        "entropy"
+      ]
+    },
+    {
+      "id": "ai-008",
+      "year": 1949,
+      "date": "1949",
+      "date_precision": "year",
+      "title_zh": "Hebb《The Organization of Behavior》：突触可塑性假说",
+      "title_en": "Hebb's The Organization of Behavior",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1949 年，加拿大心理学家 Donald Hebb 在 McGill 大学出版《The Organization of Behavior》。 他提出一个后来被概括为 \"Hebb's rule\" 的假说：\"当细胞 A 的轴突足够接近细胞 B 并反复参与其激发时，A 到 B 的连接会被增强\"——通俗表述是 \"Cells that fire together, wire together\"（一起激发的…",
+      "source_name": "Wiley 1949 / Britannica - Donald O. Hebb",
+      "source_url": "https://www.britannica.com/biography/Donald-O-Hebb",
+      "related_terms": [
+        "neural-network"
+      ]
+    },
+    {
+      "id": "ai-009",
+      "year": 1950,
+      "date": "1950-10",
+      "date_precision": "month",
+      "title_zh": "Turing《Computing Machinery and Intelligence》：图灵测试的起源",
+      "title_en": "Computing Machinery and Intelligence",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1950 年 10 月，Alan Turing 在哲学期刊《Mind》第 59 卷第 236 期发表《Computing Machinery and Intelligence》（pp. 433-460）。 文章开头拒绝直接定义\"机器\"和\"思考\"，转而提出\"模仿游戏\"（imitation game）：如果一台机器在通过电传打字机进行对话时，能让提问者难以判断对方是人还是机器，是否就应当承认它能\"思考…",
+      "source_name": "Mind, vol. LIX, no. 236, pp. 433-460 (October 1950)",
+      "source_url": "https://academic.oup.com/mind/article/LIX/236/433/986238",
+      "related_terms": [
+        "alan-turing",
+        "turing-test",
+        "artificial-general-intelligence"
+      ]
+    },
+    {
+      "id": "ai-010",
+      "year": 1955,
+      "date": "1955-08-31",
+      "date_precision": "day",
+      "title_zh": "McCarthy-Minsky-Rochester-Shannon 提案：\"Artificial Intelligence\" 一词的首次正式使用",
+      "title_en": "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1955 年 8 月 31 日，John McCarthy、Marvin Minsky、Nathaniel Rochester（IBM 701 总设计师）和 Claude Shannon 联名向洛克菲勒基金会提交了《A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence》（打字稿，页数待核实）。",
+      "source_name": "McCarthy, Minsky, Rochester, Shannon (1955). A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence.",
+      "source_url": "http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html",
+      "related_terms": [
+        "artificial-intelligence",
+        "dartmouth-workshop",
+        "anthropic"
+      ]
+    },
+    {
+      "id": "ai-011",
+      "year": 1957,
+      "date": "1957",
+      "date_precision": "year",
+      "title_zh": "General Problem Solver（GPS）：首个目标导向的通用问题求解器",
+      "title_en": "General Problem Solver",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1957 年，Allen Newell、Cliff Shaw、Herbert Simon 在 RAND Corporation 提出通用问题求解器 GPS。 GPS 不像 Logic Theorist 只能证明逻辑定理，而是用\"手段-目的分析\"（means-ends analysis）把任意问题分解为：当前状态、目标状态、可用算子、差异检测——通过不断\"减小当前状态与目标状态之间的差异\"来搜索解法…",
+      "source_name": "Newell, A., Shaw, J. C., Simon, H. A. (1959). Report on a general problem-solving program. Proceedings of the International Conference on Information Processing, 256-264.",
+      "source_url": "https://apps.dtic.mil/sti/citations/AD0635402",
+      "related_terms": [
+        "alan-turing"
+      ]
+    },
+    {
+      "id": "ai-012",
+      "year": 1958,
+      "date": "1958-07",
+      "date_precision": "month",
+      "title_zh": "Rosenblatt 感知机：可学习神经网络的首次实现",
+      "title_en": "Rosenblatt's Perceptron",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1957 年 Frank Rosenblatt 在纽约 Buffalo 的 Cornell Aeronautical Laboratory（CAL）首次在 IBM 704 上仿真感知机算法（Project PARA），用 50 次训练让机器学会区分打孔卡的左标记与右标记——这是历史上第一次机器通过自身调整权重从例子中学习。",
+      "source_name": "Rosenblatt, F. (1958). The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain. Psychological Review, 65(6), 386-408.",
+      "source_url": "https://psycnet.apa.org/record/1959-04182-001",
+      "related_terms": [
+        "perceptron",
+        "neural-network",
+        "deep-learning"
+      ]
+    },
+    {
+      "id": "ai-013",
+      "year": 1958,
+      "date": "1958-09",
+      "date_precision": "month",
+      "title_zh": "McCarthy 在 MIT 启动 Lisp：早期 AI 的母语诞生",
+      "title_en": "McCarthy Begins Lisp Development at MIT",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1958 年秋，John McCarthy 离开达特茅斯到 MIT 任助理教授，与 Marvin Minsky 共同组建 MIT Artificial Intelligence Project。 McCarthy 试图用 IBM 704 上的 FORTRAN 处理 AI 列表操作（FLPL: FORTRAN List Processing Language），但发现 FORTRAN 缺少递归、条件…",
+      "source_name": "McCarthy, J. (1960). Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I. Communications of the ACM, 3(4), 184-195.",
+      "source_url": "https://dl.acm.org/doi/10.1145/367177.367199",
+      "related_terms": [
+        "lisp",
+        "mit"
+      ]
+    },
+    {
+      "id": "ai-014",
+      "year": 1959,
+      "date": "1959-07",
+      "date_precision": "month",
+      "title_zh": "Samuel《Some Studies in Machine Learning Using the Game of Checkers》：\"Machine Learning\" 一词的首次学术定义",
+      "title_en": "Samuel Coins \"Machine Learning\" in IBM Journal",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1959 年 7 月，Arthur Samuel 在《IBM Journal of Research and Development》第 3 卷第 3 期发表《Some Studies in Machine Learning Using the Game of Checkers》（pp. 210-229）。",
+      "source_name": "Samuel, A. L. (1959). Some Studies in Machine Learning Using the Game of Checkers. IBM Journal of Research and Development, 3(3), 210-229.",
+      "source_url": "https://ieeexplore.ieee.org/document/5392560",
+      "related_terms": [
+        "machine-learning",
+        "self-play"
+      ]
+    },
+    {
+      "id": "ai-015",
+      "year": 1965,
+      "date": "1965",
+      "date_precision": "year",
+      "title_zh": "DENDRAL 启动:第一个大型知识驱动专家系统",
+      "title_en": "DENDRAL Project: First Knowledge-Intensive Expert System",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1965 年春,Edward Feigenbaum 刚加入 Stanford 任计算机系创始教员,立刻与诺奖遗传学家 Joshua Lederberg 启动 DENDRAL 项目,目标是让计算机从有机化合物的质谱图反推分子结构。 1966 年 Lederberg 拉入 Carl Djerassi(口服避孕药之父、Stanford 质谱实验室负责人)补齐化学知识。",
+      "source_name": "Lindsay, Buchanan, Feigenbaum, Lederberg (1993). DENDRAL: A case study. AI Journal 61:209-261.",
+      "source_url": "https://digirepo.nlm.nih.gov/ext/document/101584906X1027/PDF/101584906X1027.pdf",
+      "related_terms": [
+        "expert-system"
+      ]
+    },
+    {
+      "id": "ai-016",
+      "year": 1965,
+      "date": "1965",
+      "date_precision": "year",
+      "title_zh": "Weizenbaum ELIZA:第一个聊天机器人的诞生",
+      "title_en": "ELIZA: A Computer Program for the Study of Natural Language Communication",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1965 年,Joseph Weizenbaum 在 MIT Project MAC 用 MAD-SLIP 在 IBM 7094 上写出 ELIZA,通过 CTSS 分时系统让多个用户同时与程序对话。 ELIZA 是一个平台:换不同“脚本”就变不同角色。 最有名的脚本是 DOCTOR——模仿 Rogerian 心理治疗师,用“你刚才说...”“这让你想到什么?”等反问模板把用户的话包装成回应。",
+      "source_name": "Weizenbaum, J. (1966). CACM 9(1):36-45",
+      "source_url": "https://redirect.cs.umbc.edu/courses/331/papers/eliza.html",
+      "related_terms": [
+        "chatbot",
+        "nlp",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-017",
+      "year": 1968,
+      "date": "1968",
+      "date_precision": "year",
+      "title_zh": "Winograd SHRDLU:积木世界里的“理解”",
+      "title_en": "SHRDLU: Understanding Natural Language in a Blocks World",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1968-1970 年,Terry Winograd 在 MIT 开发 SHRDLU,作为博士论文(1970 完成;论文 1971 年以 MIT AI-TR-235 正式发表)。 程序运行在 DEC PDP-6 上,用 Micro Planner + Lisp 写成,用户通过电传打字机与一个虚拟“积木世界”对话——指令 SHRDLU 把红色方块放到绿色立方体上,问“刚才你拿起的是哪个?”,SHRD…",
+      "source_name": "Winograd, T. (1972). Understanding Natural Language. Academic Press. PhD thesis, MIT, 1970.",
+      "source_url": "https://hci.stanford.edu/winograd/shrdlu/",
+      "related_terms": [
+        "nlp"
+      ]
+    },
+    {
+      "id": "ai-018",
+      "year": 1969,
+      "date": "1969",
+      "date_precision": "year",
+      "title_zh": "SRI Shakey:第一个会推理的移动机器人",
+      "title_en": "Shakey: First Mobile Robot with Reasoning",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1966-1972 年,SRI International(Charles Rosen + Nils Nilsson 团队)开发 Shakey——第一个能感知环境、规划路径、执行动作的自主移动机器人。 1969 年第一版完成:装电视摄像头、激光测距仪、碰撞传感器,通过无线连到 DEC PDP-10/PDP-15 上跑规划与感知。",
+      "source_name": "Nilsson, N. J. (1984). Shakey the Robot. SRI AI Center Technical Note 323.",
+      "source_url": "https://www.sri.com/wp-content/uploads/2021/12/629.pdf",
+      "related_terms": [
+        "robotics",
+        "sri",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-019",
+      "year": 1974,
+      "date": "1974",
+      "date_precision": "year",
+      "title_zh": "第一次 AI 寒冬:英美同步降温",
+      "title_en": "First AI Winter Begins",
+      "type": "risk",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1973-1974 年,英美 AI 经费同步大砍,构成第一次 AI 寒冬。 英国:Lighthill 报告(1973)导致 SRC 停止对爱丁堡之外多数大学的 AI 资助。 美国:DARPA 1969 年 Mansfield 修正案后必须证明项目“直接军事相关”,1971-1974 年大幅削减 CMU、MIT、SRI、斯坦福的 AI 通用研究经费,1974 年的 DARPA AI 研究预算比 19…",
+      "source_name": "Crevier, G. (1993). AI: The Tumultuous History; McCorduck 2004; Russell & Norvig 3rd ed.",
+      "source_url": "https://en.wikipedia.org/wiki/AI_winter",
+      "related_terms": [
+        "ai",
+        "darpa",
+        "expert-system"
+      ]
+    },
+    {
+      "id": "ai-020",
+      "year": 1974,
+      "date": "1974-08",
+      "date_precision": "month",
+      "title_zh": "Werbos 反向传播:深度学习的数学起点",
+      "title_en": "Werbos Backpropagation: Beyond Regression (1974 Harvard PhD)",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1974 年 8 月,Paul Werbos 在哈佛大学通过博士论文答辩,题目《Beyond Regression: New Tools for Prediction and Analysis in the Behavioral Sciences》。",
+      "source_name": "Werbos, P. (1974). Harvard PhD thesis; (1994) Wiley book The Roots of Backpropagation",
+      "source_url": "https://www.lesswrong.com/posts/oFrayyD4MNTX7goNj/backprop-the-russian-algorithm-the-west-claimed-as-its-own",
+      "related_terms": [
+        "backpropagation-1986",
+        "neural-network",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-021",
+      "year": 1974,
+      "date": "1974-10",
+      "date_precision": "month",
+      "title_zh": "MYCIN:专家系统进入医学诊断",
+      "title_en": "MYCIN: Medical Expert System",
+      "type": "product",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1974 年 10 月,Edward Shortliffe 在斯坦福提交博士论文《MYCIN: A Rule-Based Computer Program for Advising Physicians Regarding Antimicrobial Therapy Selection》(CS-TR-74-465, AIM-251)。",
+      "source_name": "Shortliffe, E. H. (1974). PhD thesis, Stanford CS-TR-74-465; (1975) Comput Biomed Res 8(4)",
+      "source_url": "http://bitsavers.trailing-edge.com/pdf/stanford/Stanford_CS_TR_Collection_2025-12-12/OCR/CS-TR-74-465-ocr.pdf",
+      "related_terms": [
+        "expert-system",
+        "mycin",
+        "dendral"
+      ]
+    },
+    {
+      "id": "ai-022",
+      "year": 1975,
+      "date": "1975-10-20",
+      "date_precision": "day",
+      "title_zh": "物理符号系统假说:Newell & Simon Turing 演讲",
+      "title_en": "Physical Symbol System Hypothesis (Newell & Simon 1975 Turing Lecture)",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1975 年 10 月 20 日,Allen Newell 和 Herbert A. Simon 在明尼阿波利斯 ACM 年会上联合接受 1975 年 ACM Turing Award,演讲题为《Computer Science as Empirical Inquiry:Symbols and Search》,1976 年 3 月发表于 CACM 19(3)。",
+      "source_name": "Newell, A. & Simon, H. A. (1976). CACM 19(3):113-126",
+      "source_url": "https://dl.acm.org/doi/10.1145/360018.360022",
+      "related_terms": [
+        "heuristic-search",
+        "deep-learning"
+      ]
+    },
+    {
+      "id": "ai-023",
+      "year": 1980,
+      "date": "1980-04",
+      "date_precision": "month",
+      "title_zh": "XCON/R1:专家系统首次大规模商用",
+      "title_en": "XCON/R1: First Large-Scale Commercial Expert System",
+      "type": "product",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1978-1980 年,John McDermott 在 CMU 为 DEC 公司开发 R1(后改名 XCON,eXpert CONfigurer)。 1980 年 4 月正式上线,任务是自动配置 VAX-11/780 计算机订单,把销售员勾选的硬件清单转成可投产的连接方案。 R1 用 OPS5 产生式规则编写,初始约 500 条规则,到 1986 年膨胀到上千至上万条。",
+      "source_name": "McDermott, J. (1982). R1: A rule-based configurer of computer systems. Artificial Intelligence 19(1):39-88",
+      "source_url": "https://doi.org/10.1016/0004-3702(82)90022-3",
+      "related_terms": [
+        "expert-system",
+        "rule-based-system"
+      ]
+    },
+    {
+      "id": "ai-024",
+      "year": 1982,
+      "date": "1982-04-01",
+      "date_precision": "day",
+      "title_zh": "Hopfield 网络:神经网络复苏的火花",
+      "title_en": "Hopfield Network: Revival of Neural Networks",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1982 年 4 月,Caltech 物理学家 John Hopfield 在 PNAS 79(8):2554-2558 发表《Neural networks and physical systems with emergent collective computational abilities》。",
+      "source_name": "Hopfield, J. J. (1982). PNAS 79(8):2554-2558; (1984) PNAS 81(10):3088-3092",
+      "source_url": "https://www.pnas.org/doi/10.1073/pnas.79.8.2554",
+      "related_terms": [
+        "neural-network",
+        "deep-learning"
+      ]
+    },
+    {
+      "id": "ai-025",
+      "year": 1986,
+      "date": "1986-10-09",
+      "date_precision": "day",
+      "title_zh": "Rumelhart-Hinton-Williams 反向传播:深度学习的工程起点",
+      "title_en": "Rumelhart-Hinton-Williams Backpropagation Paper",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1986 年 10 月 9 日,Nature 323:533-536 发表《Learning representations by back-propagating errors》(Rumelhart, Hinton, Williams)。 论文把反向模式自动微分明确应用在多层神经网络上,给出干净的可计算梯度公式,让隐藏层权重可以用 SGD 更新。",
+      "source_name": "Rumelhart, D. E., Hinton, G. E., Williams, R. J. (1986). Nature 323:533-536",
+      "source_url": "https://www.nature.com/articles/323533a0",
+      "related_terms": [
+        "backpropagation-1986",
+        "neural-network",
+        "geoffrey-hinton"
+      ]
+    },
+    {
+      "id": "ai-026",
+      "year": 1987,
+      "date": "1987-08",
+      "date_precision": "month",
+      "title_zh": "第二次 AI 寒冬:LISP 机崩盘与专家系统时代结束",
+      "title_en": "Second AI Winter: LISP Machine Collapse and End of Expert System Era",
+      "type": "risk",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1987-1993 年是 AI 史上最长的寒冬,起点是 1987 年下半年 LISP 机市场崩盘。 Symbolics、LMI 两家 LISP 机厂商销售额断崖式下跌,到 1988 年 Symbolics 破产保护,LMI 关闭;通用工作站(Sun、DEC、SGI)在性能价格比上全面碾压专用 LISP 硬件,AI 公司的硬件护城河一夜消失。",
+      "source_name": "Crevier, G. (1993). AI: The Tumultuous History; Russell & Norvig AIAMA 4th ed Ch 1.4",
+      "source_url": "https://en.wikipedia.org/wiki/AI_winter",
+      "related_terms": [
+        "ai",
+        "expert-system",
+        "neural-network"
+      ]
+    },
+    {
+      "id": "ai-027",
+      "year": 1988,
+      "date": "1988-09",
+      "date_precision": "month",
+      "title_zh": "Pearl 贝叶斯网络:让概率推理进入 AI",
+      "title_en": "Pearl Bayesian Networks: Probabilistic Reasoning Enters AI",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1985-1988 年,UCLA 的 Judea Pearl 系统化提出贝叶斯网络(Bayesian Network),1988 年 9 月由 Morgan Kaufmann 出版《Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference》。",
+      "source_name": "Pearl, J. (1988). Probabilistic Reasoning in Intelligent Systems. Morgan Kaufmann; Turing Award 2011",
+      "source_url": "https://en.wikipedia.org/wiki/Bayesian_network",
+      "related_terms": []
+    },
+    {
+      "id": "ai-028",
+      "year": 1989,
+      "date": "1989-01-01",
+      "date_precision": "day",
+      "title_zh": "Watkins Q-learning:强化学习的核心算法",
+      "title_en": "Watkins Q-learning: Core Algorithm of Reinforcement Learning",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1989 年,Christopher Watkins 在剑桥大学提交博士论文《Learning from Delayed Rewards》。 提出 Q-learning 算法:智能体在状态 s 下采取动作 a,观察到奖励 r 和下一状态 s',更新 Q(s,a) ← Q(s,a) + α[r + γ max Q(s',a') - Q(s,a)]。",
+      "source_name": "Watkins, C. J. C. H. (1989). PhD thesis, University of Cambridge; (1992) Machine Learning 8(3-4)",
+      "source_url": "https://www.cs.rhul.ac.uk/~chrisw/",
+      "related_terms": [
+        "reinforcement-learning",
+        "deep-q-network",
+        "ppo"
+      ]
+    },
+    {
+      "id": "ai-029",
+      "year": 1989,
+      "date": "1989-12-01",
+      "date_precision": "day",
+      "title_zh": "LeCun 卷积网络:神经网走进银行与邮局",
+      "title_en": "LeCun Convolutional Network for Handwriting Recognition",
+      "type": "model",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1989 年冬,Yann LeCun 等人在 Neural Computation 1(4):541-551 发表《Backpropagation Applied to Handwritten Zip Code Recognition》。 这是第一个真正可用的工业级卷积神经网络,用于 USPS 邮政编码识别,输入 16×16 像素,3 个卷积隐藏层,约 1000 个神经元。",
+      "source_name": "LeCun, Y. et al. (1989). Neural Computation 1(4):541-551; (1998) Proc. IEEE 86(11)",
+      "source_url": "https://ieeexplore.ieee.org/document/6795724",
+      "related_terms": [
+        "cnn",
+        "neural-network"
+      ]
+    },
+    {
+      "id": "ai-030",
+      "year": 1995,
+      "date": "1995-09-01",
+      "date_precision": "day",
+      "title_zh": "Cortes-Vapnik SVM:统计学习的核心算法",
+      "title_en": "Cortes-Vapnik Support Vector Machine",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1995 年 9 月,Corinna Cortes 和 Vladimir Vapnik 在 Machine Learning 20(3):273-297 发表《Support-Vector Networks》。 SVM 在特征空间中找一个最大间隔超平面分割两类,由距离边界最近的少数“支持向量”决定分类器。 通过核函数(kernel trick)把数据映射到高维空间,SVM 可以处理线性不可分问题。",
+      "source_name": "Cortes, C. & Vapnik, V. (1995). Machine Learning 20(3):273-297; Vapnik (1995) The Nature of Statistical Learning Theory",
+      "source_url": "https://link.springer.com/article/10.1007/BF00994018",
+      "related_terms": [
+        "svm",
+        "deep-learning"
+      ]
+    },
+    {
+      "id": "ai-031",
+      "year": 1997,
+      "date": "1997-05-11",
+      "date_precision": "day",
+      "title_zh": "IBM 深蓝击败卡斯帕罗夫:AI 的第一次大众胜利",
+      "title_en": "IBM Deep Blue Defeats Kasparov",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1997 年 5 月 11 日,IBM 深蓝(Deep Blue)在纽约衡平中心(Equitable Center)6 局对抗赛中,以 3.5:2.5(2 胜 1 负 3 和)击败国际象棋世界冠军 Garry Kasparov。",
+      "source_name": "Hsu, F.-h. (2002). Behind Deep Blue; Campbell, M. et al. (2002) AI Journal 134(1-2):57-83",
+      "source_url": "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)",
+      "related_terms": [
+        "deep-blue",
+        "alphago",
+        "deep-learning"
+      ]
+    },
+    {
+      "id": "ai-032",
+      "year": 1997,
+      "date": "1997-11-15",
+      "date_precision": "day",
+      "title_zh": "Hochreiter-Schmidhuber LSTM:序列建模的支柱",
+      "title_en": "Hochreiter-Schmidhuber LSTM",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1997 年 11 月 15 日,Sepp Hochreiter 和 Jürgen Schmidhuber 在Neural Computation 9(8):1735-1780 发表《Long Short-Term Memory》。",
+      "source_name": "Hochreiter, S. & Schmidhuber, J. (1997). Neural Computation 9(8):1735-1780",
+      "source_url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+      "related_terms": [
+        "lstm",
+        "rnn",
+        "transformer"
+      ]
+    },
+    {
+      "id": "ai-033",
+      "year": 1998,
+      "date": "1998-11-01",
+      "date_precision": "day",
+      "title_zh": "LeNet-5 论文:卷积网络的工程化文档",
+      "title_en": "LeNet-5 Paper: Engineering Documentation of CNNs",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1998 年 11 月,Yann LeCun、Léon Bottou、Yoshua Bengio、Patrick Haffner 在Proceedings of the IEEE 86(11):2278-2324 发表《Gradient-Based Learning Applied to Document Recognition》。",
+      "source_name": "LeCun, Y. et al. (1998). Proc. IEEE 86(11):2278-2324; MNIST dataset",
+      "source_url": "https://ieeexplore.ieee.org/document/726791",
+      "related_terms": [
+        "cnn",
+        "mnist",
+        "alexnet"
+      ]
+    },
+    {
+      "id": "ai-034",
+      "year": 1999,
+      "date": "1999-10-11",
+      "date_precision": "day",
+      "title_zh": "NVIDIA GeForce 256:GPU 时代开启",
+      "title_en": "NVIDIA GeForce 256: GPU Era Begins",
+      "type": "compute",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "1999 年 10 月 11 日,NVIDIA 发布 GeForce 256,售价 199 美元。 NVIDIA 把它宣传为“世界第一款 GPU(Graphics Processing Unit)”,首次把 Transform、Lighting、Setup、Rendering 四阶段整合到单芯片,支持硬件 T&L,集成 2300 万晶体管,核心 120MHz,显存 64MB DDR。",
+      "source_name": "NVIDIA GeForce 256 press release (1999-10-11); Buck, I. (2004) Stanford PhD",
+      "source_url": "https://en.wikipedia.org/wiki/GeForce_256",
+      "related_terms": [
+        "gpu",
+        "nvidia",
+        "cuda"
+      ]
+    },
+    {
+      "id": "ai-035",
+      "year": 2006,
+      "date": "2006-07-28",
+      "date_precision": "day",
+      "title_zh": "Hinton-Salakhutdinov DBN:深度学习复兴起点",
+      "title_en": "Hinton-Salakhutdinov DBN: Deep Learning Revival",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2006 年 7 月 28 日,Geoffrey Hinton 和 Ruslan Salakhutdinov 在Science 313(5786):504-507 发表《Reducing the Dimensionality of Data with Neural Networks》。",
+      "source_name": "Hinton, G. E. & Salakhutdinov, R. (2006) Science 313(5786):504-507; Hinton et al. (2006) NIPS",
+      "source_url": "https://www.science.org/doi/10.1126/science.1127647",
+      "related_terms": [
+        "deep-learning",
+        "geoffrey-hinton",
+        "alexnet"
+      ]
+    },
+    {
+      "id": "ai-036",
+      "year": 2007,
+      "date": "2007-02-14",
+      "date_precision": "day",
+      "title_zh": "NVIDIA CUDA 1.0 正式发布:GPU 走入通用计算",
+      "title_en": "NVIDIA CUDA 1.0 Released: GPU Goes General Purpose",
+      "type": "compute",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2007 年 2 月 14 日,NVIDIA 发布 CUDA 1.0 正式版,支持 GeForce 8 系列、Quadro FX 4600/5600、Tesla C870/G80 等硬件。 CUDA 1.0 包含 nvcc 编译器、CUDA Runtime、cuBLAS、cuFFT、CUDA GDB,让 C 语言开发者可以直接在 GPU 上编程矩阵乘、卷积、FFT 等高并行计算。",
+      "source_name": "NVIDIA CUDA 1.0 release (2007-02-14); NVIDIA Tesla brand launch (2007)",
+      "source_url": "https://developer.nvidia.com/cuda-toolkit-archive",
+      "related_terms": [
+        "cuda",
+        "nvidia",
+        "google"
+      ]
+    },
+    {
+      "id": "ai-037",
+      "year": 2009,
+      "date": "2009-06-20",
+      "date_precision": "day",
+      "title_zh": "Fei-Fei Li ImageNet:视觉识别的标准基准",
+      "title_en": "Fei-Fei Li ImageNet: Standard Benchmark for Visual Recognition",
+      "type": "data",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2009 年 6 月 20 日,Fei-Fei Li 团队在 CVPR 2009 发表《ImageNet: A Large-Scale Hierarchical Image Database》,正式发布 ImageNet 数据集。",
+      "source_name": "Deng, J. et al. (2009) CVPR; Russakovsky et al. (2015) IJCV 115(3):211-252",
+      "source_url": "https://en.wikipedia.org/wiki/ImageNet",
+      "related_terms": [
+        "imagenet",
+        "dataset",
+        "ilsvrc"
+      ]
+    },
+    {
+      "id": "ai-038",
+      "year": 2011,
+      "date": "2011-02-16",
+      "date_precision": "day",
+      "title_zh": "IBM Watson 击败 Jeopardy! 冠军:问答 AI 高峰",
+      "title_en": "IBM Watson Beats Jeopardy! Champions: QA AI Peak",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2011 年 2 月 14-16 日,IBM Watson 在 Jeopardy! 三集特别节目中以 77,147 美元击败卫冕冠军 Ken Jennings(24,000)和 Brad Rutter(21,600)。 Watson 由 David Ferrucci 2006-2011 年领导开发,用 DeepQA 架构:问题分析 + 候选生成 + 证据检索 + 置信度排序,在 200M 页结构化…",
+      "source_name": "IBM Watson Jeopardy! (2011-02-14-16); Ferrucci, D. (2012) AI Magazine 33(1)",
+      "source_url": "https://en.wikipedia.org/wiki/Watson_(computer)",
+      "related_terms": [
+        "ibm-watson",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-039",
+      "year": 2011,
+      "date": "2011-10-04",
+      "date_precision": "day",
+      "title_zh": "Apple Siri 在 iPhone 4S 发布:消费级语音助手诞生",
+      "title_en": "Apple Siri Launched on iPhone 4S: Consumer Voice Assistant Born",
+      "type": "product",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2011 年 10 月 4 日,Apple 在 iPhone 4S 发布会推出 Siri 语音助手,10 月 14 日 iPhone 4S 上市,Siri 正式面向消费者。 Siri 1.0 用 Nuance 语音识别 + 自研自然语言理解 + 25 类内置服务(短信、电话、日历、地图、Wolfram Alpha),用户用自然语言对话,Siri 返回结果或调用 App。",
+      "source_name": "Apple Siri on iPhone 4S launch (2011-10-04); Siri Inc. acquisition (2010-04-28)",
+      "source_url": "https://en.wikipedia.org/wiki/Siri",
+      "related_terms": [
+        "voice-assistant",
+        "apple",
+        "siri"
+      ]
+    },
+    {
+      "id": "ai-040",
+      "year": 2012,
+      "date": "2012-12",
+      "date_precision": "month",
+      "title_zh": "AlexNet 在 NIPS 2012 引爆:深度学习时代起点",
+      "title_en": "AlexNet at NIPS 2012: Deep Learning Era Begins",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2012 年 12 月,Alex Krizhevsky、Ilya Sutskever、Geoffrey Hinton 在 NIPS 2012 论文集发表论文《ImageNet Classification with Deep Convolutional Neural Networks》(ILSVRC 2012 结果于 10 月公布,top-5 错误率 15.3% vs 第二名 26.2%)。",
+      "source_name": "Krizhevsky, A., Sutskever, I., Hinton, G. (2012) NIPS; ILSVRC 2012 results",
+      "source_url": "https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+      "related_terms": [
+        "alexnet",
+        "cnn",
+        "imagenet"
+      ]
+    },
+    {
+      "id": "ai-041",
+      "year": 2013,
+      "date": "2013-01-16",
+      "date_precision": "day",
+      "title_zh": "Mikolov word2vec:词向量与分布式表示普及",
+      "title_en": "Mikolov word2vec: Word Embeddings Popularized",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2013 年 1 月 16 日,Tomas Mikolov、Kai Chen、Greg Corrado、Jeff Dean 在 arXiv 发表论文《Efficient Estimation of Word Representations in Vector Space》,后发表于 ICLR 2013。",
+      "source_name": "Mikolov, T. et al. (2013) ICLR 2013; arXiv:1301.3781",
+      "source_url": "https://arxiv.org/abs/1301.3781",
+      "related_terms": [
+        "nlp",
+        "bert",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-042",
+      "year": 2013,
+      "date": "2013-12-19",
+      "date_precision": "day",
+      "title_zh": "DeepMind DQN:深度强化学习首次成功",
+      "title_en": "DeepMind DQN: First Deep Reinforcement Learning Success",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2013 年 12 月 19 日,DeepMind 团队(Volodymyr Mnih、Koray Kavukcuoglu、David Silver、Alex Graves、Ioannis Antonoglou、Daan Wierstra、Martin Riedmiller)在 NIPS 2013 Deep Learning Workshop 发表论文《Playing Atari with Dee…",
+      "source_name": "Mnih, V. et al. (2013) NIPS Deep Learning Workshop; (2015) Nature 518:529-533",
+      "source_url": "https://arxiv.org/abs/1312.5602",
+      "related_terms": [
+        "deep-q-network",
+        "deepmind",
+        "alphago"
+      ]
+    },
+    {
+      "id": "ai-043",
+      "year": 2014,
+      "date": "2014-06-10",
+      "date_precision": "day",
+      "title_zh": "Goodfellow GAN:生成式 AI 的早期突破",
+      "title_en": "Goodfellow GAN: Early Generative AI Breakthrough",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2014 年 6 月 10 日,Ian Goodfellow 等人在 NIPS 2014 发表论文《Generative Adversarial Nets》。 GAN 用 Generator + Discriminator 对抗训练,Generator 从噪声生成图像,Discriminator 判断图像真伪,两者博弈达到 Nash 均衡时 Generator 能生成逼真图像。",
+      "source_name": "Goodfellow, I. et al. (2014) NIPS 2014; arXiv:1406.2661",
+      "source_url": "https://arxiv.org/abs/1406.2661",
+      "related_terms": [
+        "stylegan"
+      ]
+    },
+    {
+      "id": "ai-044",
+      "year": 2014,
+      "date": "2014-09-10",
+      "date_precision": "day",
+      "title_zh": "Sutskever Seq2Seq:端到端机器翻译范式确立",
+      "title_en": "Sutskever Seq2Seq: End-to-End Translation Paradigm Established",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2014 年 9 月 10 日,Ilya Sutskever、Oriol Vinyals、Quoc Le 在 NeurIPS 2014 发表论文《Sequence to Sequence Learning with Neural Networks》。",
+      "source_name": "Sutskever, I., Vinyals, O., Le, Q. (2014) NeurIPS 2014; WMT-14 results",
+      "source_url": "https://arxiv.org/abs/1409.3215",
+      "related_terms": [
+        "lstm",
+        "transformer",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-045",
+      "year": 2015,
+      "date": "2015-10-09",
+      "date_precision": "day",
+      "title_zh": "AlphaGo 胜樊麾:围棋 AI 首次击败职业棋手",
+      "title_en": "AlphaGo Beats Fan Hui: Go AI Beats Professional for the First Time",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2015 年 10 月 9 日,DeepMind AlphaGo 在伦敦闭门比赛中以 5:0 击败欧洲围棋冠军樊麾二段,这是围棋 AI 首次击败职业棋手。 AlphaGo 用 CNN + MCTS(蒙特卡洛树搜索)+ RL(强化学习),训练分两阶段:(1) 监督学习模仿人类专家走子,达到业余强手水平;(2) 自我对弈强化学习,超过人类专家水平。",
+      "source_name": "Silver, D. et al. (2016) Nature 529:484-489; AlphaGo vs Fan Hui (2015-10)",
+      "source_url": "https://www.nature.com/articles/nature16961",
+      "related_terms": [
+        "alphago",
+        "deepmind",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-046",
+      "year": 2015,
+      "date": "2015-12-10",
+      "date_precision": "day",
+      "title_zh": "He ResNet:超深网络训练突破",
+      "title_en": "He ResNet: Ultra-Deep Network Training Breakthrough",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2015 年 12 月 10 日,Kaiming He、Xiangyu Zhang、Shaoqing Ren、Jian Sun 在 CVPR 2016 发表论文《Deep Residual Learning for Image Recognition》。",
+      "source_name": "He, K. et al. (2015) CVPR 2016; arXiv:1512.03385",
+      "source_url": "https://arxiv.org/abs/1512.03385",
+      "related_terms": [
+        "resnet",
+        "cnn",
+        "deep-learning"
+      ]
+    },
+    {
+      "id": "ai-047",
+      "year": 2015,
+      "date": "2015-12-11",
+      "date_precision": "day",
+      "title_zh": "OpenAI 成立:非营利 AI 研究实验室启动",
+      "title_en": "OpenAI Founded: Nonprofit AI Research Lab Launched",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2015 年 12 月 11 日,OpenAI 在旧金山成立,由 Sam Altman、Elon Musk、Greg Brockman、Ilya Sutskever、Wojciech Zaremba、John Schulman 联合创办。 初始承诺 10 亿美元资金,实际到位约 1.3 亿美元。",
+      "source_name": "OpenAI founding announcement (2015-12-11); OpenAI LP structure (2019-03)",
+      "source_url": "https://openai.com/blog/introducing-openai",
+      "related_terms": [
+        "openai",
+        "artificial-general-intelligence",
+        "gpt"
+      ]
+    },
+    {
+      "id": "ai-048",
+      "year": 2016,
+      "date": "2016-03-15",
+      "date_precision": "day",
+      "title_zh": "AlphaGo 4:1 胜李世石:围棋 AI 越过职业九段",
+      "title_en": "AlphaGo 4:1 Beats Lee Sedol: Go AI Crosses Pro 9-Dan",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2016 年 3 月 9-15 日,DeepMind AlphaGo 在首尔四季酒店 5 局比赛中以 4:1 击败韩国职业九段李世石(Lee Sedol),李世石在第 4 局(3 月 13 日)唯一胜局被称为“神之一手”(Move 78)。 AlphaGo 用 MCTS + 深度策略网络 + 深度价值网络,176 个 GPU + 1202 个 CPU,每步搜索 0.2 秒。",
+      "source_name": "Silver, D. et al. (2016) Nature 529:484-489; AlphaGo vs Lee Sedol match record",
+      "source_url": "https://www.nature.com/articles/nature16961",
+      "related_terms": [
+        "deepmind",
+        "alphago",
+        "google"
+      ]
+    },
+    {
+      "id": "ai-049",
+      "year": 2016,
+      "date": "2016-05-18",
+      "date_precision": "day",
+      "title_zh": "Google TPU v1:AI 专用芯片公开",
+      "title_en": "Google TPU v1: AI-Specific Chip Public",
+      "type": "compute",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2016 年 5 月 18 日,Google 在 Google I/O 2016 主题演讲公开 TPU(Tensor Processing Unit)。 TPU v1 是 Google 2013 年内部立项、2015 年数据中心部署的 ASIC,专为矩阵乘法优化,8-bit 整数 Systolic Array 架构,28nm 工艺,700MHz,92 TOPS,28W TDP。",
+      "source_name": "Jouppi et al. (2017) ISCA; Google I/O 2016 keynote",
+      "source_url": "https://dl.acm.org/doi/10.1145/3079856.3080246",
+      "related_terms": [
+        "tpu",
+        "google",
+        "tensor-core"
+      ]
+    },
+    {
+      "id": "ai-050",
+      "year": 2017,
+      "date": "2017-01-18",
+      "date_precision": "day",
+      "title_zh": "PyTorch 开源:动态图框架进入主流",
+      "title_en": "PyTorch Open-Sourced: Dynamic Graph Framework Goes Mainstream",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2017 年 1 月 18 日,Facebook AI Research(FAIR)发布 PyTorch 0.1,Adam Paszke、Sam Gross、Soumith Chintala 主导开发。 PyTorch 基于 Torch7,核心创新是动态计算图(Define-by-Run),比 TensorFlow 1.x 静态图更易调试,Python 原生语法接近 NumPy。",
+      "source_name": "Paszke, A. et al. (2017) PyTorch 0.1 release; NeurIPS 2019 autodiff workshop",
+      "source_url": "https://github.com/pytorch/pytorch",
+      "related_terms": [
+        "tensorflow",
+        "chinese-large-language-model"
+      ]
+    },
+    {
+      "id": "ai-051",
+      "year": 2017,
+      "date": "2017-06-12",
+      "date_precision": "day",
+      "title_zh": "Transformer 论文:Attention Is All You Need",
+      "title_en": "Transformer Paper: Attention Is All You Need",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2017 年 6 月 12 日,Ashish Vaswani 等 8 位 Google Brain/Google Research 研究员在 NeurIPS 2017 发表《Attention Is All You Need》(arXiv:1706.03762)。",
+      "source_name": "Vaswani, A. et al. (2017) NeurIPS; arXiv:1706.03762",
+      "source_url": "https://arxiv.org/abs/1706.03762",
+      "related_terms": [
+        "transformer",
+        "google",
+        "bert"
+      ]
+    },
+    {
+      "id": "ai-052",
+      "year": 2018,
+      "date": "2018-06-11",
+      "date_precision": "day",
+      "title_zh": "OpenAI GPT-1:预训练 + 微调范式确立",
+      "title_en": "OpenAI GPT-1: Pre-training + Fine-tuning Paradigm Established",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2018 年 6 月 11 日,OpenAI 在论文《Improving Language Understanding by Generative Pre-Training》发布 GPT-1。 GPT-1 用 12 层 Transformer Decoder(768 维隐藏层,12 头,117M 参数),在 BookCorpus(7000+ 本未出版小说)上无监督预训练,然后在 12 个 NLP…",
+      "source_name": "Radford, A. et al. (2018) OpenAI blog; GPT-1 paper",
+      "source_url": "https://openai.com/research/language-unsupervised",
+      "related_terms": [
+        "gpt",
+        "llm",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-053",
+      "year": 2018,
+      "date": "2018-10-11",
+      "date_precision": "day",
+      "title_zh": "Google BERT:双向预训练 NLP 范式确立",
+      "title_en": "Google BERT: Bidirectional Pre-training NLP Paradigm Established",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2018 年 10 月 11 日,Google AI 在 arXiv:1810.04805 发表《BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding》。",
+      "source_name": "Devlin, J. et al. (2018) arXiv:1810.04805; NAACL 2019",
+      "source_url": "https://arxiv.org/abs/1810.04805",
+      "related_terms": [
+        "bert",
+        "nlp",
+        "google"
+      ]
+    },
+    {
+      "id": "ai-054",
+      "year": 2019,
+      "date": "2019-02-14",
+      "date_precision": "day",
+      "title_zh": "OpenAI GPT-2:大规模生成预训练首次披露",
+      "title_en": "OpenAI GPT-2: Large-Scale Generative Pre-training Disclosed",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2019 年 2 月 14 日,OpenAI 在博客《Better Language Models and Their Implications》发布 GPT-2 论文《Language Models are Unsupervised Multitask Learners》(Radford 等)。",
+      "source_name": "Radford, A. et al. (2019) GPT-2 paper; OpenAI blog",
+      "source_url": "https://openai.com/research/better-language-models",
+      "related_terms": [
+        "gpt",
+        "llm",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-055",
+      "year": 2020,
+      "date": "2020-05-22",
+      "date_precision": "day",
+      "title_zh": "Lewis RAG:检索增强生成范式提出",
+      "title_en": "Lewis RAG: Retrieval-Augmented Generation Paradigm Proposed",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2020 年 5 月 22 日,Facebook AI Research Patrick Lewis 等在 NeurIPS 2020 发表《Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks》(arXiv:2005.11401)。",
+      "source_name": "Lewis, P. et al. (2020) arXiv:2005.11401; NeurIPS 2020",
+      "source_url": "https://arxiv.org/abs/2005.11401",
+      "related_terms": [
+        "rag",
+        "langchain",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-056",
+      "year": 2020,
+      "date": "2020-05-28",
+      "date_precision": "day",
+      "title_zh": "OpenAI GPT-3 175B:Scaling Laws 验证",
+      "title_en": "OpenAI GPT-3 175B: Scaling Laws Validated",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2020 年 5 月 28 日,OpenAI 在 arXiv:2005.14165 发表《Language Models are Few-Shot Learners》。 GPT-3 用 96 层 Transformer Decoder,175B 参数,在 Common Crawl(499B token)+ WebText2 + Books1 + Books2 + Wikipedia 上训练。",
+      "source_name": "Brown, T. et al. (2020) arXiv:2005.14165; NeurIPS 2020",
+      "source_url": "https://arxiv.org/abs/2005.14165",
+      "related_terms": [
+        "gpt",
+        "llm",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-057",
+      "year": 2020,
+      "date": "2020-11-30",
+      "date_precision": "day",
+      "title_zh": "AlphaFold2:CASP14 蛋白质结构预测达到实验级精度",
+      "title_en": "AlphaFold2: CASP14 Protein Structure Prediction Reaches Experimental Accuracy",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2020 年 11 月 30 日,CASP14(第 14 届 Critical Assessment of Protein Structure Prediction)会议公布结果,DeepMind AlphaFold2 在 GDT_TS 中位 92.4,远超第二名 75.6,首次达到实验级精度(X-ray 晶体学误差范围内)。",
+      "source_name": "Jumper, J. et al. (2021) Nature 596:583-589; CASP14 results (2020-11)",
+      "source_url": "https://www.nature.com/articles/s41586-021-03819-2",
+      "related_terms": [
+        "deepmind",
+        "alphafold2",
+        "google"
+      ]
+    },
+    {
+      "id": "ai-058",
+      "year": 2021,
+      "date": "2021-01-05",
+      "date_precision": "day",
+      "title_zh": "OpenAI CLIP + DALL·E:多模态预训练范式确立",
+      "title_en": "OpenAI CLIP + DALL·E: Multimodal Pre-training Paradigm Established",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2021 年 1 月 5 日,OpenAI 同时发布 CLIP(Contrastive Language-Image Pre-training,arXiv:2103.00020,实际 2021-02-26 arXiv)和 DALL·E(arXiv:2102.12092,2021-01-05 blog)。",
+      "source_name": "Radford, A. et al. (2021) CLIP arXiv:2103.00020; Ramesh, A. et al. DALL·E arXiv:2102.12092",
+      "source_url": "https://arxiv.org/abs/2103.00020",
+      "related_terms": [
+        "clip",
+        "openai",
+        "dalle"
+      ]
+    },
+    {
+      "id": "ai-059",
+      "year": 2021,
+      "date": "2021-06-29",
+      "date_precision": "day",
+      "title_zh": "GitHub Copilot 公测:AI 编程助手进入主流",
+      "title_en": "GitHub Copilot Public Beta: AI Coding Assistant Goes Mainstream",
+      "type": "product",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2021 年 6 月 29 日,GitHub 与 OpenAI 联合宣布 GitHub Copilot Technical Preview 公测。 Copilot 基于 OpenAI Codex(GPT-3 微调版,代码训练 159GB GitHub 代码),在 VS Code 中提供行级 / 函数级代码补全,月费 10 美元。",
+      "source_name": "GitHub (2021-06-29) Copilot preview announcement; OpenAI Codex",
+      "source_url": "https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/",
+      "related_terms": [
+        "openai",
+        "codex",
+        "cursor"
+      ]
+    },
+    {
+      "id": "ai-060",
+      "year": 2022,
+      "date": "2022-03-04",
+      "date_precision": "day",
+      "title_zh": "InstructGPT 论文:RLHF 路线工业落地",
+      "title_en": "InstructGPT Paper: RLHF Industrialized",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2022 年 3 月 4 日,OpenAI 在 arXiv:2203.02155 发表《Training language models to follow instructions with human feedback》。 InstructGPT 用三阶段训练:1) SFT(监督微调,演示数据) 2) RM(奖励模型,偏好数据) 3) PPO(强化学习优化)。",
+      "source_name": "Ouyang, L. et al. (2022) arXiv:2203.02155; NeurIPS 2022",
+      "source_url": "https://arxiv.org/abs/2203.02155",
+      "related_terms": [
+        "rlhf",
+        "term-1043",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-061",
+      "year": 2022,
+      "date": "2022-08-22",
+      "date_precision": "day",
+      "title_zh": "Stability AI Stable Diffusion 1.4:开源文生图爆发",
+      "title_en": "Stability AI Stable Diffusion 1.4: Open Text-to-Image Era Begins",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2022 年 8 月 22 日,Stability AI 在 GitHub / HuggingFace 发布 Stable Diffusion 1.4 模型权重(CreativeML Open RAIL-M 许可)。 SD 1.4 用 Latent Diffusion(Rombach 2022 CVPR)+ CLIP text encoder,在 LAION-5B 子集上训练,512×512 图像…",
+      "source_name": "Rombach, R. et al. (2022) arXiv:2112.10752; Stability AI SD 1.4 release",
+      "source_url": "https://arxiv.org/abs/2112.10752",
+      "related_terms": [
+        "latent-diffusion"
+      ]
+    },
+    {
+      "id": "ai-062",
+      "year": 2022,
+      "date": "2022-09-21",
+      "date_precision": "day",
+      "title_zh": "OpenAI Whisper:开源语音识别奠基",
+      "title_en": "OpenAI Whisper: Open-Source Speech Recognition Foundation",
+      "type": "foundational",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2022 年 9 月 21 日,OpenAI 在 arXiv:2212.04356 发表《Robust Speech Recognition via Large-Scale Weak Supervision》。 Whisper 用 68 万小时多语种音频训练(65% 英文 + 17% 非英文 + 18% 翻译对),Encoder-Decoder Transformer,在 0-shot 跨语种语音…",
+      "source_name": "Radford, A. et al. (2022) arXiv:2212.04356; Whisper GitHub",
+      "source_url": "https://arxiv.org/abs/2212.04356",
+      "related_terms": [
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-063",
+      "year": 2022,
+      "date": "2022-11-30",
+      "date_precision": "day",
+      "title_zh": "OpenAI ChatGPT:AI 的 iPhone 时刻",
+      "title_en": "OpenAI ChatGPT: AI's iPhone Moment",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2022 年 11 月 30 日,OpenAI 在 blog 发布 ChatGPT(chat.openai.com),免费公测。 ChatGPT 基于 GPT-3.5(2020 年 GPT-3 + 2022 年 InstructGPT RLHF 微调),支持多轮对话、上下文记忆、代码生成、写作、翻译。",
+      "source_name": "OpenAI (2022-11-30) ChatGPT launch blog",
+      "source_url": "https://openai.com/blog/chatgpt",
+      "related_terms": [
+        "chatgpt",
+        "openai",
+        "rlhf"
+      ]
+    },
+    {
+      "id": "ai-064",
+      "year": 2023,
+      "date": "2023-03-14",
+      "date_precision": "day",
+      "title_zh": "Anthropic Claude 1 发布:Anthropic 商业化起点",
+      "title_en": "Anthropic Claude 1 Launch: Anthropic Commercialization Begins",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2023 年 3 月 14 日,Anthropic 发布 Claude 1(同年 GPT-4 同日发布)。 Claude 1 上下文 9K,在 Cohere 多项任务上接近 GPT-3.5。 Claude 1 强调 Constitutional AI(AI 通过「宪法」原则自我修正),避免 GPT 的 RLHF 失控。",
+      "source_name": "Anthropic (2023-03-14) Claude launch; Constitutional AI paper",
+      "source_url": "https://www.anthropic.com/index/introducing-claude",
+      "related_terms": [
+        "claude",
+        "anthropic",
+        "constitutional-ai"
+      ]
+    },
+    {
+      "id": "ai-065",
+      "year": 2023,
+      "date": "2023-03-14",
+      "date_precision": "day",
+      "title_zh": "OpenAI GPT-4 发布:多模态 + 推理提升",
+      "title_en": "OpenAI GPT-4 Release: Multimodal + Reasoning",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2023 年 3 月 14 日,OpenAI 发布 GPT-4(内部代号 GPT-4-base + GPT-4-turbo)。 GPT-4 在 MMLU 86.4%(GPT-3.5 70.0%)、HumanEval 67%、GSM8K 92%。 GPT-4 支持图像输入(GPT-4V),32K 上下文(后续 128K)。",
+      "source_name": "OpenAI (2023-03-14) GPT-4 Release blog; GPT-4 Technical Report",
+      "source_url": "https://openai.com/research/gpt-4",
+      "related_terms": [
+        "gpt-4",
+        "openai",
+        "gpt4v"
+      ]
+    },
+    {
+      "id": "ai-066",
+      "year": 2023,
+      "date": "2023-07-18",
+      "date_precision": "day",
+      "title_zh": "Meta Llama 2 商用开源:开源 LLM 商业化起点",
+      "title_en": "Meta Llama 2 Commercial Open-Source: Open-Source LLM Commercialization Begins",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2023 年 7 月 18 日,Meta 在 arXiv:2307.09288 发布《Llama 2: Open Foundation and Fine-Tuned Chat Models》。 Llama 2 包括 7B/13B/70B,4K 上下文,商用许可(月活 7 亿以下免费)。 Llama 2-Chat 用 RLHF + Safety RLHF + Red Teaming 训练。",
+      "source_name": "Touvron, H. et al. (2023) arXiv:2307.09288; Meta blog",
+      "source_url": "https://arxiv.org/abs/2307.09288",
+      "related_terms": [
+        "google",
+        "chinese-large-language-model"
+      ]
+    },
+    {
+      "id": "ai-067",
+      "year": 2023,
+      "date": "2023-09-27",
+      "date_precision": "day",
+      "title_zh": "Mistral 7B 发布:欧洲开源大模型旗舰起点",
+      "title_en": "Mistral 7B Release: European Open LLM Flagship",
+      "type": "model",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2023 年 9 月 27 日,Mistral AI 在 arXiv:2310.06825 发布《Mistral 7B》。 Mistral 7B 用 7.3B 参数在所有评测上超过 Llama 2 13B,代码任务上超过 Llama 2 34B。",
+      "source_name": "Jiang, A. Q. et al. (2023) arXiv:2310.06825; Mistral AI blog",
+      "source_url": "https://arxiv.org/abs/2310.06825",
+      "related_terms": [
+        "mixtral",
+        "gqa"
+      ]
+    },
+    {
+      "id": "ai-068",
+      "year": 2023,
+      "date": "2023-12-06",
+      "date_precision": "day",
+      "title_zh": "Google Gemini 1.0:原生多模态 LLM",
+      "title_en": "Google Gemini 1.0: Native Multimodal LLM",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2023 年 12 月 6 日,Google DeepMind 发布 Gemini 1.0(Ultra/Pro/Nano 三档)。 Gemini 是首个原生多模态 LLM(图像/音频/视频/文本统一编码),非拼接。 Gemini Ultra 在 MMLU 90.0%(GPT-4 86.4%),首次反超 GPT-4。",
+      "source_name": "Google DeepMind (2023-12-06) Gemini 1.0 blog; Technical Report",
+      "source_url": "https://deepmind.google/technologies/gemini/",
+      "related_terms": [
+        "gemini",
+        "google",
+        "deepmind"
+      ]
+    },
+    {
+      "id": "ai-069",
+      "year": 2024,
+      "date": "2024-02-15",
+      "date_precision": "day",
+      "title_zh": "OpenAI Sora 公布:视频生成里程碑",
+      "title_en": "OpenAI Sora Reveal: Video Generation Milestone",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2024 年 2 月 15 日,OpenAI 公布 Sora(text-to-video 模型,最长 60 秒)。 Sora 用 DiT(Diffusion Transformer)架构,把视频生成从「U-Net 扩散」推向「Transformer 扩散」。 Sora 演示视频质量震惊业界,但 OpenAI 未开源 + 延迟发布。",
+      "source_name": "OpenAI (2024-02-15) Sora reveal; Brooks-Peebles DiT paper",
+      "source_url": "https://openai.com/sora",
+      "related_terms": [
+        "sora",
+        "veo",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-070",
+      "year": 2024,
+      "date": "2024-03-13",
+      "date_precision": "day",
+      "title_zh": "欧盟 AI Act 通过:全球首部 AI 监管法",
+      "title_en": "EU AI Act Passed: World's First AI Regulation Law",
+      "type": "policy",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2024 年 3 月 13 日,欧洲议会通过《AI Act》。 AI Act 按风险分四档:不可接受(禁)、高风险(限)、有限风险(透明)、最小风险(自由)。 AI Act 对 General Purpose AI(GPAI) + Systemic Risk LLM(>=10^25 FLOPS) 设特殊义务:模型卡、版权披露、红队测试、严重事件报告。",
+      "source_name": "European Parliament (2024-03-13) AI Act adoption; Official Journal",
+      "source_url": "https://www.europarl.europa.eu/news/en/press-room/20240308IPR19015/artificial-intelligence-act-first-regulation-on-ai-by-european-parliament",
+      "related_terms": [
+        "chinese-large-language-model"
+      ]
+    },
+    {
+      "id": "ai-071",
+      "year": 2024,
+      "date": "2024-05-13",
+      "date_precision": "day",
+      "title_zh": "GPT-4o:实时多模态 LLM 起点",
+      "title_en": "GPT-4o: Real-Time Multimodal LLM Begins",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2024 年 5 月 13 日,OpenAI 发布 GPT-4o(omni)。 GPT-4o 是首个原生多模态 LLM(文本+图像+音频统一编码),语音对话延迟 232ms(接近人类 200ms)。 GPT-4o 在 MMLU 88.7%(超过 GPT-4 Turbo 86.5%)。 GPT-4o 免费向所有 ChatGPT 用户开放,Plus 5 倍额度。",
+      "source_name": "OpenAI (2024-05-13) GPT-4o launch; System Card",
+      "source_url": "https://openai.com/index/hello-gpt-4o/",
+      "related_terms": [
+        "gpt-4o",
+        "openai"
+      ]
+    },
+    {
+      "id": "ai-072",
+      "year": 2024,
+      "date": "2024-09-12",
+      "date_precision": "day",
+      "title_zh": "OpenAI o1:推理模型时代起点",
+      "title_en": "OpenAI o1: Reasoning Model Era Begins",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2024 年 9 月 12 日,OpenAI 发布 o1-preview + o1-mini。 o1 用 RL + Chain-of-Thought 训练,在数学(AIME 83.3%,GPT-4o 13.4%)、编程(Codeforces 89%)、博士级科学(GPQA 78%) 上大幅超越 GPT-4o。",
+      "source_name": "OpenAI (2024-09-12) o1 launch; Learning to Reason blog",
+      "source_url": "https://openai.com/index/learning-to-reason-with-llms/",
+      "related_terms": [
+        "openai",
+        "deepseek-r1",
+        "chinese-large-language-model"
+      ]
+    },
+    {
+      "id": "ai-073",
+      "year": 2024,
+      "date": "2024-10-22",
+      "date_precision": "day",
+      "title_zh": "Claude Computer Use:LLM 直接操作电脑",
+      "title_en": "Claude Computer Use: LLM Directly Operates Computer",
+      "type": "milestone",
+      "importance": 5,
+      "confidence": "high",
+      "summary_zh": "2024 年 10 月 22 日,Anthropic 在 Claude 3.5 Sonnet v2 同步推出 Computer Use API(beta)。 Claude Computer Use 让 LLM 通过截图 + 鼠标键盘控制直接操作电脑(浏览器、终端、文件)。",
+      "source_name": "Anthropic (2024-10-22) Claude 3.5 Sonnet v2 + Computer Use",
+      "source_url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+      "related_terms": [
+        "anthropic",
+        "agent",
+        "operator"
+      ]
+    },
+    {
+      "id": "ai-074",
+      "year": 2025,
+      "date": "2025-01-20",
+      "date_precision": "day",
+      "title_zh": "DeepSeek-R1 发布及技术报告开源",
+      "title_en": "DeepSeek-R1 Release & Technical Report Open-sourced",
+      "type": "model",
+      "importance": 5,
+      "confidence": "medium",
+      "summary_zh": "2025 年 1 月 20 日,DeepSeek 发布 R1 推理模型;1 月 22 日公开技术报告,补充训练、强化学习、蒸馏与评测细节。 R1 以强推理表现和高关注度把推理模型竞争推到全球讨论中心:模型能不能把复杂问题拆开、检查、推演和修正。 它还带来一个更现实的刺激——如果更低成本也能做出强推理模型,前沿模型竞争的经济账就要重新算。",
+      "source_name": "DeepSeek API Docs / Technical Report",
+      "source_url": "https://api-docs.deepseek.com/news/news250120",
+      "related_terms": [
+        "deepseek-r1",
+        "deepseek",
+        "llm"
+      ]
+    },
+    {
+      "id": "ai-075",
+      "year": 2026,
+      "date": "2026-07-28",
+      "date_precision": "day",
+      "title_zh": "MCP 2026-07-28 规范发布：核心转向无状态架构",
+      "title_en": "MCP 2026-07-28 Specification Moves to a Stateless Core",
+      "type": "foundational",
+      "importance": 4,
+      "confidence": "high",
+      "summary_zh": "Model Context Protocol 发布第五版规范，核心传输转向无状态设计，同时强化授权机制，并推动官方扩展进入稳定阶段。Anthropic 同日宣布在 Claude 产品中支持新版规范。 MCP 正从单一公司的连接方案成长为更可扩展的开放 Agent 协议。",
+      "source_name": "Model Context Protocol / Anthropic",
+      "source_url": "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
+      "related_terms": [
+        "mcp",
+        "agent",
+        "tools"
+      ]
+    }
+  ]
+}

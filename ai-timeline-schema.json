@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Timeline Public Dataset",
+  "type": "object",
+  "required": [
+    "updated_at",
+    "schema_version",
+    "public_event_count",
+    "events"
+  ],
+  "properties": {
+    "updated_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "full_collection_size": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "public_event_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "date_range": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    }
+  },
+  "$defs": {
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "year",
+        "date",
+        "date_precision",
+        "title_zh",
+        "title_en",
+        "type",
+        "importance",
+        "confidence",
+        "summary_zh",
+        "source_name",
+        "source_url",
+        "related_terms"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^ai-[0-9]{3}$"
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2100
+        },
+        "date": {
+          "type": "string",
+          "pattern": "^[0-9]{4}(-[0-9]{2})?(-[0-9]{2})?$"
+        },
+        "date_precision": {
+          "enum": [
+            "year",
+            "month",
+            "day"
+          ]
+        },
+        "title_zh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title_en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "importance": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "summary_zh": {
+          "type": "string",
+          "minLength": 50,
+          "maxLength": 220
+        },
+        "source_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "related_terms": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Minimal term slugs used only to link timeline events to the companion dictionary."
+        }
+      }
+    }
+  }
+}

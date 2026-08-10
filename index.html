@@ -1154,10 +1154,10 @@
         .map(paragraph => paragraph.trim())
         .filter(Boolean);
       if (!paragraphs.length) return "";
-      // Pure-Flow: 段内按句子断行，一句一行，保留呼吸感
+      // Pure-Flow: 段内按句子断行，一句一行，保留呼吸感（中英文均支持）
       const sentenceize = paragraph =>
         String(paragraph)
-          .split(/(?<=[。！？；])/)
+          .split(/(?<=[。！？；])|(?<=[.!?])(?=\s|$)/)
           .map(s => s.trim())
           .filter(Boolean);
       return `

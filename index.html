@@ -771,8 +771,8 @@
     <div class="kicker">Chronology</div>
     <div class="hero-grid">
       <div>
-        <h1>AI 编年史</h1>
-        <p class="lead">这是一份开放的 AI 历史年表：99 个精选节点覆盖 1936 至今，并连接到配套 AI 词典。</p>
+        <h1 id="site-title">AI 编年史</h1>
+        <p class="lead" id="site-lead">从图灵的纸带到今天的 Agent，一百年的 AI 故事，我用 116 个节点串成一条可追溯的线索——每个节点都能继续走到词典里，把一个概念真正弄懂。</p>
       </div>
       <aside class="ledger" aria-label="时间轴统计">
         <div class="ledger-title">
@@ -808,6 +808,12 @@
       if (state.rawEvents) {
         state.events = state.rawEvents.map(normalizeEvent).sort((a, b) => timelineDateKey(a).localeCompare(timelineDateKey(b)));
       }
+      const titleEl = document.getElementById("site-title");
+      const leadEl = document.getElementById("site-lead");
+      if (titleEl) titleEl.textContent = lang === "en" ? "AI Chronicle" : "AI 编年史";
+      if (leadEl) leadEl.textContent = lang === "en"
+        ? "From Turing's paper tape to today's agents, a century of AI told through 116 traceable milestones — each one leading onward to the dictionary, where a concept can be truly understood."
+        : "从图灵的纸带到今天的 Agent，一百年的 AI 故事，我用 116 个节点串成一条可追溯的线索——每个节点都能继续走到词典里，把一个概念真正弄懂。";
       renderAll();
       const enBtn = document.getElementById("translate-en");
       const zhBtn = document.getElementById("translate-zh");

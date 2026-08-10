@@ -20,8 +20,8 @@ Every map is drawn from somewhere. I live in China and read across Chinese- and 
 
 ## At a glance
 
-- **263** events in the maintained full collection
-- **99** representative events in this open dataset
+- **272** events in the maintained full collection
+- **116** representative events in this open dataset
 - **1936–2026-08** historical coverage
 - Updated weekly
 - Static HTML and JSON; no framework or build step required
@@ -83,8 +83,8 @@ See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for validation rules and editorial cr
 
 - **Source code:** MIT License.
 - **Public dataset (`ai-timeline-public.json`):** CC BY-NC 4.0.
-- **What this repository includes:** the timeline page, interactive code, data schema, validation rules, and 99 source-backed representative events — each with a curated card summary, an event overview, a behind-the-scenes narrative, and a "why it matters" note, so the timeline is fully readable on its own.
-- **What this repository does not include:** the complete 263-event dataset, learning paths, relationship graphs, research drafts, and the full AI dictionary cards and paid content — these remain under full copyright unless otherwise stated.
+- **What this repository includes:** the timeline page, interactive code, data schema, validation rules, and 116 source-backed representative events — each with a curated card summary, an event overview, a behind-the-scenes narrative, and a "why it matters" note, so the timeline is fully readable on its own.
+- **What this repository does not include:** the complete 272-event dataset, learning paths, relationship graphs, research drafts, and the full AI dictionary cards and paid content — these remain under full copyright unless otherwise stated.
 
 The source code is licensed under MIT. The public dataset is CC BY-NC 4.0. The full timeline data, learning paths, and dictionary entries are not covered by these licenses and remain under full copyright unless otherwise stated.
 

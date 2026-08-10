@@ -1,0 +1,98 @@
+# AI Timeline
+
+A source-backed, bilingual chronology of artificial intelligence—from the theoretical foundations of computation to modern models and agents.
+
+**Live demo:** https://gengyueworks.github.io/ai-timeline/
+
+## At a glance
+
+- **263** events in the maintained full collection
+- **75** representative events in this open dataset
+- **1936–2026-08** historical coverage
+- Updated weekly
+- Static HTML and JSON; no framework or build step required
+
+The public edition is intentionally useful on its own. It provides a working timeline, a documented schema, verifiable sources, minimal dictionary links, and enough coverage to trace the major technical and cultural shifts in AI history.
+
+## Repository structure
+
+```text
+ai-timeline/
+├── .github/workflows/validate-data.yml
+├── _meta/
+│   ├── MAINTAINER.md
+│   ├── RELEASE-CHECKLIST.md
+│   └── SOURCES.md
+├── scripts/
+│   └── validate-public-data.py
+├── README.md
+├── README.zh-CN.md
+├── LICENSE
+├── LICENSE-DATA
+├── CONTRIBUTING.md
+├── index.html
+├── ai-timeline-public.json
+├── ai-timeline-schema.json
+└── .gitignore
+```
+
+## Inclusion and sourcing
+
+An event belongs in the timeline when it marks a meaningful change in at least one of these areas:
+
+- foundational ideas, algorithms, or research methods;
+- model capabilities and architectures;
+- computing infrastructure and datasets;
+- products and developer ecosystems;
+- safety, governance, or cultural impact.
+
+Every public event must include a date with an explicit precision level, a concise bilingual title, a 100–200 character Chinese summary, an importance score, a confidence level, and at least one publicly accessible source. Primary sources are preferred. See [`_meta/SOURCES.md`](./_meta/SOURCES.md).
+
+## AI dictionary
+
+The timeline records **what happened** in AI history. For readers who want to understand **what a concept means**, term links connect to [AI Demystified Dictionary](https://gengyueworks.github.io/ai-dictionary/), a companion paid project whose in-depth cards are under development. The timeline remains fully usable without purchasing the dictionary.
+
+## Contributing
+
+Corrections and new-event proposals are welcome. Please open an issue or pull request and include:
+
+1. the proposed date and date precision;
+2. a concise explanation of the event;
+3. at least one reliable public source;
+4. the reason the event matters to the broader AI timeline.
+
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for validation rules and editorial criteria.
+
+## Scope and licensing
+
+- **Source code:** MIT License.
+- **Public dataset (`ai-timeline-public.json`):** CC BY-NC 4.0.
+- **Full timeline data, in-depth Chinese narratives, and dictionary entries:** not included in this repository and remain under full copyright unless otherwise stated.
+
+The source code is licensed under MIT. The public dataset is CC BY-NC 4.0. Full timeline data, in-depth Chinese narratives, and dictionary entries are not covered by these licenses and remain under full copyright unless otherwise stated.
+
+For commercial use of the dataset, please open an issue describing the intended use.
+
+---
+
+## 中文说明
+
+AI Timeline 是一份有来源依据的双语 AI 编年史，从计算理论起点记录到今天的模型、产品与 Agent。
+
+- 完整维护库共 **263** 个事件
+- 本仓库公开 **75** 个代表性事件
+- 覆盖 **1936–2026 年 8 月**
+- 每周更新
+- 纯静态 HTML + JSON，可直接部署到 GitHub Pages
+
+本仓库公开时间轴前端、数据结构、来源标准和代表性数据。完整数据、深度中文叙事、人物关联、学习路径与 AI 词典深度词卡不在本仓库的开放范围内。
+
+时间轴回答 AI 历史上“发生了什么”；若想进一步理解某个概念“意味着什么”，可以访问配套的 [AI 祛魅词典](https://gengyueworks.github.io/ai-dictionary/)。词典是独立的付费项目，但时间轴本身可以免费完整使用。
+
+### 授权范围
+
+- 代码：MIT
+- 公开数据集：CC BY-NC 4.0
+- 完整时间轴、深度叙事与词典内容：保留所有权利
+
+欢迎通过 Issue 或 Pull Request 提交纠错与新增事件建议。

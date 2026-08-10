@@ -1,0 +1,26 @@
+AI Timeline Public Dataset License
+
+Copyright (c) 2026 Yue Geng.
+
+The file `ai-timeline-public.json` is licensed under the Creative Commons
+Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
+
+You may share and adapt the public dataset for non-commercial purposes,
+provided that you give appropriate credit, link to the license, and indicate
+whether changes were made. You may not use the material for commercial
+purposes without separate written permission.
+
+Canonical license text:
+https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+Required attribution:
+"AI Timeline public dataset by Yue Geng — https://github.com/gengyueworks/ai-timeline"
+
+This license applies only to `ai-timeline-public.json`. It does not apply to
+the private full timeline dataset, in-depth Chinese narratives, research
+notes, learning paths, AI dictionary entries, or other material not included
+in this repository. Those materials remain under full copyright unless a
+separate license is explicitly provided.
+
+Commercial licensing requests may be submitted through the repository issue
+tracker.

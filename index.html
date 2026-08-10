@@ -487,6 +487,17 @@
       font-size: 13px;
     }
 
+    .detail-sentence {
+      margin: 0 0 0.55em;
+      color: #332d24;
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .detail-sentence:last-child {
+      margin-bottom: 0;
+    }
+
     .detail-text + .detail-text {
       margin-top: 10px;
     }
@@ -1171,9 +1182,19 @@
         .map(paragraph => paragraph.trim())
         .filter(Boolean);
       if (!paragraphs.length) return "";
+      // Pure-Flow: 段内按句子断行，一句一行，保留呼吸感
+      const sentenceize = paragraph =>
+        String(paragraph)
+          .split(/(?<=[。！？；])/)
+          .map(s => s.trim())
+          .filter(Boolean);
       return `
         ${label ? `<p class="detail-label">${escapeHTML(label)}</p>` : ""}
-        ${paragraphs.map(paragraph => `<p class="detail-text">${escapeHTML(paragraph)}</p>`).join("")}
+        ${paragraphs.map(paragraph =>
+          sentenceize(paragraph)
+            .map(sentence => `<p class="detail-sentence">${escapeHTML(sentence)}</p>`)
+            .join("")
+        ).join("")}
       `;
     }
 

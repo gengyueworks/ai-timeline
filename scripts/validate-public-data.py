@@ -15,7 +15,7 @@ for i,e in enumerate(events):
     for key in required:
         if key not in e or e[key] in (None,""): errors.append(f"{label}: missing {key}")
     # 允许深度字段（有内容版）：behind_scenes_zh / why_it_matters_zh / tags / type_legacy / learning_path_hint / missing_terms / source_author
-    allowed_extra={"behind_scenes_zh","why_it_matters_zh","tags","type_legacy","learning_path_hint","missing_terms","source_author"}
+    allowed_extra={"behind_scenes_zh","why_it_matters_zh","tags","type_legacy","learning_path_hint","missing_terms","source_author","card_summary_en","summary_en","context_en","why_it_matters_en"}
     extra=set(e)-set(required)-allowed_extra
     if extra: errors.append(f"{label}: unknown fields present: {sorted(extra)}")
     date=str(e.get("date",""))

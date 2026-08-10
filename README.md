@@ -96,8 +96,8 @@ For commercial use of the dataset, please open an issue describing the intended 
 
 AI Timeline 是一份有来源依据的双语 AI 编年史，从计算理论起点记录到今天的模型、产品与 Agent。
 
-- 完整维护库共 **263** 个事件
-- 本仓库公开 **99** 个代表性事件
+- 完整维护库共 **272** 个事件
+- 本仓库公开 **116** 个代表性事件
 - 覆盖 **1936–2026 年 8 月**
 - 每周更新
 - 纯静态 HTML + JSON，可直接部署到 GitHub Pages
@@ -127,4 +127,4 @@ Every event uses an independently edited `card_summary_zh`; previews are never g
 
 ## Selection balance
 
-The 99-event public cut follows a company-neutral editorial standard. See [`_meta/SELECTION-STANDARD.md`](./_meta/SELECTION-STANDARD.md).
+The 116-event public cut follows a company-neutral editorial standard. See [`_meta/SELECTION-STANDARD.md`](./_meta/SELECTION-STANDARD.md).

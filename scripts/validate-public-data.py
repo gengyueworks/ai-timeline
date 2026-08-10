@@ -7,7 +7,7 @@ d=json.loads(p.read_text(encoding="utf-8"))
 events=d.get("events",[])
 errors=[]
 if d.get("public_event_count") != len(events): errors.append("public_event_count does not match events length")
-if len(events) != 118: errors.append(f"public dataset must contain exactly 118 events (got {len(events)})")
+if len(events) != 116: errors.append(f"public dataset must contain exactly 116 events (got {len(events)})")
 seen=set(); previous=""
 for i,e in enumerate(events):
     label=f"event[{i}]"

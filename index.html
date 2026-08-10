@@ -981,7 +981,8 @@
 
     async function loadDictionary() {
       try {
-        const data = await loadJSON("ai-dictionary.json");
+        // 词典公开数据（1327 条索引 + 51 条精选样板），与 ai-dictionary 仓库同源加载
+        const data = await loadJSON("https://gengyueworks.github.io/ai-dictionary/ai-dictionary-free.json");
         return (data.terms || []).filter(term => term && term.term);
       } catch (error) {
         return [];
@@ -1001,8 +1002,9 @@
       const needle = String(label || "").toLowerCase();
       return list.find(term => {
         const name = String(term.term || "").toLowerCase();
+        const termId = String(term.id || "").toLowerCase();
         const aliases = Array.isArray(term.aliases) ? term.aliases : [];
-        return name === needle || aliases.some(alias => String(alias).toLowerCase() === needle);
+        return name === needle || termId === needle || aliases.some(alias => String(alias).toLowerCase() === needle);
       });
     }
 

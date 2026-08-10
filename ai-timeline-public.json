@@ -2,7 +2,7 @@
  "updated_at": "2026-08-11",
  "schema_version": "ai-timeline-public-v1.1",
  "full_collection_size": 272,
- "public_event_count": 118,
+ "public_event_count": 116,
  "date_range": "1936–2026-08-10",
  "license": "CC BY-NC 4.0",
  "events": [
@@ -168,7 +168,11 @@
    "why_it_matters_zh": "AI 作为“软件”的可能性，建立在通用电子计算机的可用性之上。\nENIAC 证明了真空管电子计算在工程上的可行性，它的问题（重编程难）直接推动了 EDVAC 的存储程序架构、EDVAC 又被 Manchester Baby 验证、被 EDSAC 实用化——这条链路是 AI 诞生的硬件前提。",
    "source_name": "University of Pennsylvania ENIAC Archives / IEEE Milestones",
    "source_url": "https://www.computerhistory.org/timeline/1945-2/",
-   "related_terms": [],
+   "related_terms": [
+    "stored-program-computer",
+    "john-von-neumann",
+    "computer-vision"
+   ],
    "missing_terms": [],
    "tags": [
     "1946",
@@ -242,7 +246,10 @@
    "why_it_matters_zh": "AI 能成为程序、模型、系统，前提是机器能运行可更换的程序。\n存储程序架构让\"软件\"这个概念有了物理载体——程序不再是改线路、插线缆，而是改内存里的数据。\n1986 年 IEEE 把 Baby 列为国际里程碑，认定它是\"第一台执行存储程序的电子计算机\"。",
    "source_name": "University of Manchester Digital60 / IEEE Milestones",
    "source_url": "https://curation.cs.manchester.ac.uk/digital60/www.digital60.org/birth/thebaby/",
-   "related_terms": [],
+   "related_terms": [
+    "stored-program-computer",
+    "john-von-neumann"
+   ],
    "missing_terms": [],
    "tags": [
     "1948",
@@ -703,7 +710,11 @@
    "why_it_matters_zh": "模糊集合让数学第一次承认“模糊”本身可以被精确处理。\n它催生了模糊逻辑、模糊控制两大学科,1980-90 年代日本家电（松下洗衣机、三菱空调、仙台地铁）用模糊控制做出“会判断”的产品。\n今天洗衣机自动称重、空调恒温、相机自动对焦都还跑着模糊控制器。\n在 LLM 时代，模糊集合又以“软标签”“membership score”“token probability”等面目回来。",
    "source_name": "Zadeh, L. A. (1965). Information and Control 8(3):338-353",
    "source_url": "https://www.sciencedirect.com/science/article/pii/S001999586590241X",
-   "related_terms": [],
+   "related_terms": [
+    "fuzzy-logic",
+    "fuzzy-sets",
+    "lotfi-zadeh"
+   ],
    "missing_terms": [],
    "tags": [
     "1965",
@@ -1205,7 +1216,10 @@
    "why_it_matters_zh": "贝叶斯网络是 1990-2010 年概率 AI 的主力工具，广泛应用于医疗诊断、故障定位、自然语言理解、推荐系统。\n今天 LLM 虽然取代了大量概率 AI 应用，但在医疗、法律、保险等高责任场景，贝叶斯网络仍然是可解释推理的首选。\nPearl 的因果推断框架，也是当前 AI 圈讨论“LLM 能不能做因果推理”的理论坐标系。",
    "source_name": "Pearl, J. (1988). Probabilistic Reasoning in Intelligent Systems. Morgan Kaufmann; Turing Award 2011",
    "source_url": "https://en.wikipedia.org/wiki/Bayesian_network",
-   "related_terms": [],
+   "related_terms": [
+    "bayesian-optimization",
+    "probability-distribution"
+   ],
    "missing_terms": [],
    "tags": [
     "1988",
@@ -3852,7 +3866,6 @@
    "source_url": "https://z.ai/blog/glm-5.2",
    "related_terms": [
     "glm",
-    "zhipu-ai",
     "agent"
    ],
    "tags": [
@@ -3890,7 +3903,7 @@
    "related_terms": [
     "codex",
     "agent",
-    "workflow-automation"
+    "agentic-workflow"
    ],
    "tags": [
     "OpenAI",
@@ -3924,9 +3937,8 @@
    "source_name": "美团技术团队",
    "source_url": "https://tech.meituan.com/2026/06/30/LongCat2.0.html",
    "related_terms": [
-    "meituan",
-    "longcat",
-    "agentic-coding",
+    "meituan-longcat",
+    "coding-agent",
     "ai-chip"
    ],
    "tags": [
@@ -4001,7 +4013,7 @@
    "related_terms": [
     "grok",
     "coding-agent",
-    "tool-use"
+    "tool-calling"
    ],
    "tags": [
     "xAI",
@@ -4104,7 +4116,7 @@
    "related_terms": [
     "apple",
     "openai",
-    "ai-hardware"
+    "ai-chip"
    ],
    "tags": [
     "Apple",
@@ -4138,7 +4150,7 @@
    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
    "related_terms": [
     "thinking-machines",
-    "open-weights",
+    "open-source-llm",
     "mira-murati"
    ],
    "tags": [
@@ -4161,7 +4173,7 @@
   {
    "title_zh": "Kimi K3 发布：首个开放的 3T 级模型",
    "title_en": "Kimi K3 Introduced as an Open 3T-Class Model",
-   "year": 2026,
+   "year": "2026",
    "date": "2026-07-16",
    "date_precision": "day",
    "importance": 5,
@@ -4174,9 +4186,9 @@
    "source_url": "https://www.kimi.com/blog/kimi-k3",
    "related_terms": [
     "kimi",
-    "moonshot",
-    "open-weights",
-    "moe"
+    "moonshot-ai",
+    "open-source-llm",
+    "mixture-of-experts"
    ],
    "tags": [
     "Kimi K3",
@@ -4213,7 +4225,7 @@
    "related_terms": [
     "qwen",
     "image-generation",
-    "multimodal"
+    "multimodal-ai"
    ],
    "tags": [
     "Qwen",
@@ -4281,8 +4293,7 @@
    "related_terms": [
     "mcp",
     "agent",
-    "tools",
-    "protocol"
+    "tool-calling"
    ],
    "tags": [
     "MCP",
@@ -4318,7 +4329,7 @@
    "source_url": "https://deepmind.google/models/gemini-robotics/",
    "related_terms": [
     "robotics",
-    "embodied-ai",
+    "embodied-intelligence",
     "gemini"
    ],
    "tags": [
@@ -4351,7 +4362,7 @@
    "related_terms": [
     "openai",
     "gpt",
-    "api",
+    "api-design",
     "inference"
    ],
    "tags": [
@@ -4385,9 +4396,8 @@
    "source_name": "European Commission",
    "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1708",
    "related_terms": [
-    "ai-infrastructure",
-    "compute",
-    "eu-ai"
+    "ai-data-center",
+    "inference-engine"
    ],
    "tags": [
     "欧盟",
@@ -4418,8 +4428,8 @@
    "source_url": "https://huggingface.co/collections/deepseek-ai/deepseek-v4",
    "related_terms": [
     "deepseek",
-    "open-weights",
-    "moe"
+    "open-source-llm",
+    "mixture-of-experts"
    ],
    "tags": [
     "DeepSeek",
@@ -4454,9 +4464,9 @@
    "source_name": "European Commission",
    "source_url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_26_1714/IP_26_1714_EN.pdf",
    "related_terms": [
-    "eu-ai-act",
+    "ai-safety",
     "ai-governance",
-    "synthetic-media"
+    "deepfake"
    ],
    "tags": [
     "欧盟",
@@ -4488,7 +4498,7 @@
    "source_url": "https://qwen.ai/blog?id=qwen3.8",
    "related_terms": [
     "qwen",
-    "open-weights",
+    "open-source-llm",
     "coding-agent"
    ],
    "tags": [
@@ -4521,7 +4531,7 @@
    "related_terms": [
     "claude-code",
     "agent",
-    "self-hosted"
+    "edge-computing"
    ],
    "tags": [
     "Claude Code",
@@ -4571,72 +4581,6 @@
    "context_en": "Following the initial launch of its frontier models, OpenAI rapidly adjusted response styles, factual reliability, and free-tier coverage, illustrating that model releases have become continuous operational processes rather than static events. By deploying a more capable version for high-difficulty tasks and a cheaper version for everyday use, the company utilized product stratification to pursue both quality and scale simultaneously. For users, retaining the same model name no longer guarantees a fixed experience over time. Ultimately, the historical significance of these models is determined not by their launch-day feature lists, but by sustained user adoption and actual task completion. Their success depends on whether permission controls, failure recovery mechanisms, and human oversight can withstand the complexities of real-world environments.",
    "why_it_matters_en": "This update demonstrates how frontier models enter the mass market through continuous fine-tuning and stratified distribution. While expanding free coverage increases the user sample size, it also amplifies pressures regarding safety, inference costs, and product consistency. For the broader timeline of AI development, this event highlights that a model's societal impact depends heavily on post-launch price reductions, iterative corrections, and expanded access, rather than just its initial debut. The long-term significance of these tools ultimately relies on real-world utility: whether they genuinely save time, reliably complete tasks, and allow human users to understand, pause, and intervene when errors occur.",
    "source_author": "OpenAI (institutional record)"
-  },
-  {
-   "year": 2026,
-   "date": "2026-08-07",
-   "date_precision": "day",
-   "title_zh": "OpenAI 因 Astra 潜在关键网络能力收紧发布控制",
-   "title_en": "OpenAI Tightens Release Controls over Astra’s Potential Critical Cyber Capabilities",
-   "type": "safety",
-   "importance": 5,
-   "confidence": "high",
-   "card_summary_zh": "OpenAI 表示无法排除未发布模型 Astra 达到“关键”网络能力阈值，前沿模型发布首次因网络风险进入更严格的暂停与访问控制。",
-   "summary_zh": "OpenAI 表示，针对未发布模型 Astra 的评估无法排除其达到 Preparedness Framework 中“关键”网络安全能力阈值，因此暂停不符合加强后安全要求的内部活动，并扩大测试与访问控制。",
-   "behind_scenes_zh": "模型安全框架过去常停留在原则说明，这次事件把能力阈值直接连接到延迟、暂停和访问分层。“关键”并不等于模型已在现实中自主攻击，而是评估显示它可能跨过需要更强控制的界线；仍需等待更完整的系统卡和外部审查。",
-   "why_it_matters_zh": "它改变了模型发布逻辑：当能力本身成为风险时，“先发布再修补”可能不再可接受。防守方需要更强模型，社会也要避免高风险能力无差别扩散。",
-   "source_name": "Reuters",
-   "source_url": "https://www.reuters.com/legal/litigation/openai-flags-possible-critical-cybersecurity-risk-upcoming-model-tightens-2026-08-07/",
-   "related_terms": [
-    "ai-safety",
-    "cybersecurity",
-    "preparedness"
-   ],
-   "tags": [
-    "OpenAI",
-    "网络安全",
-    "治理"
-   ],
-   "missing_terms": [],
-   "id": "ai-117",
-   "card_summary_en": "OpenAI stated it could not rule out its unreleased Astra model reaching the \"critical\" cybersecurity threshold, marking the first time a frontier model faced strict pauses and access controls due to cyber risks.",
-   "summary_en": "OpenAI announced that evaluations of its unreleased Astra model could not rule out the possibility that it had reached the \"critical\" cybersecurity capability threshold outlined in its Preparedness Framework. In response to these findings, the company paused internal development activities that failed to meet newly enhanced security requirements, while simultaneously expanding its rigorous testing protocols and internal access controls to mitigate potential risks.",
-   "context_en": "Historically, AI safety frameworks have often remained at the level of theoretical principles and high-level guidelines. This incident marked a significant operational shift, directly linking predefined capability thresholds to concrete, restrictive actions, such as deployment delays, development pauses, and tiered internal access controls. It is important to note that reaching a \"critical\" threshold does not mean the model has autonomously executed real-world cyberattacks or demonstrated malicious intent. Rather, internal evaluations indicate that Astra may have crossed a technical boundary requiring significantly stronger safeguards before further deployment. A more comprehensive understanding of the model's actual capabilities and the specific nature of these cyber risks still requires the publication of a full system card and thorough external audits by independent red-teaming organizations.",
-   "why_it_matters_en": "This event fundamentally alters the logic of frontier model releases. When raw capability itself becomes a severe security risk, the traditional tech industry approach of \"ship first, patch later\" may no longer be acceptable for advanced AI systems. While cybersecurity defenders require increasingly powerful models to counter emerging threats, society must simultaneously prevent the indiscriminate proliferation of high-risk cyber capabilities that could be easily exploited by malicious actors. This tension highlights the growing complexity of governing dual-use technologies.",
-   "source_author": "Reuters (editorial, no individual byline)"
-  },
-  {
-   "year": 2026,
-   "date": "2026-08-10",
-   "date_precision": "day",
-   "title_zh": "Meta 开源 Muse Glimmer：本地常驻 Agent 进入消费级硬件",
-   "title_en": "Meta Open-Sources Muse Glimmer for Always-On Local Agents",
-   "type": "open_source",
-   "importance": 5,
-   "confidence": "high",
-   "card_summary_zh": "Muse Glimmer 以 Apache 2.0 开放 300 亿参数权重，并面向单机常驻 Agent 优化，本地 AI 从聊天模型走向持续工作流。",
-   "summary_zh": "Meta 发布 Muse Glimmer，一款约 300 亿参数、面向常驻本地 Agent 工作流的模型，并以 Apache 2.0 许可证开放权重。模型针对个人设备和消费级 GPU 部署，强调隐私、低延迟与离线运行。",
-   "behind_scenes_zh": "Meta 将更大模型的能力蒸馏到个人硬件可运行的规模，并把目标从单轮本地聊天转到长期驻留、调用工具和处理个人工作流。开放权重降低了定制门槛，但本地不自动等于安全：文件访问、记忆与自动操作仍需隔离和审计。",
-   "why_it_matters_zh": "它为个人 Agent 提供不同于云端订阅的路线：模型可以靠近数据运行，由用户控制版本和环境。若能力与效率足够稳定，本地 Agent 可能成为隐私敏感工作的基础。",
-   "source_name": "Meta AI Research",
-   "source_url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
-   "related_terms": [
-    "local-ai",
-    "open-weights",
-    "agent"
-   ],
-   "tags": [
-    "Meta",
-    "开源",
-    "本地 Agent"
-   ],
-   "missing_terms": [],
-   "id": "ai-118",
-   "card_summary_en": "Meta released the 30-billion-parameter Muse Glimmer under an Apache 2.0 license, optimizing it for always-on local agents. This shifts local AI from simple chat models to continuous, on-device workflows.",
-   "summary_en": "Meta released Muse Glimmer, an open-weight model with approximately 30 billion parameters designed specifically for always-on local agent workflows. Released under the Apache 2.0 license, the model is optimized for deployment on personal devices and consumer-grade GPUs. It emphasizes privacy, low latency, and offline execution, enabling users to run continuous AI processes without relying on cloud infrastructure.",
-   "context_en": "Meta developed Muse Glimmer by distilling the capabilities of much larger foundation models down to a scale that can run efficiently on personal hardware. This development trajectory shifts the primary focus of local AI from single-turn chat interactions to long-horizon tasks, tool use, and managing personal workflows as a persistent background process. While releasing open weights significantly lowers the barrier for developers to customize these agents for specific use cases, local deployment does not automatically guarantee system security. Allowing an autonomous model to access local files, maintain persistent memory, and execute automated operations still requires rigorous isolation, auditing, and user oversight to prevent unintended actions or vulnerabilities on personal devices.",
-   "why_it_matters_en": "Muse Glimmer provides an alternative trajectory for personal AI agents, diverging from the standard cloud-subscription model. By allowing the model to run close to the user's data, it grants individuals full control over their software versions and computing environments. If the model's capabilities and efficiency prove sufficiently stable in real-world use, always-on local agents could become the foundational infrastructure for privacy-sensitive workflows, ensuring that personal data never has to leave the device.",
-   "source_author": "Meta AI Research (institutional record)"
   }
  ]
 }

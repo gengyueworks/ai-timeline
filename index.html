@@ -1,0 +1,1316 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 时间轴｜编辑档案版</title>
+  <style>
+    :root {
+      --paper: #f3efe4;
+      --paper-2: #fffaf0;
+      --ink: #17130d;
+      --muted: #6f675b;
+      --faint: #c9bea9;
+      --line: #d8cbb5;
+      --track: #002fa7;
+      --red: #bd2f20;
+      --green: #2f6d55;
+      --card: rgba(255, 250, 240, 0.76);
+      --serif: Georgia, "Songti SC", "STSong", serif;
+      --sans: "Avenir Next", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      --condensed: "Arial Narrow", "Avenir Next Condensed", "Roboto Condensed", var(--sans);
+      --mono: "SFMono-Regular", Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.5;
+      background:
+        linear-gradient(90deg, rgba(23, 19, 13, 0.035) 1px, transparent 1px),
+        linear-gradient(rgba(23, 19, 13, 0.026) 1px, transparent 1px),
+        var(--paper);
+      background-size: 34px 34px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 18% 6%, rgba(255, 255, 255, 0.58), transparent 30vw),
+        linear-gradient(115deg, transparent 0 42%, rgba(255, 255, 255, 0.36) 43% 47%, transparent 48%);
+      mix-blend-mode: soft-light;
+    }
+
+    button,
+    input { font: inherit; }
+    button { color: inherit; cursor: pointer; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .shell {
+      width: min(1120px, calc(100vw - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 2px solid var(--ink);
+      background: rgba(243, 239, 228, 0.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 56px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      color: var(--paper-2);
+      background: var(--track);
+      font-family: var(--mono);
+      font-size: 11px;
+      box-shadow: inset 0 0 0 4px rgba(255, 250, 240, 0.26);
+    }
+
+    .filters {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 7px;
+      min-width: 0;
+    }
+
+    .chip {
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: transparent;
+      white-space: nowrap;
+      font-size: 12px;
+      font-weight: 760;
+      transition: transform 150ms ease, background 150ms ease, color 150ms ease;
+    }
+
+    .chip:hover,
+    .chip.active {
+      color: var(--paper-2);
+      background: var(--ink);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .translate-mini {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .translate-mini button {
+      min-width: 30px;
+      border: 1px solid rgba(23, 19, 13, 0.32);
+      border-radius: 999px;
+      padding: 5px 7px;
+      color: var(--muted);
+      background: rgba(255, 250, 240, 0.44);
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1;
+      opacity: 0.68;
+      transition: opacity 150ms ease, border-color 150ms ease, color 150ms ease, background 150ms ease;
+    }
+
+    .translate-mini button:hover {
+      border-color: var(--track);
+      color: var(--track);
+      background: rgba(255, 250, 240, 0.78);
+      opacity: 1;
+    }
+
+    #google_translate_element {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .goog-te-banner-frame,
+    .goog-te-balloon-frame,
+    .skiptranslate iframe {
+      display: none !important;
+    }
+
+    body { top: 0 !important; }
+
+    .search {
+      width: min(236px, 24vw);
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      padding: 7px 12px;
+      color: var(--ink);
+      background: rgba(255, 250, 240, 0.78);
+      outline: none;
+      font-size: 12px;
+    }
+
+    .search:focus { box-shadow: 0 0 0 3px rgba(0, 47, 167, 0.18); }
+
+    .hero { padding: 38px 0 18px; }
+
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--red);
+      font-family: var(--condensed);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 38px;
+      height: 5px;
+      background: var(--red);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 292px;
+      gap: 34px;
+      align-items: end;
+      margin-top: 14px;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(32px, 4.7vw, 58px);
+      line-height: 1;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .lead {
+      max-width: 700px;
+      margin: 15px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .ledger {
+      border: 2px solid var(--ink);
+      background: var(--paper-2);
+      box-shadow: 7px 7px 0 var(--track);
+    }
+
+    .ledger-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 11px 13px;
+      border-bottom: 2px solid var(--ink);
+      font-family: var(--condensed);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stat {
+      min-height: 76px;
+      padding: 12px;
+      border-right: 1px solid var(--line);
+    }
+
+    .stat:last-child { border-right: 0; }
+
+    .stat strong {
+      display: block;
+      font-family: var(--mono);
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .main-grid {
+      display: block;
+      padding: 18px 0 88px;
+    }
+
+    .timeline-wrap {
+      width: min(930px, 100%);
+      padding: 8px 0 22px;
+    }
+
+    .timeline-head {
+      display: grid;
+      grid-template-columns: 90px minmax(0, 1fr);
+      gap: 18px;
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .timeline-head strong {
+      color: var(--ink);
+      font-family: var(--condensed);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 20px;
+      padding-bottom: 18px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 20px;
+      width: 34px;
+      border-radius: 999px;
+      background: var(--track);
+      box-shadow: inset 0 0 0 1px rgba(23, 19, 13, 0.1);
+    }
+
+    .timeline::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      bottom: 18px;
+      left: 36px;
+      width: 3px;
+      border-radius: 999px;
+      background: rgba(255, 250, 240, 0.86);
+    }
+
+    .event {
+      position: relative;
+      display: grid;
+      grid-template-columns: 90px minmax(0, 1fr);
+      gap: 18px;
+      min-height: 118px;
+    }
+
+    .rail {
+      position: relative;
+      z-index: 2;
+      width: 30px;
+      height: 30px;
+      margin: 22px 0 0 22px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      color: var(--paper-2);
+      background: var(--track);
+      box-shadow: 0 0 0 4px var(--paper), inset 0 0 0 1px rgba(255, 250, 240, 0.45);
+      font-size: 17px;
+      line-height: 1;
+    }
+
+    .rail::before { content: "✦"; transform: translateY(-1px); }
+
+    .event-card {
+      width: 100%;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      text-align: left;
+    }
+
+    .event-inner {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      padding: 14px 0 16px;
+      border-top: 2px solid var(--ink);
+      transition: transform 160ms ease, background 160ms ease, padding 160ms ease;
+    }
+
+    .event-card:hover .event-inner,
+    .event-card.active .event-inner {
+      padding-left: 13px;
+      padding-right: 13px;
+      background: var(--card);
+      transform: translateX(2px);
+    }
+
+    .year {
+      color: var(--red);
+      font-family: var(--condensed);
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .date {
+      display: block;
+      margin-top: 6px;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .event-type {
+      display: inline-flex;
+      margin-bottom: 7px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      padding: 3px 8px;
+      color: var(--ink);
+      background: var(--paper-2);
+      font-size: 10px;
+      font-weight: 820;
+    }
+
+    .event-card h3 {
+      margin: 0;
+      max-width: 740px;
+      font-family: var(--condensed);
+      font-size: clamp(20px, 2.2vw, 29px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .summary {
+      max-width: 700px;
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .event-card.active .summary {
+      max-width: 680px;
+      color: #4a4034;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .event-detail {
+      display: none;
+      grid-column: 2;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .event-card.active .event-detail { display: block; }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(188px, 232px);
+      gap: 42px;
+      align-items: start;
+    }
+
+    .detail-main {
+      display: grid;
+      gap: 0;
+      min-width: 0;
+    }
+
+    .detail-main .detail-label:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    .detail-label {
+      margin: 0 0 6px;
+      color: var(--red);
+      font-family: var(--condensed);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .detail-text {
+      margin: 0;
+      color: #332d24;
+      font-size: 13px;
+    }
+
+    .detail-text + .detail-text {
+      margin-top: 10px;
+    }
+
+    .learning-hint {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .subtimeline {
+      margin-top: 14px;
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+
+    .subtimeline-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      padding: 6px 10px;
+      color: var(--ink);
+      background: var(--paper-2);
+      font-size: 12px;
+      font-weight: 760;
+      transition: transform 150ms ease, background 150ms ease;
+    }
+
+    .subtimeline-toggle:hover {
+      background: rgba(255, 250, 240, 0.9);
+      transform: translateY(-1px);
+    }
+
+    .subtimeline-toggle::before {
+      content: "+";
+      width: 16px;
+      height: 16px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      color: var(--paper-2);
+      background: var(--track);
+      font-family: var(--mono);
+      font-size: 11px;
+      line-height: 1;
+    }
+
+    .subtimeline.open .subtimeline-toggle::before { content: "−"; }
+
+    .subtimeline-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .subtimeline-item {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      gap: 12px;
+      border-left: 3px solid var(--track);
+      padding: 0 0 0 12px;
+    }
+
+    .subtimeline-date {
+      color: var(--red);
+      font-family: var(--mono);
+      font-size: 10px;
+      line-height: 1.45;
+    }
+
+    .subtimeline-body h4 {
+      margin: 0;
+      font-family: var(--condensed);
+      font-size: 16px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .subtimeline-body p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .detail-links {
+      display: grid;
+      gap: 9px;
+    }
+
+    .detail-side {
+      border-left: 1px solid var(--line);
+      padding-left: 18px;
+    }
+
+    .event-actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 14px;
+    }
+
+    .collapse-event {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 9px;
+      color: var(--muted);
+      background: transparent;
+      font-size: 12px;
+    }
+
+    .collapse-event:hover {
+      border-color: var(--ink);
+      color: var(--ink);
+      background: var(--paper-2);
+    }
+
+    .term {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 10px 12px;
+      color: var(--muted);
+      background: rgba(255, 250, 240, 0.42);
+      font-size: 12px;
+      text-align: left;
+      transition: transform 150ms ease, border-color 150ms ease, background 150ms ease, box-shadow 150ms ease;
+    }
+
+    .term:hover,
+    .term.found {
+      border-color: rgba(0, 47, 167, 0.62);
+      color: var(--ink);
+      background: rgba(255, 250, 240, 0.86);
+      box-shadow: 4px 4px 0 rgba(0, 47, 167, 0.12);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .term strong {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      color: #332d24;
+      font-size: 12px;
+      font-weight: 560;
+      line-height: 1.3;
+    }
+
+    .term strong::after {
+      content: "打开 →";
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 680;
+      opacity: 0.58;
+      transition: color 150ms ease, opacity 150ms ease, transform 150ms ease;
+    }
+
+    .term:hover strong::after {
+      color: var(--track);
+      opacity: 1;
+      transform: translateX(2px);
+    }
+
+    .term span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      line-height: 1.3;
+    }
+
+    .term.review strong::after {
+      content: "  待审卡";
+      color: var(--red);
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .term.missing strong::after {
+      content: "";
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .empty,
+    .status {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .translate-mini {
+        position: static;
+        transform: none;
+      }
+      .filters {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 3px;
+      }
+      .search {
+        width: 218px;
+        flex: 0 0 auto;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .shell { width: min(100% - 20px, 1120px); }
+      .nav {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 10px 0;
+      }
+      .hero { padding-top: 28px; }
+      .stats { grid-template-columns: 1fr; }
+      .frontier-grid { grid-template-columns: 1fr; }
+      .frontier-card { border-right: 0; }
+      .stat { min-height: 58px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .stat:last-child { border-bottom: 0; }
+      .timeline-head { grid-template-columns: 54px minmax(0, 1fr); }
+      .timeline::before { left: 10px; width: 24px; }
+      .timeline::after { left: 21px; width: 2px; }
+      .event { grid-template-columns: 54px minmax(0, 1fr); gap: 8px; }
+      .rail { width: 24px; height: 24px; margin-left: 10px; font-size: 14px; }
+      .event-inner { grid-template-columns: 1fr; }
+      .event-card:hover .event-inner,
+      .event-card.active .event-inner {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .event-card h3 { font-size: 25px; }
+      .event-detail { grid-column: 1; }
+      .detail-grid { grid-template-columns: 1fr; }
+      .subtimeline-item { grid-template-columns: 1fr; gap: 4px; }
+      .detail-side {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
+        padding-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="shell nav">
+      <a class="brand" href="#" aria-label="AI 时间轴">
+        <span class="brand-mark">AI</span>
+        <span>AI 时间轴</span>
+      </a>
+      <div class="filters" aria-label="筛选时间轴">
+        <button class="chip active" type="button" data-filter="全部">全部</button>
+        <button class="chip" type="button" data-filter="foundational">底层突破</button>
+        <button class="chip" type="button" data-filter="model">模型路线</button>
+        <button class="chip" type="button" data-filter="product">产品爆发</button>
+        <button class="chip" type="button" data-filter="ecosystem">生态扩散</button>
+        <button class="chip" type="button" data-filter="safety">安全治理</button>
+        <button class="chip" type="button" data-filter="culture">文化影响</button>
+        <input class="search" id="search" type="search" placeholder="搜索年份、事件、概念">
+        <span class="translate-mini" aria-label="辅助翻译">
+          <button type="button" id="translate-zh" title="回到中文">CH</button>
+          <button type="button" id="translate-en" title="使用 Google Translate 临时翻译成英文">EN</button>
+          <span id="google_translate_element" aria-hidden="true"></span>
+        </span>
+      </div>
+    </nav>
+  </header>
+
+  <section class="shell hero">
+    <div class="kicker">Chronology</div>
+    <div class="hero-grid">
+      <div>
+        <h1>AI 编年史</h1>
+        <p class="lead">这是一份开放的 AI 历史年表：75 个精选节点覆盖 1936 至今，并连接到配套 AI 词典。</p>
+      </div>
+      <aside class="ledger" aria-label="时间轴统计">
+        <div class="ledger-title">
+          <span>Index</span>
+          <span id="date-range"></span>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong id="event-count">--</strong><span>历史节点</span></div>
+          <div class="stat"><strong id="term-count">--</strong><span>词典连接</span></div>
+          <div class="stat"><strong id="match-count">--</strong><span>当前显示</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <main class="shell main-grid">
+    <section class="timeline-wrap">
+      <div class="timeline-head">
+        <strong>Line</strong>
+        <span>点击年份节点后，可了解相关事件和词典入口。</span>
+      </div>
+      <div class="timeline" id="timeline" aria-label="AI 发展时间轴">
+        <p class="status">正在读取 AI 大事记数据。</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    window.googleTranslateElementInit = function() {
+      if (!window.google || !window.google.translate) return;
+      new google.translate.TranslateElement({
+        pageLanguage: "zh-CN",
+        includedLanguages: "en,zh-CN",
+        autoDisplay: false
+      }, "google_translate_element");
+    };
+
+    function setTranslateCookie(value) {
+      const expires = "expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      document.cookie = `googtrans=; ${expires}; path=/`;
+      document.cookie = `googtrans=; ${expires}; domain=${location.hostname}; path=/`;
+      if (value) {
+        document.cookie = `googtrans=${value}; path=/`;
+      }
+    }
+
+    function loadGoogleTranslate() {
+      if (document.querySelector("script[data-google-translate]")) return;
+      const script = document.createElement("script");
+      script.dataset.googleTranslate = "true";
+      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      document.head.appendChild(script);
+    }
+
+    function chooseGoogleLanguage(language) {
+      loadGoogleTranslate();
+      let attempts = 0;
+      const timer = window.setInterval(() => {
+        const select = document.querySelector(".goog-te-combo");
+        attempts += 1;
+        if (!select && attempts < 24) return;
+        window.clearInterval(timer);
+        if (!select) return;
+        select.value = language;
+        select.dispatchEvent(new Event("change"));
+      }, 250);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("translate-en")?.addEventListener("click", () => {
+        setTranslateCookie("/zh-CN/en");
+        chooseGoogleLanguage("en");
+      });
+      document.getElementById("translate-zh")?.addEventListener("click", () => {
+        setTranslateCookie("");
+        location.reload();
+      });
+    });
+
+    const TYPE_LABELS = {
+      foundational: "底层突破",
+      model: "模型路线",
+      product: "产品爆发",
+      ecosystem: "生态扩散",
+      industry: "产业化",
+      compute: "算力基础",
+      policy: "治理政策",
+      safety: "安全治理",
+      data: "数据基础",
+      dataset: "数据基础",
+      breakthrough: "重大突破",
+      concept: "概念转折",
+      interface: "交互入口",
+      risk: "风险治理",
+      theme: "主题转折",
+      governance: "治理政策",
+      robotics: "机器人",
+      infrastructure: "基础设施",
+      culture: "文化影响"
+    };
+
+    const FILTER_GROUPS = {
+      foundational: new Set(["foundational", "compute", "breakthrough"]),
+      model: new Set(["model", "concept"]),
+      product: new Set(["product", "industry"]),
+      ecosystem: new Set(["ecosystem", "data", "dataset", "infrastructure"]),
+      safety: new Set(["safety", "risk", "governance", "policy"]),
+      culture: new Set(["culture", "interface", "robotics", "theme"])
+    };
+
+    const state = {
+      events: [],
+      terms: [],
+      reviewTerms: [],
+      filter: "全部",
+      keyword: "",
+      active: -1,
+      openProductLines: new Set()
+    };
+
+    function escapeHTML(value) {
+      return String(value || "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      }[char]));
+    }
+
+    async function loadJSON(path) {
+      const response = await fetch(`${path}?t=${Date.now()}`);
+      if (!response.ok) throw new Error(`无法读取 ${path}`);
+      return response.json();
+    }
+
+    function normalizeEvent(event, index) {
+      const relatedTerms = Array.isArray(event.related_terms) ? event.related_terms.filter(Boolean) : [];
+      const sections = splitStorySections(event.summary_zh || "");
+      const date = String(event.date || event.year || "");
+      const year = String(event.year || "").replace(/\.0$/, "");
+      const subtimeline = Array.isArray(event.subtimeline) ? event.subtimeline.map(item => ({
+        date: String(item.date || ""),
+        title: item.title_zh || item.title_en || "",
+        titleEn: item.title_en || "",
+        productLine: item.product_line || "",
+        eventType: item.event_type || "",
+        summary: item.summary_zh || "",
+        why: item.why_it_matters_zh || "",
+        tags: Array.isArray(item.capability_tags) ? item.capability_tags.filter(Boolean) : [],
+        sourceName: item.source_name || "",
+        sourceUrl: item.source_url || ""
+      })) : [];
+      return {
+        index,
+        date,
+        displayDate: date && date !== year ? date : "",
+        year,
+        title: event.title_zh || event.title_en || "",
+        titleEn: event.title_en || "",
+        type: event.type || "foundational",
+        label: TYPE_LABELS[event.type] || event.type || "历史节点",
+        summary: makeEventDeck(event, sections),
+        what: sections.what,
+        story: event.behind_scenes_zh || sections.story,
+        why: event.why_it_matters_zh || "",
+        terms: relatedTerms,
+        missingTerms: Array.isArray(event.missing_terms) ? event.missing_terms.filter(Boolean) : [],
+        tags: Array.isArray(event.tags) ? event.tags.filter(Boolean) : [],
+        hint: event.learning_path_hint || "",
+        sourceName: event.source_name || "",
+        sourceUrl: event.source_url || "",
+        confidence: event.confidence || "",
+        importance: Number(event.importance || 3),
+        subtimeline
+      };
+    }
+
+    function splitStorySections(text) {
+      const raw = String(text || "").trim();
+      const result = { lead: raw, what: "", story: "" };
+      if (!/(节点|这是什么)：/.test(raw) && !/背后(现场|故事)：/.test(raw)) return result;
+      const whatMatch = raw.match(/(?:(?:节点|这是什么)：)?([\s\S]*?)(?=背后(?:现场|故事)：|$)/);
+      const storyMatch = raw.match(/背后(?:现场|故事)：([\s\S]*)/);
+      result.what = whatMatch ? whatMatch[1].trim() : "";
+      result.story = storyMatch ? storyMatch[1].trim() : "";
+      result.lead = result.what || raw;
+      return result;
+    }
+
+    function normalizeWhitespace(text) {
+      return String(text || "").replace(/\s+/g, " ").trim();
+    }
+
+    function firstReadableSentence(text) {
+      const clean = normalizeWhitespace(cleanWhy(text).replace(/^(节点|这是什么)：/, "").replace(/^背后(现场|故事)：/, ""));
+      const stripped = clean
+        .replace(/学习者能先看到[^。！？；]*[。！？；]?/g, "")
+        .replace(/先看「[^」]+」/g, "")
+        .replace(/先看“[^”]+”/g, "")
+        .replace(/先看『[^』]+』/g, "")
+        .replace(/先看[^。！？；]*再/g, "再")
+        .replace(/把时间轴先给出[^。！？；]*[。！？；]?/g, "")
+        .trim();
+      const match = stripped.match(/^(.{18,88}?[。！？；]|.{18,88}?\.)/);
+      return match ? match[1].trim() : stripped.slice(0, 88).trim();
+    }
+
+    function makeEventDeck(event, sections) {
+      const lead = firstReadableSentence(sections.lead || event.summary_zh || "");
+      return lead || firstReadableSentence(event.why_it_matters_zh || "") || firstReadableSentence(sections.story || "") || firstReadableSentence(sections.what || event.summary_zh || "") || "";
+    }
+
+    function cleanWhy(text) {
+      return String(text || "").replace(/^(为何重要|为什么重要)：/, "").trim();
+    }
+
+    function timelineDateKey(event) {
+      const raw = String(event.date || event.year || "");
+      if (/^\d{4}$/.test(raw)) return `${raw}-01-01`;
+      if (/^\d{4}-\d{2}$/.test(raw)) return `${raw}-01`;
+      if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
+      return "9999-12-31";
+    }
+
+    async function loadTimeline() {
+      const data = await loadJSON("ai-timeline-public.json");
+      const rawEvents = Array.isArray(data.events) && data.events.length ? data.events : (data.timeline || []);
+      return rawEvents.map(normalizeEvent).sort((a, b) => timelineDateKey(a).localeCompare(timelineDateKey(b)));
+    }
+
+    async function loadDictionary() {
+      try {
+        const data = await loadJSON("ai-dictionary.json");
+        return (data.terms || []).filter(term => term && term.term);
+      } catch (error) {
+        return [];
+      }
+    }
+
+    async function loadReviewTerms() {
+      try {
+        const data = await loadJSON("ai-dictionary-expansion-review-draft.json");
+        return (data.items || []).filter(term => term && term.term);
+      } catch (error) {
+        return [];
+      }
+    }
+
+    function findInList(list, label) {
+      const needle = String(label || "").toLowerCase();
+      return list.find(term => {
+        const name = String(term.term || "").toLowerCase();
+        const aliases = Array.isArray(term.aliases) ? term.aliases : [];
+        return name === needle || aliases.some(alias => String(alias).toLowerCase() === needle);
+      });
+    }
+
+    function findTerm(label) {
+      return findInList(state.terms, label);
+    }
+
+    function findReviewTerm(label) {
+      return findInList(state.reviewTerms, label);
+    }
+
+    const GENERIC_LEARNING_TERMS = new Set([
+      "AGI",
+      "Benchmark",
+      "AI Agent",
+      "Prompt",
+      "Training",
+      "Pretraining",
+      "Fine-tuning",
+      "监督学习",
+      "自监督学习",
+      "强化学习",
+      "RAG",
+      "Memory",
+      "Guardrail",
+      "Safety Policy",
+      "Latency",
+      "Token",
+      "LLM"
+    ]);
+
+    function compactSourceName(name) {
+      const clean = String(name || "").trim();
+      if (!clean) return "";
+      return clean
+        .replace(/\s+-\s+.*$/, "")
+        .replace(/^The\s+/i, "")
+        .replace(/\s{2,}/g, " ")
+        .slice(0, 34);
+    }
+
+    function eventKeyTerms(event, limit = 3) {
+      const uniqueTerms = [...event.missingTerms, ...event.terms]
+        .filter(Boolean)
+        .filter((term, index, arr) => arr.indexOf(term) === index);
+      const specificTerms = uniqueTerms.filter(term => !GENERIC_LEARNING_TERMS.has(term));
+      return (specificTerms.length ? specificTerms : uniqueTerms).slice(0, limit);
+    }
+
+    function eventVisible(event) {
+      const filterTypes = FILTER_GROUPS[state.filter];
+      const filterMatch = state.filter === "全部" || event.type === state.filter || filterTypes?.has(event.type);
+      const keyword = state.keyword.trim().toLowerCase();
+      const haystack = [
+        event.date,
+        event.year,
+        event.title,
+        event.titleEn,
+        event.summary,
+        event.why,
+        event.label,
+        event.hint,
+        ...event.subtimeline.flatMap(item => [item.date, item.title, item.titleEn, item.productLine, item.summary, item.why, ...item.tags]),
+        ...event.terms,
+        ...event.missingTerms
+      ].join(" ").toLowerCase();
+      return filterMatch && (!keyword || haystack.includes(keyword));
+    }
+
+    function visibleEvents() {
+      const keyword = state.keyword.trim().toLowerCase();
+      const list = state.events.filter(eventVisible);
+      if (!keyword) return list;
+      return list.sort((a, b) => searchRank(a, keyword) - searchRank(b, keyword));
+    }
+
+    function searchRank(event, keyword) {
+      const title = [event.title, event.titleEn].join(" ").toLowerCase();
+      const terms = [...event.terms, ...event.missingTerms].join(" ").toLowerCase();
+      const summary = [event.summary, event.why, event.hint].join(" ").toLowerCase();
+      if (title.includes(keyword)) return 0;
+      if (terms.split(/\s+/).includes(keyword)) return 1;
+      if (terms.includes(keyword)) return 2;
+      if (summary.includes(keyword)) return 3;
+      return 4;
+    }
+
+
+    function renderStats() {
+      const visible = visibleEvents();
+      const allTerms = new Set();
+      state.events.forEach(event => event.terms.forEach(term => allTerms.add(term)));
+      document.getElementById("event-count").textContent = state.events.length;
+      document.getElementById("term-count").textContent = allTerms.size;
+      document.getElementById("match-count").textContent = visible.length;
+      if (state.events.length) {
+        const first = state.events[0].year;
+        const last = state.events[state.events.length - 1].year;
+        document.getElementById("date-range").textContent = `${first} — ${last}`;
+      }
+    }
+
+    function renderTerms(event) {
+      const terms = eventKeyTerms(event, 3);
+      if (!terms.length) return `<span class="empty">这个节点暂时没有词典连接。</span>`;
+      return terms.map(term => {
+        const matched = findTerm(term);
+        const review = matched ? null : findReviewTerm(term);
+        const label = matched || review;
+        const title = label?.term_zh && label.term_zh !== term ? `${label.term_zh}（${term}）` : term;
+        const subtitle = matched ? "" : review ? "待审卡，先保留为学习线索。" : "";
+        const className = matched ? "found" : review ? "review" : "missing";
+        const attr = matched ? `data-term="${escapeHTML(term)}"` : review ? `data-review-term="${escapeHTML(term)}"` : "";
+        return `<button class="term ${className}" type="button" ${attr}><strong>${escapeHTML(title)}</strong>${subtitle ? `<span>${escapeHTML(subtitle)}</span>` : ""}</button>`;
+      }).join("");
+    }
+
+    function renderSubtimeline(event) {
+      if (!event.subtimeline.length) return "";
+      const isOpen = state.openProductLines.has(event.index);
+      const label = isOpen ? "收起产品线" : `展开产品线（${event.subtimeline.length}）`;
+      const list = isOpen ? `
+        <div class="subtimeline-list">
+          ${event.subtimeline.map(item => `
+            <section class="subtimeline-item">
+              <div class="subtimeline-date">${escapeHTML(item.date)}</div>
+              <div class="subtimeline-body">
+                <h4>${escapeHTML(item.title)}</h4>
+                <p>${escapeHTML(item.summary)}</p>
+                ${item.why ? `<p>${escapeHTML(item.why)}</p>` : ""}
+              </div>
+            </section>
+          `).join("")}
+        </div>
+      ` : "";
+      return `
+        <div class="subtimeline ${isOpen ? "open" : ""}">
+          <button class="subtimeline-toggle" type="button" data-subtimeline="${event.index}">${escapeHTML(label)}</button>
+          ${list}
+        </div>
+      `;
+    }
+
+    function renderDetailBlock(label, text) {
+      const paragraphs = String(text || "")
+        .split(/\n{2,}/)
+        .map(paragraph => paragraph.trim())
+        .filter(Boolean);
+      if (!paragraphs.length) return "";
+      return `
+        ${label ? `<p class="detail-label">${escapeHTML(label)}</p>` : ""}
+        ${paragraphs.map(paragraph => `<p class="detail-text">${escapeHTML(paragraph)}</p>`).join("")}
+      `;
+    }
+
+    function renderTimeline() {
+      const list = visibleEvents();
+      if (state.keyword.trim() && list.length && state.active === -1) {
+        state.active = list[0].index;
+      }
+      if (state.active !== -1 && !list.some(event => event.index === state.active)) {
+        const chatGPT = list.find(event => event.date === "2022-11-30");
+        state.active = (chatGPT || list[0] || { index: -1 }).index;
+      }
+
+      document.getElementById("timeline").innerHTML = list.map(event => `
+        <article class="event">
+          <div class="rail" aria-hidden="true"></div>
+          <article class="event-card ${event.index === state.active ? "active" : ""}" tabindex="0" data-index="${event.index}">
+            <div class="event-inner">
+              <div>
+                <span class="year">${escapeHTML(event.year)}</span>
+                ${event.displayDate ? `<span class="date">${escapeHTML(event.displayDate)}</span>` : ""}
+              </div>
+              <div>
+                <span class="event-type">${escapeHTML(event.label)}</span>
+                <h3>${escapeHTML(event.title)}</h3>
+                <p class="summary">${escapeHTML(event.summary)}</p>
+                <div class="event-detail">
+		                  <div class="detail-grid">
+		                    <div class="detail-main">
+		                      ${renderDetailBlock("背后现场", event.story)}
+		                      ${renderDetailBlock("为何重要", cleanWhy(event.why))}
+		                      ${renderSubtimeline(event)}
+                    </div>
+                    <div class="detail-side">
+                      <p class="detail-label">继续学习</p>
+                      <div class="detail-links">${renderTerms(event)}</div>
+                    </div>
+                  </div>
+                  <div class="event-actions">
+                    <button class="collapse-event" type="button" data-collapse="${event.index}">收起</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </article>
+      `).join("") || `<p class="empty">没有匹配的历史节点。</p>`;
+
+      document.querySelectorAll(".event-card").forEach(card => {
+        card.addEventListener("click", () => {
+          state.active = Number(card.dataset.index);
+          renderAll();
+        });
+        card.addEventListener("keydown", event => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            state.active = Number(card.dataset.index);
+            renderAll();
+          }
+        });
+      });
+
+      document.querySelectorAll("[data-term]").forEach(button => {
+        button.addEventListener("click", event => {
+          event.stopPropagation();
+          const term = findTerm(button.dataset.term);
+          if (term) window.location.href = `https://gengyueworks.github.io/ai-dictionary/ai-dictionary-lab.html?term=${encodeURIComponent(term.term)}&from=timeline`;
+        });
+      });
+
+      document.querySelectorAll("[data-review-term]").forEach(button => {
+        button.addEventListener("click", event => {
+          event.stopPropagation();
+        });
+      });
+
+      document.querySelectorAll("[data-subtimeline]").forEach(button => {
+        button.addEventListener("click", event => {
+          event.stopPropagation();
+          const index = Number(button.dataset.subtimeline);
+          if (state.openProductLines.has(index)) {
+            state.openProductLines.delete(index);
+          } else {
+            state.openProductLines.add(index);
+          }
+          renderAll();
+        });
+      });
+
+      document.querySelectorAll("[data-collapse]").forEach(button => {
+        button.addEventListener("click", event => {
+          event.stopPropagation();
+          state.active = -1;
+          renderAll();
+        });
+      });
+    }
+
+    function renderAll() {
+      renderStats();
+      renderTimeline();
+    }
+
+    function bindEvents() {
+      document.querySelectorAll("[data-filter]").forEach(button => {
+        button.addEventListener("click", () => {
+          state.filter = button.dataset.filter;
+          document.querySelectorAll("[data-filter]").forEach(item => item.classList.toggle("active", item === button));
+          renderAll();
+        });
+      });
+      document.getElementById("search").addEventListener("input", event => {
+        state.keyword = event.target.value;
+        state.active = -1;
+        renderAll();
+      });
+    }
+
+    async function main() {
+      bindEvents();
+      try {
+        const [timeline, dictionary, reviewTerms] = await Promise.all([loadTimeline(), loadDictionary(), loadReviewTerms()]);
+        state.events = timeline;
+        state.terms = dictionary;
+        state.reviewTerms = reviewTerms;
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get("q") || params.get("search") || "";
+        if (query.trim()) {
+          state.keyword = query.trim();
+          document.getElementById("search").value = state.keyword;
+          state.active = -1;
+        }
+        renderAll();
+      } catch (error) {
+        document.getElementById("timeline").innerHTML = `<p class="empty">时间轴数据读取失败，请检查 ai-timeline-public.json。</p>`;
+      }
+    }
+
+    main();
+  </script>
+</body>
+</html>

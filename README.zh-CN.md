@@ -2,6 +2,10 @@
 
 [English](./README.md) · **简体中文**
 
+[![校验](https://github.com/gengyueworks/ai-timeline/actions/workflows/validate-data.yml/badge.svg)](https://github.com/gengyueworks/ai-timeline/actions/workflows/validate-data.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![数据: CC BY-NC 4.0](https://img.shields.io/badge/Dataset-CC%20BY--NC%204.0-orange.svg)](./LICENSE-DATA)
+
 一份有来源依据的双语 AI 编年史，从计算理论起点记录到今天的模型、产品与 Agent。
 
 **在线访问：** https://gengyueworks.github.io/ai-timeline/

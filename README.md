@@ -2,6 +2,10 @@
 
 **English** · [简体中文](./README.zh-CN.md)
 
+[![Validate](https://github.com/gengyueworks/ai-timeline/actions/workflows/validate-data.yml/badge.svg)](https://github.com/gengyueworks/ai-timeline/actions/workflows/validate-data.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![Dataset: CC BY-NC 4.0](https://img.shields.io/badge/Dataset-CC%20BY--NC%204.0-orange.svg)](./LICENSE-DATA)
+
 A source-backed, bilingual chronology of artificial intelligence—from the theoretical foundations of computation to modern models and agents.
 
 **Live demo:** https://gengyueworks.github.io/ai-timeline/

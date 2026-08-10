@@ -7,11 +7,11 @@ d=json.loads(p.read_text(encoding="utf-8"))
 events=d.get("events",[])
 errors=[]
 if d.get("public_event_count") != len(events): errors.append("public_event_count does not match events length")
-if len(events) < 60 or len(events) > 80: errors.append("public dataset must contain 60–80 events")
+if len(events) != 99: errors.append("public dataset must contain exactly 99 events")
 seen=set(); previous=""
 for i,e in enumerate(events):
     label=f"event[{i}]"
-    required=["id","year","date","date_precision","title_zh","title_en","type","importance","confidence","summary_zh","source_name","source_url","related_terms"]
+    required=["id","year","date","date_precision","title_zh","title_en","type","importance","confidence","summary_zh","source_name","source_url","related_terms","card_summary_zh"]
     for key in required:
         if key not in e or e[key] in (None,""): errors.append(f"{label}: missing {key}")
     extra=set(e)-set(required)
@@ -24,6 +24,9 @@ for i,e in enumerate(events):
     sig=(date,e.get("title_zh"))
     if sig in seen: errors.append(f"{label}: duplicate event")
     seen.add(sig)
+    card=str(e.get("card_summary_zh",""))
+    if not 20<=len(card)<=98: errors.append(f"{label}: card_summary_zh length must be 20–98")
+    if card.endswith(("…","，","；","：")): errors.append(f"{label}: card summary is truncated")
     if not isinstance(e.get("related_terms"),list) or len(e.get("related_terms",[]))>3: errors.append(f"{label}: related_terms must be an array of at most 3 terms")
     if not str(e.get("source_url","")).startswith(("http://","https://")): errors.append(f"{label}: source_url must be public")
     if e.get("confidence") not in {"high","medium","low"}: errors.append(f"{label}: invalid confidence")

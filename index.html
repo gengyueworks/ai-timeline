@@ -763,7 +763,7 @@
     <div class="hero-grid">
       <div>
         <h1>AI 编年史</h1>
-        <p class="lead">这是一份开放的 AI 历史年表：75 个精选节点覆盖 1936 至今，并连接到配套 AI 词典。</p>
+        <p class="lead">这是一份开放的 AI 历史年表：99 个精选节点覆盖 1936 至今，并连接到配套 AI 词典。</p>
       </div>
       <aside class="ledger" aria-label="时间轴统计">
         <div class="ledger-title">
@@ -974,6 +974,8 @@
     }
 
     function makeEventDeck(event, sections) {
+      const curated = String(event.card_summary_zh || "").trim();
+      if (curated) return curated;
       const lead = firstReadableSentence(sections.lead || event.summary_zh || "");
       return lead || firstReadableSentence(event.why_it_matters_zh || "") || firstReadableSentence(sections.story || "") || firstReadableSentence(sections.what || event.summary_zh || "") || "";
     }

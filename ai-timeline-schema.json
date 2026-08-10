@@ -54,7 +54,8 @@
         "summary_zh",
         "source_name",
         "source_url",
-        "related_terms"
+        "related_terms",
+        "card_summary_zh"
       ],
       "properties": {
         "id": {
@@ -122,6 +123,12 @@
             "minLength": 1
           },
           "description": "Minimal term slugs used only to link timeline events to the companion dictionary."
+        },
+        "card_summary_zh": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 98,
+          "description": "Curated one-sentence card preview: what happened + why it matters."
         }
       }
     }

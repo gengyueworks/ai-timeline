@@ -28,3 +28,5 @@ __pycache__/
 # Local previews and exports
 preview*.png
 *.zip
+
+ai-timeline-data-with-card-summaries.json

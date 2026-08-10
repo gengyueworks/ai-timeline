@@ -32,8 +32,7 @@
     "图灵",
     "计算理论",
     "图灵机"
-   ],
-   "learning_path_hint": "配合「可计算数」词典卡和图灵的「智能机器」1948 报告一起看。"
+   ]
   },
   {
    "id": "ai-002",
@@ -2675,62 +2674,32 @@
   {
    "id": "ai-090",
    "year": 2026,
-   "date": "2026",
-   "date_precision": "year",
-   "title_zh": "聊天转向工作流自动化",
-   "title_en": "Shift to Workflow Automation",
-   "type": "industry",
-   "importance": 4,
-   "confidence": "medium",
-   "card_summary_zh": "AI 产品的中心正从“陪你聊天”转向“替你完成一串任务”，模型、工具和权限被编排成连续工作流。",
-   "summary_zh": "到 2026 年，行业重点从单轮聊天转向能调用工具、读写文件、浏览网页、执行多步任务的工作流系统。 用户开始关心模型能不能接住一个真实任务：读资料、做计划、用工具、留记录、遇到问题再回来确认。 这条线把 Deep Research、Codex、Claude Code、Hermes、OpenClaw 等产品和社区线索放到同一张图里：AI 正在从聊天框，走向可执行的工作流。",
-   "source_name": "Current frontier AI product direction",
-   "source_url": "https://openai.com/",
+   "date": "2026-04-16",
+   "date_precision": "day",
+   "title_zh": "Codex for (almost) everything：从编程代理扩展到完整工作流",
+   "title_en": "Codex for (Almost) Everything Expands Beyond Coding",
+   "type": "product",
+   "importance": 5,
+   "confidence": "high",
+   "card_summary_zh": "Codex 获得电脑操作、记忆和跨工具插件能力，从代码助手扩展为覆盖完整软件生命周期的通用工作代理。",
+   "summary_zh": "OpenAI 发布 Codex 重大更新，使其可以操作电脑、连接更多应用与工具、生成图像、记住偏好，并处理持续和可重复的工作。Codex 同时加强了代码审查、多文件与终端、SSH 远程开发环境和内置浏览器等软件开发流程。",
+   "source_name": "OpenAI",
+   "source_url": "https://openai.com/index/codex-for-almost-everything/",
    "related_terms": [
-    "agentic-workflow",
-    "workflow",
-    "openclaw"
+    "codex",
+    "agent",
+    "computer-use"
    ],
-   "why_it_matters_zh": "评估 AI 的标准开始从回答质量转向执行成功率、延迟、成本、权限边界和可审计性。",
+   "behind_scenes_zh": "这次更新把电脑操作、记忆、应用连接与开发工作台整合到同一个代理界面中。",
+   "why_it_matters_zh": "Codex 不再只负责生成代码，而是开始覆盖从理解需求、操作工具、验证结果到持续执行的完整工作流。",
    "tags": [
-    "2026",
-    "生态扩散",
-    "Anthropic",
-    "AI Agent",
-    "Agentic Workflow",
-    "Workflow"
+    "OpenAI",
+    "Codex",
+    "Agent"
    ]
   },
   {
    "id": "ai-091",
-   "year": 2026,
-   "date": "2026-02",
-   "date_precision": "month",
-   "title_zh": "OpenClaw 进入开源个人 Agent 线索",
-   "title_en": "OpenClaw enters the open personal-agent track",
-   "type": "industry",
-   "importance": 4,
-   "confidence": "medium",
-   "card_summary_zh": "开源个人 Agent 开始连接文件、浏览器与本地工具，私人工作流不必完全依赖封闭平台。",
-   "summary_zh": "OpenClaw 把个人 Agent 从聊天框推进到工作台。以前你问一句，AI 回一句； 答案有用，最后还是你自己开网页、翻文件、接消息、跑流程。龙虾之后，Agent 开始有手有脚。它可以接消息入口，可以看你的电脑，可以连浏览器、文件、脚本和工具，把“我给你一个答案”推进到“我替你把这件事往前做”。",
-   "source_name": "用户下载材料与本地快讯",
-   "source_url": "https://zhuanlan.zhihu.com/p/2022610828315083104",
-   "related_terms": [
-    "agent",
-    "openclaw",
-    "tool-calling"
-   ],
-   "why_it_matters_zh": "OpenClaw 把个人 Agent 的关键变化说得很直白：AI 不能只会聊天，还要能接消息、看电脑、连工具、跑流程。\n谁能把这套手脚接到个人工作台上，谁就可能改变普通人使用 AI 的方式。",
-   "tags": [
-    "2026",
-    "生态扩散",
-    "开源",
-    "Agent",
-    "个人工作流"
-   ]
-  },
-  {
-   "id": "ai-092",
    "year": 2026,
    "date": "2026-05-19",
    "date_precision": "day",
@@ -2760,31 +2729,59 @@
    ]
   },
   {
+   "id": "ai-092",
+   "year": 2026,
+   "date": "2026-06-16",
+   "date_precision": "day",
+   "title_zh": "智谱 GLM-5.2 发布：开放模型强化长程 Agent 任务",
+   "title_en": "Z.ai Releases GLM-5.2 for Long-Horizon Agentic Work",
+   "type": "model",
+   "importance": 5,
+   "confidence": "high",
+   "card_summary_zh": "智谱 GLM-5.2 以百万上下文强化长程编码与 Agent 任务，中国开放模型在持续执行能力上补齐关键一环。",
+   "summary_zh": "智谱旗下 Z.ai 发布 GLM-5.2，面向长程任务提供 100 万 token 上下文，并加强复杂软件工程、编码调试、终端自动化和多轮持续执行能力。模型权重与相关部署资料通过 Hugging Face 和 GitHub 开放。",
+   "source_name": "Z.ai",
+   "source_url": "https://z.ai/blog/glm-5.2",
+   "related_terms": [
+    "glm",
+    "zhipu-ai",
+    "agent"
+   ],
+   "behind_scenes_zh": "GLM-5.2 将长上下文稳定性、编码能力和持续任务执行放在同一条产品主线上。",
+   "why_it_matters_zh": "GLM-5.2 代表中国开放模型竞争从单轮基准能力进一步走向长上下文、工程执行和 Agent 工作流。",
+   "tags": [
+    "智谱",
+    "GLM",
+    "开放模型",
+    "Agent"
+   ]
+  },
+  {
    "id": "ai-093",
    "year": 2026,
    "date": "2026-06-30",
    "date_precision": "day",
-   "title_zh": "Claude Sonnet 5 发布：Agent 工作流进入更低成本区间",
-   "title_en": "Claude Sonnet 5 Released for Agentic Workflows",
+   "title_zh": "美团发布并开源 LongCat-2.0",
+   "title_en": "Meituan Releases and Open-Sources LongCat-2.0",
    "type": "model",
    "importance": 4,
    "confidence": "high",
-   "card_summary_zh": "Sonnet 5 把规划、终端和浏览器操作下放到更低成本层级，持续运行 Agent 不再只能依赖最贵模型。",
-   "summary_zh": "Anthropic 发布 Claude Sonnet 5，强调其规划、工具调用和自主执行能力。模型面向 Claude、Claude Code 与 Claude Platform 提供，首发优惠价格为每百万输入 token 2 美元、输出 token 10 美元。",
-   "source_name": "Anthropic",
-   "source_url": "https://www.anthropic.com/news/claude-sonnet-5",
+   "card_summary_zh": "LongCat-2.0 在国产五万卡集群上完成万亿参数训练并开放权重，展示了另一套前沿模型基础设施路径。",
+   "summary_zh": "美团发布 LongCat-2.0：总参数 1.6T、平均激活约 48B，原生支持 1M 上下文，并宣布对外开源。官方称其全流程训练与推理运行在五万卡国产算力集群上，重点面向 Agentic Coding。",
+   "source_name": "美团技术团队",
+   "source_url": "https://tech.meituan.com/2026/06/30/LongCat2.0.html",
    "related_terms": [
-    "anthropic",
-    "claude",
-    "agent"
+    "meituan",
+    "longcat",
+    "agentic-coding"
    ],
-   "behind_scenes_zh": "这次发布的重点不只是基准分数，而是把原本需要更大模型完成的 Agent 工作流下放到 Sonnet 级别，让持续运行的代码、浏览器和终端任务更容易控制成本。",
-   "why_it_matters_zh": "前沿模型竞争开始从单纯追求最高能力，转向能力、成本与可持续运行之间的平衡。",
+   "behind_scenes_zh": "LongCat-2.0 将模型架构、国产算力集群和代码 Agent 场景放在同一工程体系中，展示了超大规模稀疏模型在非 NVIDIA 训练基础设施上的实践。",
+   "why_it_matters_zh": "它既是开放模型事件，也是中国大规模 AI 基础设施工程能力的一次公开展示。",
    "tags": [
-    "Claude",
-    "Anthropic",
-    "Agent",
-    "模型发布"
+    "美团",
+    "LongCat",
+    "开源",
+    "国产算力"
    ]
   },
   {
@@ -2908,8 +2905,8 @@
    "confidence": "high",
    "card_summary_zh": "新版 MCP 转向无状态核心并强化授权，让 Agent 连接外部工具的开放协议更适合大规模生产部署。",
    "summary_zh": "Model Context Protocol 发布第五版规范，核心传输转向无状态设计，同时强化授权机制，并推动官方扩展进入稳定阶段。Anthropic 同日宣布在 Claude 产品中支持新版规范。",
-   "source_name": "Model Context Protocol / Anthropic",
-   "source_url": "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
+   "source_name": "Model Context Protocol",
+   "source_url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
    "related_terms": [
     "mcp",
     "agent",
@@ -2926,28 +2923,28 @@
   {
    "id": "ai-099",
    "year": 2026,
-   "date": "2026-08-06",
+   "date": "2026-07-31",
    "date_precision": "day",
-   "title_zh": "Claude Code 支持在企业自有基础设施运行云端会话",
-   "title_en": "Claude Code Adds Self-Hosted Cloud Session Environments",
-   "type": "product",
+   "title_zh": "DeepSeek-V4-Flash-0731 更新开放权重模型",
+   "title_en": "DeepSeek Updates Its Open-Weights V4 Flash Model",
+   "type": "model",
    "importance": 4,
    "confidence": "high",
-   "card_summary_zh": "Claude Code 可以把云端编码任务路由到企业自有计算环境，Agent 开始进入可控、可审计的生产基础设施。",
-   "summary_zh": "Anthropic 推出 Claude Code 自托管环境公测，允许团队把云端编码会话路由到自己管理的计算基础设施。",
-   "source_name": "Anthropic / Claude",
-   "source_url": "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute",
+   "card_summary_zh": "DeepSeek 继续以开放权重快速迭代 V4 Flash，前沿模型的更新节奏正在接近持续交付的软件产品。",
+   "summary_zh": "DeepSeek 更新 V4 Flash 开放权重模型。Hugging Face 官方集合显示 DeepSeek-V4-Flash-0731 已发布，模型规模约 304B 参数。",
+   "source_name": "DeepSeek / Hugging Face",
+   "source_url": "https://huggingface.co/collections/deepseek-ai/deepseek-v4",
    "related_terms": [
-    "claude-code",
-    "agent",
-    "self-hosted"
+    "deepseek",
+    "open-weights",
+    "moe"
    ],
-   "behind_scenes_zh": "企业可以自行控制网络出口、运行环境与隔离策略，同时保留云端 Agent 的异步工作方式。",
-   "why_it_matters_zh": "编码 Agent 正从个人开发工具进入可由企业基础设施和安全策略管理的生产环境。",
+   "behind_scenes_zh": "这次更新延续了 DeepSeek 通过公开权重和模型集合快速迭代的路线，也方便开发者直接跟踪版本变化。",
+   "why_it_matters_zh": "开放权重模型的持续迭代，让研究者和开发者能够自行评估、部署并改进前沿模型。",
    "tags": [
-    "Claude Code",
-    "自托管",
-    "企业 AI"
+    "DeepSeek",
+    "V4",
+    "开放权重"
    ]
   }
  ]

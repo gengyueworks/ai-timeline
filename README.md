@@ -18,6 +18,8 @@ I love AI, but what draws me most is the feeling of exploration: following one i
 
 The value of the project is therefore not simply that it collects dates. It turns a stream of papers, models, products, infrastructure shifts, debates, and cultural moments into a source-backed path that people can follow. It helps a curious reader see what came before a breakthrough, what changed after it, and where to continue learning. I maintain it both as an archive for others and as a record of my own attempt to understand the field more deeply.
 
+The repository was made public on August 10, 2026, but the project itself has grown over months of private research and local development. The public release is a stable edition: research structure, editorial standards, data validation, and the publishing pipeline were all in place before the first public commit.
+
 I came to AI as a liberal-arts writer rather than a computer scientist. That background makes me attentive to language, context, forgotten branches, and the moment when a technical idea enters ordinary life. I do not expect this timeline to be the final or only map; it is one carefully maintained route through a much larger world.
 
 Every map is drawn from somewhere. I live in China and read across Chinese- and English-language sources, so I sometimes notice open models, infrastructure projects, and developer communities that receive less attention in English-language summaries. When they are historically relevant, I include them alongside work from the rest of the world. This is not an argument for one country or company, only a natural part of keeping the view open, plural, and as complete as I can make it.

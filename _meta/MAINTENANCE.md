@@ -17,6 +17,14 @@
 新事件提案 (Issue) → 事实核查 → 编辑审阅 → 双语写作 → 数据校验 → Release
 ```
 
+## 完整库数量口径
+
+公开版的 `full_collection_size` 当前统一记录为 **272**。维护者私有工作区中，2026-08-11 生成的英文完整数据是当前 272 条 canonical source；名为 `ai-timeline-data-263条-完整版.json` 的文件属于旧快照，不能继续作为完整库数量依据。
+
+每周维护时，使用 `python3 scripts/validate-public-data.py --full-data <canonical-full-data.json>` 对照完整数据。校验脚本会以完整数据中的 `events` 数组长度为准，并检查 `total_events` 是否一致；文件名中的数字不参与判断。
+
+公开数据的 `date_range` 由事件数组中的最小日期和最大日期计算。事件增删后，必须重新运行校验，不能手工保留过期日期范围。
+
 ### 1. 事件提案与事实核查
 
 - 通过 Issue 模板收集新增事件/事实纠错/来源失效/翻译修正
@@ -37,10 +45,17 @@
 ### 4. 数据校验
 
 - 修改后运行 `python3 scripts/validate-public-data.py`
+- 有 canonical 完整库时，追加 `--full-data <canonical-full-data.json>` 检查公开版与完整库数量口径
 - GitHub Actions 自动校验：事件数、时间顺序、重复 ID、来源完整性、字段合法性
 - 校验失败会阻止部署
 
-### 5. 发布
+### 5. 来源链接检查
+
+`scripts/check-source-links.py` 只生成健康报告，不自动修改数据，也不因 403、429、超时、SSL、EOF 或连接重置创建 Issue。404/410 先标记为 `candidate-dead`；同一 URL 连续两次报告为候选失效后，才进入人工确认队列。
+
+建议将报告写入 `reports/link-health/YYYY-MM-DD.json`，下一次使用同一个报告路径作为历史依据。只有人工确认来源确实失效后，才替换 URL 或关闭事件。
+
+### 6. 发布
 
 - 版本化 Release（v0.1.0 起）
 - GitHub Pages 自动部署（push main 触发）

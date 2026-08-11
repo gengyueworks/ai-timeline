@@ -1,0 +1,1815 @@
+{
+  "checked_at": "2026-08-11T03:11:20.778122+00:00",
+  "total_urls": 114,
+  "counts": {
+    "healthy": 83,
+    "blocked": 24,
+    "candidate-dead": 2,
+    "network-error": 4,
+    "review": 1
+  },
+  "results": [
+    {
+      "title": "MYCIN:专家系统进入医学诊断",
+      "url": "http://bitsavers.trailing-edge.com/pdf/stanford/Stanford_CS_TR_Collection_2025-12-12/OCR/CS-TR-74-465-ocr.pdf",
+      "final_url": "http://bitsavers.trailing-edge.com/pdf/stanford/Stanford_CS_TR_Collection_2025-12-12/OCR/CS-TR-74-465-ocr.pdf",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "McCarthy-Minsky-Rochester-Shannon 提案：\"Artificial Intelligence\" 一词的首次正式使用",
+      "url": "http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html",
+      "final_url": "http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Turing《Computing Machinery and Intelligence》：图灵测试的起源",
+      "url": "https://academic.oup.com/mind/article/LIX/236/433/986238",
+      "final_url": "https://academic.oup.com/mind/article/LIX/236/433/986238",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "Turing《Computing Machinery and Intelligence》：图灵测试的起源",
+          "url": "https://academic.oup.com/mind/article/LIX/236/433/986238",
+          "final_url": "https://academic.oup.com/mind/article/LIX/236/433/986238",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "Turing《Computing Machinery and Intelligence》：图灵测试的起源",
+          "url": "https://academic.oup.com/mind/article/LIX/236/433/986238",
+          "final_url": "https://academic.oup.com/mind/article/LIX/236/433/986238",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Meta 发布 Muse Spark 1.1，并开放模型 API",
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api",
+      "final_url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api",
+      "classification": "review",
+      "http_status": 400,
+      "attempt": 2,
+      "detail": "Bad Request",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "Meta 发布 Muse Spark 1.1，并开放模型 API",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api",
+          "final_url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api",
+          "classification": "review",
+          "http_status": 400,
+          "attempt": 1,
+          "detail": "Bad Request"
+        },
+        {
+          "title": "Meta 发布 Muse Spark 1.1，并开放模型 API",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api",
+          "final_url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api",
+          "classification": "review",
+          "http_status": 400,
+          "attempt": 2,
+          "detail": "Bad Request"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "DeepSeek-R1 发布及技术报告开源",
+      "url": "https://api-docs.deepseek.com/news/news250120",
+      "final_url": "https://api-docs.deepseek.com/news/news250120",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Apple 起诉 OpenAI，指控其窃取商业机密",
+      "url": "https://apnews.com/article/apple-openai-lawsuit-trade-secrets-theft-6fff8833f5889d86406b89a02dd8fb16",
+      "final_url": "https://apnews.com/article/apple-openai-lawsuit-trade-secrets-theft-6fff8833f5889d86406b89a02dd8fb16",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "General Problem Solver（GPS）：首个目标导向的通用问题求解器",
+      "url": "https://apps.dtic.mil/sti/citations/AD0635402",
+      "classification": "network-error",
+      "attempt": 2,
+      "detail": "<urlopen error EOF occurred in violation of protocol (_ssl.c:992)>",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "General Problem Solver（GPS）：首个目标导向的通用问题求解器",
+          "url": "https://apps.dtic.mil/sti/citations/AD0635402",
+          "classification": "network-error",
+          "attempt": 1,
+          "detail": "<urlopen error EOF occurred in violation of protocol (_ssl.c:992)>"
+        },
+        {
+          "title": "General Problem Solver（GPS）：首个目标导向的通用问题求解器",
+          "url": "https://apps.dtic.mil/sti/citations/AD0635402",
+          "classification": "network-error",
+          "attempt": 2,
+          "detail": "<urlopen error EOF occurred in violation of protocol (_ssl.c:992)>"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "von Neumann《EDVAC 报告初稿》：存储程序架构的起源",
+      "url": "https://archive.computerhistory.org/resources/text/Knuth_Don_X4100/PDF_index/k-8-pdf/k-8-u2593-Draft-EDVAC.pdf",
+      "final_url": "https://archive.computerhistory.org/resources/text/Knuth_Don_X4100/PDF_index/k-8-pdf/k-8-u2593-Draft-EDVAC.pdf",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Mikolov word2vec:词向量与分布式表示普及",
+      "url": "https://arxiv.org/abs/1301.3781",
+      "final_url": "https://arxiv.org/abs/1301.3781",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "DeepMind DQN:深度强化学习首次成功",
+      "url": "https://arxiv.org/abs/1312.5602",
+      "final_url": "https://arxiv.org/abs/1312.5602",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Goodfellow GAN:生成式 AI 的早期突破",
+      "url": "https://arxiv.org/abs/1406.2661",
+      "final_url": "https://arxiv.org/abs/1406.2661",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Sutskever Seq2Seq:端到端机器翻译范式确立",
+      "url": "https://arxiv.org/abs/1409.3215",
+      "final_url": "https://arxiv.org/abs/1409.3215",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "He ResNet:超深网络训练突破",
+      "url": "https://arxiv.org/abs/1512.03385",
+      "final_url": "https://arxiv.org/abs/1512.03385",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "DeepMind WaveNet:神经网络生成原始音频波形",
+      "url": "https://arxiv.org/abs/1609.03499",
+      "final_url": "https://arxiv.org/abs/1609.03499",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Transformer 论文:Attention Is All You Need",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "final_url": "https://arxiv.org/abs/1706.03762",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Google BERT:双向预训练 NLP 范式确立",
+      "url": "https://arxiv.org/abs/1810.04805",
+      "final_url": "https://arxiv.org/abs/1810.04805",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Lewis RAG:检索增强生成范式提出",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "final_url": "https://arxiv.org/abs/2005.11401",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI GPT-3 175B:Scaling Laws 验证",
+      "url": "https://arxiv.org/abs/2005.14165",
+      "final_url": "https://arxiv.org/abs/2005.14165",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI CLIP + DALL·E:多模态预训练范式确立",
+      "url": "https://arxiv.org/abs/2103.00020",
+      "final_url": "https://arxiv.org/abs/2103.00020",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Hu LoRA:低秩适配器开启高效微调时代",
+      "url": "https://arxiv.org/abs/2106.09685",
+      "final_url": "https://arxiv.org/abs/2106.09685",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Stability AI Stable Diffusion 1.4:开源文生图爆发",
+      "url": "https://arxiv.org/abs/2112.10752",
+      "final_url": "https://arxiv.org/abs/2112.10752",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "InstructGPT 论文:RLHF 路线工业落地",
+      "url": "https://arxiv.org/abs/2203.02155",
+      "final_url": "https://arxiv.org/abs/2203.02155",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Tri Dao FlashAttention:注意力 IO 优化奠基",
+      "url": "https://arxiv.org/abs/2205.14135",
+      "final_url": "https://arxiv.org/abs/2205.14135",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI Whisper:开源语音识别奠基",
+      "url": "https://arxiv.org/abs/2212.04356",
+      "final_url": "https://arxiv.org/abs/2212.04356",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "DPO 论文:RLHF 替代方案",
+      "url": "https://arxiv.org/abs/2305.18290",
+      "final_url": "https://arxiv.org/abs/2305.18290",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Meta Llama 2 商用开源:开源 LLM 商业化起点",
+      "url": "https://arxiv.org/abs/2307.09288",
+      "final_url": "https://arxiv.org/abs/2307.09288",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "阿里通义千问开源:中国开源 LLM 旗舰起点",
+      "url": "https://arxiv.org/abs/2309.16609",
+      "final_url": "https://arxiv.org/abs/2309.16609",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Mistral 7B 发布:欧洲开源大模型旗舰起点",
+      "url": "https://arxiv.org/abs/2310.06825",
+      "final_url": "https://arxiv.org/abs/2310.06825",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "MCP 2026-07-28 规范发布：核心转向无状态架构",
+      "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "final_url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Claude Code 支持在企业自有基础设施运行云端会话",
+      "url": "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute",
+      "final_url": "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Manchester Baby：首台存储程序电子计算机运行",
+      "url": "https://curation.cs.manchester.ac.uk/digital60/www.digital60.org/birth/thebaby/",
+      "final_url": "https://curation.cs.manchester.ac.uk/digital60/www.digital60.org/birth/thebaby/",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Co-Scientist 公开",
+      "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/",
+      "final_url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 2,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Gemini Robotics 2 推进机器人全身控制与长程规划",
+      "url": "https://deepmind.google/models/gemini-robotics/",
+      "final_url": "https://deepmind.google/models/gemini-robotics/",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Google Gemini 1.0:原生多模态 LLM",
+      "url": "https://deepmind.google/technologies/gemini/",
+      "final_url": "https://deepmind.google/models/gemini/",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "NVIDIA CUDA 1.0 正式发布:GPU 走入通用计算",
+      "url": "https://developer.nvidia.com/cuda-toolkit-archive",
+      "final_url": "https://developer.nvidia.com/cuda-toolkit-archive",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Codex Record & Replay：把操作演示转成可复用技能",
+      "url": "https://developers.openai.com/codex/changelog",
+      "final_url": "https://learn.chatgpt.com/docs/changelog",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "DENDRAL 启动:第一个大型知识驱动专家系统",
+      "url": "https://digirepo.nlm.nih.gov/ext/document/101584906X1027/PDF/101584906X1027.pdf",
+      "final_url": "https://digirepo.nlm.nih.gov/ext/document/101584906X1027/PDF/101584906X1027.pdf",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Google TPU v1:AI 专用芯片公开",
+      "url": "https://dl.acm.org/doi/10.1145/3079856.3080246",
+      "final_url": "https://dl.acm.org/doi/10.1145/3079856.3080246",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "Google TPU v1:AI 专用芯片公开",
+          "url": "https://dl.acm.org/doi/10.1145/3079856.3080246",
+          "final_url": "https://dl.acm.org/doi/10.1145/3079856.3080246",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "Google TPU v1:AI 专用芯片公开",
+          "url": "https://dl.acm.org/doi/10.1145/3079856.3080246",
+          "final_url": "https://dl.acm.org/doi/10.1145/3079856.3080246",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "物理符号系统假说:Newell & Simon Turing 演讲",
+      "url": "https://dl.acm.org/doi/10.1145/360018.360022",
+      "final_url": "https://dl.acm.org/doi/10.1145/360018.360022",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "物理符号系统假说:Newell & Simon Turing 演讲",
+          "url": "https://dl.acm.org/doi/10.1145/360018.360022",
+          "final_url": "https://dl.acm.org/doi/10.1145/360018.360022",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "物理符号系统假说:Newell & Simon Turing 演讲",
+          "url": "https://dl.acm.org/doi/10.1145/360018.360022",
+          "final_url": "https://dl.acm.org/doi/10.1145/360018.360022",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "McCarthy 在 MIT 启动 Lisp：早期 AI 的母语诞生",
+      "url": "https://dl.acm.org/doi/10.1145/367177.367199",
+      "final_url": "https://dl.acm.org/doi/10.1145/367177.367199",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "McCarthy 在 MIT 启动 Lisp：早期 AI 的母语诞生",
+          "url": "https://dl.acm.org/doi/10.1145/367177.367199",
+          "final_url": "https://dl.acm.org/doi/10.1145/367177.367199",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "McCarthy 在 MIT 启动 Lisp：早期 AI 的母语诞生",
+          "url": "https://dl.acm.org/doi/10.1145/367177.367199",
+          "final_url": "https://dl.acm.org/doi/10.1145/367177.367199",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "XCON/R1:专家系统首次大规模商用",
+      "url": "https://doi.org/10.1016/0004-3702(82)90022-3",
+      "final_url": "https://doi.org/10.1016/0004-3702(82)90022-3",
+      "classification": "candidate-dead",
+      "http_status": 404,
+      "attempt": 2,
+      "detail": "Not Found",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "XCON/R1:专家系统首次大规模商用",
+          "url": "https://doi.org/10.1016/0004-3702(82)90022-3",
+          "final_url": "https://doi.org/10.1016/0004-3702(82)90022-3",
+          "classification": "candidate-dead",
+          "http_status": 404,
+          "attempt": 1,
+          "detail": "Not Found"
+        },
+        {
+          "title": "XCON/R1:专家系统首次大规模商用",
+          "url": "https://doi.org/10.1016/0004-3702(82)90022-3",
+          "final_url": "https://doi.org/10.1016/0004-3702(82)90022-3",
+          "classification": "candidate-dead",
+          "http_status": 404,
+          "attempt": 2,
+          "detail": "Not Found"
+        }
+      ],
+      "candidate_dead_streak": 1,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Hochreiter-Schmidhuber LSTM:序列建模的支柱",
+      "url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+      "final_url": "https://direct.mit.edu/neco/article/9/8/1735-1780/6109",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "Hochreiter-Schmidhuber LSTM:序列建模的支柱",
+          "url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+          "final_url": "https://direct.mit.edu/neco/article/9/8/1735-1780/6109",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "Hochreiter-Schmidhuber LSTM:序列建模的支柱",
+          "url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+          "final_url": "https://direct.mit.edu/neco/article/9/8/1735-1780/6109",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "欧盟开始执行 AI Act 新透明度规则",
+      "url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_26_1714/IP_26_1714_EN.pdf",
+      "final_url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_26_1714/IP_26_1714_EN.pdf",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "欧盟启动七座 AI Gigafactory 建设计划",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1708",
+      "final_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1708",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "DARPA Urban Challenge:无人驾驶进入城市环境",
+      "url": "https://en.wikipedia.org/wiki/2007_DARPA_Urban_Challenge",
+      "final_url": "https://en.wikipedia.org/wiki/2007_DARPA_Urban_Challenge",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "第一次 AI 寒冬:英美同步降温",
+      "url": "https://en.wikipedia.org/wiki/AI_winter",
+      "final_url": "https://en.wikipedia.org/wiki/AI_winter",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Pearl 贝叶斯网络:让概率推理进入 AI",
+      "url": "https://en.wikipedia.org/wiki/Bayesian_network",
+      "final_url": "https://en.wikipedia.org/wiki/Bayesian_network",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "IBM 深蓝击败卡斯帕罗夫:AI 的第一次大众胜利",
+      "url": "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)",
+      "final_url": "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "NVIDIA GeForce 256:GPU 时代开启",
+      "url": "https://en.wikipedia.org/wiki/GeForce_256",
+      "final_url": "https://en.wikipedia.org/wiki/GeForce_256",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Fei-Fei Li ImageNet:视觉识别的标准基准",
+      "url": "https://en.wikipedia.org/wiki/ImageNet",
+      "final_url": "https://en.wikipedia.org/wiki/ImageNet",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Apple Siri 在 iPhone 4S 发布:消费级语音助手诞生",
+      "url": "https://en.wikipedia.org/wiki/Siri",
+      "final_url": "https://en.wikipedia.org/wiki/Siri",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "IBM Watson 击败 Jeopardy! 冠军:问答 AI 高峰",
+      "url": "https://en.wikipedia.org/wiki/Watson_(computer)",
+      "final_url": "https://en.wikipedia.org/wiki/Watson_(computer)",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Google Project Chauffeur:工业级自动驾驶启动",
+      "url": "https://en.wikipedia.org/wiki/Waymo",
+      "final_url": "https://en.wikipedia.org/wiki/Waymo",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "GitHub Copilot 公测:AI 编程助手进入主流",
+      "url": "https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/",
+      "final_url": "https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "AutoGPT 引爆自主 Agent 开源热潮",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "final_url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "LangChain 开源:LLM 应用框架奠基",
+      "url": "https://github.com/langchain-ai/langchain",
+      "final_url": "https://github.com/langchain-ai/langchain",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "PyTorch 开源:动态图框架进入主流",
+      "url": "https://github.com/pytorch/pytorch",
+      "final_url": "https://github.com/pytorch/pytorch",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Winograd SHRDLU:积木世界里的“理解”",
+      "url": "https://hci.stanford.edu/winograd/shrdlu/",
+      "classification": "network-error",
+      "attempt": 2,
+      "detail": "Remote end closed connection without response",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "Winograd SHRDLU:积木世界里的“理解”",
+          "url": "https://hci.stanford.edu/winograd/shrdlu/",
+          "final_url": "https://sites.google.com/view/terrywinogradhomepage/shrdlu/",
+          "classification": "candidate-dead",
+          "http_status": 404,
+          "attempt": 1,
+          "detail": "Not Found"
+        },
+        {
+          "title": "Winograd SHRDLU:积木世界里的“理解”",
+          "url": "https://hci.stanford.edu/winograd/shrdlu/",
+          "classification": "network-error",
+          "attempt": 2,
+          "detail": "Remote end closed connection without response"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "DeepSeek-V4-Flash-0731 更新开放权重模型",
+      "url": "https://huggingface.co/collections/deepseek-ai/deepseek-v4",
+      "final_url": "https://huggingface.co/collections/deepseek-ai/deepseek-v4",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Samuel《Some Studies in Machine Learning Using the Game of Checkers》：\"Machine Lea",
+      "url": "https://ieeexplore.ieee.org/document/5392560",
+      "final_url": "https://ieeexplore.ieee.org/document/5392560",
+      "classification": "healthy",
+      "http_status": 202,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "LeCun 卷积网络:神经网走进银行与邮局",
+      "url": "https://ieeexplore.ieee.org/document/6795724",
+      "final_url": "https://ieeexplore.ieee.org/document/6795724",
+      "classification": "healthy",
+      "http_status": 202,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "LeNet-5 论文:卷积网络的工程化文档",
+      "url": "https://ieeexplore.ieee.org/document/726791",
+      "final_url": "https://ieeexplore.ieee.org/document/726791",
+      "classification": "healthy",
+      "http_status": 202,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Minsky-Papert《Perceptrons》:神经网络第一次大挫折",
+      "url": "https://leon.bottou.org/publications/pdf/perceptrons-2017.pdf",
+      "final_url": "https://leon.bottou.org/publications/pdf/perceptrons-2017.pdf",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Cortes-Vapnik SVM:统计学习的核心算法",
+      "url": "https://link.springer.com/article/10.1007/BF00994018",
+      "final_url": "https://link.springer.com/article/10.1007/BF00994018",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "McCulloch-Pitts 神经元：神经活动的逻辑演算",
+      "url": "https://link.springer.com/article/10.1007/BF02478259",
+      "final_url": "https://link.springer.com/article/10.1007/BF02478259",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "图灵发表《论可计算数》——计算机的理论蓝图",
+      "url": "https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/plms/s2-42.1.230",
+      "final_url": "https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/plms/s2-42.1.230",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "图灵发表《论可计算数》——计算机的理论蓝图",
+          "url": "https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/plms/s2-42.1.230",
+          "final_url": "https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/plms/s2-42.1.230",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "图灵发表《论可计算数》——计算机的理论蓝图",
+          "url": "https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/plms/s2-42.1.230",
+          "final_url": "https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/plms/s2-42.1.230",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Wiener《Cybernetics》出版：动物与机器的控制与通信",
+      "url": "https://mitpress.mit.edu/9780262730099/cybernetics/",
+      "final_url": "https://mitpress.mit.edu/9780262730099/cybernetics/",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "Wiener《Cybernetics》出版：动物与机器的控制与通信",
+          "url": "https://mitpress.mit.edu/9780262730099/cybernetics/",
+          "final_url": "https://mitpress.mit.edu/9780262730099/cybernetics/",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "Wiener《Cybernetics》出版：动物与机器的控制与通信",
+          "url": "https://mitpress.mit.edu/9780262730099/cybernetics/",
+          "final_url": "https://mitpress.mit.edu/9780262730099/cybernetics/",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI ChatGPT:AI 的 iPhone 时刻",
+      "url": "https://openai.com/blog/chatgpt",
+      "final_url": "https://openai.com/blog/chatgpt",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "OpenAI ChatGPT:AI 的 iPhone 时刻",
+          "url": "https://openai.com/blog/chatgpt",
+          "final_url": "https://openai.com/blog/chatgpt",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "OpenAI ChatGPT:AI 的 iPhone 时刻",
+          "url": "https://openai.com/blog/chatgpt",
+          "final_url": "https://openai.com/blog/chatgpt",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI 成立:非营利 AI 研究实验室启动",
+      "url": "https://openai.com/blog/introducing-openai",
+      "final_url": "https://openai.com/blog/introducing-openai",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "OpenAI 成立:非营利 AI 研究实验室启动",
+          "url": "https://openai.com/blog/introducing-openai",
+          "final_url": "https://openai.com/blog/introducing-openai",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "OpenAI 成立:非营利 AI 研究实验室启动",
+          "url": "https://openai.com/blog/introducing-openai",
+          "final_url": "https://openai.com/blog/introducing-openai",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI DevDay:GPTs + Assistants API + GPT-4 Turbo",
+      "url": "https://openai.com/blog/new-models-and-new-developer-tools-announced-at-devday",
+      "final_url": "https://openai.com/blog/new-models-and-new-developer-tools-announced-at-devday",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "OpenAI DevDay:GPTs + Assistants API + GPT-4 Turbo",
+          "url": "https://openai.com/blog/new-models-and-new-developer-tools-announced-at-devday",
+          "final_url": "https://openai.com/blog/new-models-and-new-developer-tools-announced-at-devday",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "OpenAI DevDay:GPTs + Assistants API + GPT-4 Turbo",
+          "url": "https://openai.com/blog/new-models-and-new-developer-tools-announced-at-devday",
+          "final_url": "https://openai.com/blog/new-models-and-new-developer-tools-announced-at-devday",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI API:LLM-as-a-Service 商业模式启动",
+      "url": "https://openai.com/blog/openai-api/",
+      "final_url": "https://openai.com/blog/openai-api/",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "OpenAI API:LLM-as-a-Service 商业模式启动",
+          "url": "https://openai.com/blog/openai-api/",
+          "final_url": "https://openai.com/blog/openai-api/",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "OpenAI API:LLM-as-a-Service 商业模式启动",
+          "url": "https://openai.com/blog/openai-api/",
+          "final_url": "https://openai.com/blog/openai-api/",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI 大幅下调 GPT-5.6 Luna 与 Terra 价格",
+      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+      "final_url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "OpenAI 大幅下调 GPT-5.6 Luna 与 Terra 价格",
+          "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+          "final_url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "OpenAI 大幅下调 GPT-5.6 Luna 与 Terra 价格",
+          "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+          "final_url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Codex for (almost) everything：从编程代理扩展到完整工作流",
+      "url": "https://openai.com/index/codex-for-almost-everything/",
+      "final_url": "https://openai.com/index/codex-for-almost-everything/",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "Codex for (almost) everything：从编程代理扩展到完整工作流",
+          "url": "https://openai.com/index/codex-for-almost-everything/",
+          "final_url": "https://openai.com/index/codex-for-almost-everything/",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "Codex for (almost) everything：从编程代理扩展到完整工作流",
+          "url": "https://openai.com/index/codex-for-almost-everything/",
+          "final_url": "https://openai.com/index/codex-for-almost-everything/",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "GPT-5.6 面向 ChatGPT、Codex 与 API 推出",
+      "url": "https://openai.com/index/gpt-5-6/",
+      "final_url": "https://openai.com/index/gpt-5-6/",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "GPT-5.6 面向 ChatGPT、Codex 与 API 推出",
+          "url": "https://openai.com/index/gpt-5-6/",
+          "final_url": "https://openai.com/index/gpt-5-6/",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "GPT-5.6 面向 ChatGPT、Codex 与 API 推出",
+          "url": "https://openai.com/index/gpt-5-6/",
+          "final_url": "https://openai.com/index/gpt-5-6/",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "GPT-4o:实时多模态 LLM 起点",
+      "url": "https://openai.com/index/hello-gpt-4o/",
+      "final_url": "https://openai.com/index/hello-gpt-4o/",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI 更新 GPT-5.6 Sol，并向免费用户扩展 Luna",
+      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
+      "final_url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI 推出 Codex 云端编程 Agent",
+      "url": "https://openai.com/index/introducing-codex/",
+      "final_url": "https://openai.com/index/introducing-codex/",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "OpenAI 推出 Codex 云端编程 Agent",
+          "url": "https://openai.com/index/introducing-codex/",
+          "final_url": "https://openai.com/index/introducing-codex/",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "OpenAI 推出 Codex 云端编程 Agent",
+          "url": "https://openai.com/index/introducing-codex/",
+          "final_url": "https://openai.com/index/introducing-codex/",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "2025 前沿模型与 Agent 集中显形",
+      "url": "https://openai.com/index/introducing-deep-research/",
+      "classification": "network-error",
+      "attempt": 2,
+      "detail": "<urlopen error _ssl.c:975: The handshake operation timed out>",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "2025 前沿模型与 Agent 集中显形",
+          "url": "https://openai.com/index/introducing-deep-research/",
+          "final_url": "https://openai.com/index/introducing-deep-research/",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "2025 前沿模型与 Agent 集中显形",
+          "url": "https://openai.com/index/introducing-deep-research/",
+          "classification": "network-error",
+          "attempt": 2,
+          "detail": "<urlopen error _ssl.c:975: The handshake operation timed out>"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI o1:推理模型时代起点",
+      "url": "https://openai.com/index/learning-to-reason-with-llms/",
+      "final_url": "https://openai.com/index/learning-to-reason-with-llms/",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "OpenAI o1:推理模型时代起点",
+          "url": "https://openai.com/index/learning-to-reason-with-llms/",
+          "final_url": "https://openai.com/index/learning-to-reason-with-llms/",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "OpenAI o1:推理模型时代起点",
+          "url": "https://openai.com/index/learning-to-reason-with-llms/",
+          "final_url": "https://openai.com/index/learning-to-reason-with-llms/",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI GPT-2:大规模生成预训练首次披露",
+      "url": "https://openai.com/research/better-language-models",
+      "final_url": "https://openai.com/research/better-language-models",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "OpenAI GPT-2:大规模生成预训练首次披露",
+          "url": "https://openai.com/research/better-language-models",
+          "final_url": "https://openai.com/research/better-language-models",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "OpenAI GPT-2:大规模生成预训练首次披露",
+          "url": "https://openai.com/research/better-language-models",
+          "final_url": "https://openai.com/research/better-language-models",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI GPT-4 发布:多模态 + 推理提升",
+      "url": "https://openai.com/research/gpt-4",
+      "final_url": "https://openai.com/research/gpt-4",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "OpenAI GPT-4 发布:多模态 + 推理提升",
+          "url": "https://openai.com/research/gpt-4",
+          "final_url": "https://openai.com/research/gpt-4",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "OpenAI GPT-4 发布:多模态 + 推理提升",
+          "url": "https://openai.com/research/gpt-4",
+          "final_url": "https://openai.com/research/gpt-4",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI GPT-1:预训练 + 微调范式确立",
+      "url": "https://openai.com/research/language-unsupervised",
+      "final_url": "https://openai.com/research/language-unsupervised",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "OpenAI GPT-1:预训练 + 微调范式确立",
+          "url": "https://openai.com/research/language-unsupervised",
+          "final_url": "https://openai.com/research/language-unsupervised",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "OpenAI GPT-1:预训练 + 微调范式确立",
+          "url": "https://openai.com/research/language-unsupervised",
+          "final_url": "https://openai.com/research/language-unsupervised",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "OpenAI Sora 公布:视频生成里程碑",
+      "url": "https://openai.com/sora",
+      "final_url": "https://openai.com/sora",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "OpenAI Sora 公布:视频生成里程碑",
+          "url": "https://openai.com/sora",
+          "final_url": "https://openai.com/sora",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "OpenAI Sora 公布:视频生成里程碑",
+          "url": "https://openai.com/sora",
+          "final_url": "https://openai.com/sora",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "AlexNet 在 NIPS 2012 引爆:深度学习时代起点",
+      "url": "https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+      "final_url": "https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Shannon《A Mathematical Theory of Communication》发表",
+      "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf",
+      "final_url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Rosenblatt 感知机：可学习神经网络的首次实现",
+      "url": "https://psycnet.apa.org/record/1959-04182-001",
+      "final_url": "https://psycnet.apa.org/record/1959-04182-001",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Qwen-Image-3.0 发布：图像生成转向复杂信息表达",
+      "url": "https://qwen.ai/blog?id=qwen-image-3.0",
+      "final_url": "https://qwen.ai/blog?id=qwen-image-3.0",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Qwen3.8-Max 发布，并承诺开放旗舰权重",
+      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "final_url": "https://qwen.ai/blog?id=qwen3.8",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Dartmouth 暑期 AI 研讨会：人工智能作为学科的诞生",
+      "url": "https://raysolomonoff.com/dartmouth/dartray.pdf",
+      "final_url": "https://raysolomonoff.com/dartmouth/dartray.pdf",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Weizenbaum ELIZA:第一个聊天机器人的诞生",
+      "url": "https://redirect.cs.umbc.edu/courses/331/papers/eliza.html",
+      "final_url": "https://courses.cs.umbc.edu/331/papers/eliza.html",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Engelbart「演示之母」:NLS 与个人计算诞生",
+      "url": "https://sloan.stanford.edu/mousesite/Archive/Archive.html",
+      "classification": "network-error",
+      "attempt": 2,
+      "detail": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'sloan.stanford.edu'. (_ssl.c:992)>",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "Engelbart「演示之母」:NLS 与个人计算诞生",
+          "url": "https://sloan.stanford.edu/mousesite/Archive/Archive.html",
+          "classification": "network-error",
+          "attempt": 1,
+          "detail": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'sloan.stanford.edu'. (_ssl.c:992)>"
+        },
+        {
+          "title": "Engelbart「演示之母」:NLS 与个人计算诞生",
+          "url": "https://sloan.stanford.edu/mousesite/Archive/Archive.html",
+          "classification": "network-error",
+          "attempt": 2,
+          "detail": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'sloan.stanford.edu'. (_ssl.c:992)>"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "美团发布并开源 LongCat-2.0",
+      "url": "https://tech.meituan.com/2026/06/30/LongCat2.0.html",
+      "final_url": "https://tech.meituan.com/2026/06/30/LongCat2.0.html",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Thinking Machines 发布首个开放权重模型 Inkling",
+      "url": "https://thinkingmachines.ai/news/introducing-inkling/",
+      "final_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Anthropic Claude 1 发布:Anthropic 商业化起点",
+      "url": "https://www.anthropic.com/index/introducing-claude",
+      "final_url": "https://www.anthropic.com/news/introducing-claude",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Claude Computer Use:LLM 直接操作电脑",
+      "url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+      "final_url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Claude Opus 5 发布，强化长程 Agent 与研究能力",
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "final_url": "https://www.anthropic.com/news/claude-opus-5",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Hebb《The Organization of Behavior》：突触可塑性假说",
+      "url": "https://www.britannica.com/biography/Donald-O-Hebb",
+      "final_url": "https://www.britannica.com/biography/Donald-O-Hebb",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "Hebb《The Organization of Behavior》：突触可塑性假说",
+          "url": "https://www.britannica.com/biography/Donald-O-Hebb",
+          "final_url": "https://www.britannica.com/biography/Donald-O-Hebb",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "Hebb《The Organization of Behavior》：突触可塑性假说",
+          "url": "https://www.britannica.com/biography/Donald-O-Hebb",
+          "final_url": "https://www.britannica.com/biography/Donald-O-Hebb",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "ENIAC 公开宣告：第一台通用电子数字计算机",
+      "url": "https://www.computerhistory.org/timeline/1945-2/",
+      "final_url": "https://www.computerhistory.org/timeline/1945-2/",
+      "classification": "candidate-dead",
+      "http_status": 404,
+      "attempt": 2,
+      "detail": "Not Found",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "ENIAC 公开宣告：第一台通用电子数字计算机",
+          "url": "https://www.computerhistory.org/timeline/1945-2/",
+          "final_url": "https://www.computerhistory.org/timeline/1945-2/",
+          "classification": "candidate-dead",
+          "http_status": 404,
+          "attempt": 1,
+          "detail": "Not Found"
+        },
+        {
+          "title": "ENIAC 公开宣告：第一台通用电子数字计算机",
+          "url": "https://www.computerhistory.org/timeline/1945-2/",
+          "final_url": "https://www.computerhistory.org/timeline/1945-2/",
+          "classification": "candidate-dead",
+          "http_status": 404,
+          "attempt": 2,
+          "detail": "Not Found"
+        }
+      ],
+      "candidate_dead_streak": 1,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Watkins Q-learning:强化学习的核心算法",
+      "url": "https://www.cs.rhul.ac.uk/~chrisw/",
+      "final_url": "https://www.cs.rhul.ac.uk/~chrisw/",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "欧盟 AI Act 通过:全球首部 AI 监管法",
+      "url": "https://www.europarl.europa.eu/news/en/press-room/20240308IPR19015/artificial-intelligence-act-first-regulation-on-ai-by-european-parliament",
+      "final_url": "https://www.europarl.europa.eu/news/en/press-room/20240308IPR19015/artificial-intelligence-act-first-regulation-on-ai-by-european-parliament",
+      "classification": "healthy",
+      "http_status": 202,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Kimi K3 发布：首个开放的 3T 级模型",
+      "url": "https://www.kimi.com/blog/kimi-k3",
+      "final_url": "https://www.kimi.com/blog/kimi-k3",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Werbos 反向传播:深度学习的数学起点",
+      "url": "https://www.lesswrong.com/posts/oFrayyD4MNTX7goNj/backprop-the-russian-algorithm-the-west-claimed-as-its-own",
+      "final_url": "https://www.lesswrong.com/posts/oFrayyD4MNTX7goNj/backprop-the-russian-algorithm-the-west-claimed-as-its-own",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Rumelhart-Hinton-Williams 反向传播:深度学习的工程起点",
+      "url": "https://www.nature.com/articles/323533a0",
+      "final_url": "https://www.nature.com/articles/323533a0",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "AlphaGo 胜樊麾:围棋 AI 首次击败职业棋手",
+      "url": "https://www.nature.com/articles/nature16961",
+      "final_url": "https://www.nature.com/articles/nature16961",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "AlphaGo Zero:从零自学击败旧版 AlphaGo",
+      "url": "https://www.nature.com/articles/nature24270",
+      "final_url": "https://www.nature.com/articles/nature24270",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "AlphaFold2:CASP14 蛋白质结构预测达到实验级精度",
+      "url": "https://www.nature.com/articles/s41586-021-03819-2",
+      "final_url": "https://www.nature.com/articles/s41586-021-03819-2",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Hopfield 网络:神经网络复苏的火花",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.79.8.2554",
+      "final_url": "https://www.pnas.org/doi/10.1073/pnas.79.8.2554",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "Hopfield 网络:神经网络复苏的火花",
+          "url": "https://www.pnas.org/doi/10.1073/pnas.79.8.2554",
+          "final_url": "https://www.pnas.org/doi/10.1073/pnas.79.8.2554",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "Hopfield 网络:神经网络复苏的火花",
+          "url": "https://www.pnas.org/doi/10.1073/pnas.79.8.2554",
+          "final_url": "https://www.pnas.org/doi/10.1073/pnas.79.8.2554",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Hinton-Salakhutdinov DBN:深度学习复兴起点",
+      "url": "https://www.science.org/doi/10.1126/science.1127647",
+      "final_url": "https://www.science.org/doi/10.1126/science.1127647",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "Hinton-Salakhutdinov DBN:深度学习复兴起点",
+          "url": "https://www.science.org/doi/10.1126/science.1127647",
+          "final_url": "https://www.science.org/doi/10.1126/science.1127647",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "Hinton-Salakhutdinov DBN:深度学习复兴起点",
+          "url": "https://www.science.org/doi/10.1126/science.1127647",
+          "final_url": "https://www.science.org/doi/10.1126/science.1127647",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Zadeh 模糊集合:让数学承认“差不多”",
+      "url": "https://www.sciencedirect.com/science/article/pii/S001999586590241X",
+      "final_url": "https://www.sciencedirect.com/science/article/pii/S001999586590241X",
+      "classification": "blocked",
+      "http_status": 403,
+      "attempt": 2,
+      "detail": "Forbidden",
+      "attempts": 2,
+      "history": [
+        {
+          "title": "Zadeh 模糊集合:让数学承认“差不多”",
+          "url": "https://www.sciencedirect.com/science/article/pii/S001999586590241X",
+          "final_url": "https://www.sciencedirect.com/science/article/pii/S001999586590241X",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 1,
+          "detail": "Forbidden"
+        },
+        {
+          "title": "Zadeh 模糊集合:让数学承认“差不多”",
+          "url": "https://www.sciencedirect.com/science/article/pii/S001999586590241X",
+          "final_url": "https://www.sciencedirect.com/science/article/pii/S001999586590241X",
+          "classification": "blocked",
+          "http_status": 403,
+          "attempt": 2,
+          "detail": "Forbidden"
+        }
+      ],
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "SRI Shakey:第一个会推理的移动机器人",
+      "url": "https://www.sri.com/wp-content/uploads/2021/12/629.pdf",
+      "final_url": "https://www.sri.com/wp-content/uploads/2021/12/629.pdf",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "JADEPUFFER：自主 Agent 串联完整勒索攻击链",
+      "url": "https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion",
+      "final_url": "https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Turing Bombe 在布莱切利园首次部署",
+      "url": "https://www.tnmoc.org/bh-6-enter-turing-and-welchman",
+      "final_url": "https://www.tnmoc.org/bh-6-enter-turing-and-welchman",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "Grok 4.5 发布：xAI 强化编程与 Agent 任务",
+      "url": "https://x.ai/news/grok-4-5",
+      "final_url": "https://x.ai/news/grok-4-5",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 1,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    },
+    {
+      "title": "智谱 GLM-5.2 发布：开放模型强化长程 Agent 任务",
+      "url": "https://z.ai/blog/glm-5.2",
+      "final_url": "https://z.ai/blog/glm-5.2",
+      "classification": "healthy",
+      "http_status": 200,
+      "attempt": 2,
+      "candidate_dead_streak": 0,
+      "confirmed_dead": false
+    }
+  ]
+}

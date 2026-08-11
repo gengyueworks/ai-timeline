@@ -166,8 +166,8 @@
    "summary_zh": "1946 年 2 月 14 日，宾夕法尼亚大学 Moore 电机工程学院公开宣告 ENIAC（Electronic Numerical Integrator and Computer）建造完成。\n这台由 John Mauchly 和 J. Presper Eckert 领导设计的机器重 30 吨、占地 167 平方米、含 17,468 个真空管和 5 百万个焊点，能在一秒内完成 5,000 次加法或 357 次乘法——比当时最快的机电机器快约 1,000 倍。\nENIAC 是历史上第一台通用电子数字计算机：可重编程解决任意可计算问题，且全程电子化、无机械运动部件。",
    "behind_scenes_zh": "ENIAC 项目由美军弹道研究实验室资助，最初目的是计算火炮弹道表——战时一台手摇计算器算一条弹道轨迹要数小时，前线的炮兵表更新跟不上。\nMauchly 1942 年提出电子计算方案，1943 年与 Eckert 共同立项，1945 年底完工，首次实际任务是 1945 年 12 月为 Los Alamos 国家实验室计算氢弹可行性（不在公开宣告里提及）。\nENIAC 的最大短板是“编程”——要重新设置任务，需用插线板和电缆手动改线，一次复杂的弹道设置需要两名操作员花 2~3 天插拔线缆。\n正是这个痛点直接催生了 EDVAC 的存储程序架构（1945 年的 First Draft）。\nENIAC 的 6 名首席程序员全是女性（Kathleen “Kay” McNulty、Betty Snyder Holberton、Marlyn Wescoff、Ruth Lichterman、Frances Bilas、Jean Jennings Bartik），她们的编程方法论为现代软件工程奠定了基础，但直到 1990 年代才被广泛承认。",
    "why_it_matters_zh": "AI 作为“软件”的可能性，建立在通用电子计算机的可用性之上。\nENIAC 证明了真空管电子计算在工程上的可行性，它的问题（重编程难）直接推动了 EDVAC 的存储程序架构、EDVAC 又被 Manchester Baby 验证、被 EDSAC 实用化——这条链路是 AI 诞生的硬件前提。",
-   "source_name": "University of Pennsylvania ENIAC Archives / IEEE Milestones",
-   "source_url": "https://www.computerhistory.org/timeline/1945-2/",
+   "source_name": "Computer History Museum timeline — 1946",
+   "source_url": "https://www.computerhistory.org/timeline/1946/",
    "related_terms": [
     "stored-program-computer",
     "john-von-neumann",
@@ -1058,7 +1058,7 @@
    "behind_scenes_zh": "XCON 的成功有其特定条件。\n第一，配置 VAX 是高度结构化任务，规则边界清晰，没有“灰色判断”。\n第二，DEC 自己的工程师就是领域专家，知识获取顺畅。\n第三，订单量足够大，哪怕每次只省 5 分钟也回本。\n这三个条件在其他行业（医疗、法律、勘探）几乎都不成立，所以 XCON 越成功，越让企业误以为专家系统可以无限复制，结果 1985 年之后大批公司上马专家系统失败，埋下第二次 AI 寒冬的种子。",
    "why_it_matters_zh": "XCON 是 AI 史上第一次“真金白银回本”的工业级部署。\n它证明 AI 能在企业里产生可量化的经济价值，而不仅是论文里的演示。\n但它的成功条件被忽视，失败条件被低估，这种“成功案例 → 盲目跟风 → 集体崩盘”的剧本，在 2023-2025 年的 LLM 落地潮里再次上演。",
    "source_name": "McDermott, J. (1982). R1: A rule-based configurer of computer systems. Artificial Intelligence 19(1):39-88",
-   "source_url": "https://doi.org/10.1016/0004-3702(82)90022-3",
+   "source_url": "https://doi.org/10.1016/0004-3702(82)90021-2",
    "related_terms": [
     "expert-system",
     "rule-based-system"

@@ -62,6 +62,12 @@
     a { color: inherit; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    :focus-visible {
+      outline: 2px solid var(--track);
+      outline-offset: 2px;
+      border-radius: 3px;
+    }
+
     .shell {
       width: min(1120px, calc(100vw - 32px));
       margin: 0 auto;
@@ -114,16 +120,29 @@
       justify-content: flex-end;
       gap: 7px;
       min-width: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 2px;
+    }
+
+    .filters::-webkit-scrollbar { display: none; }
+
+    .chips {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex: 0 0 auto;
     }
 
     .chip {
       border: 1px solid var(--ink);
       border-radius: 999px;
-      padding: 6px 10px;
+      padding: 6px 13px;
       background: transparent;
       white-space: nowrap;
       font-size: 12px;
       font-weight: 760;
+      min-height: 42px;
       transition: transform 150ms ease, background 150ms ease, color 150ms ease;
     }
 
@@ -140,10 +159,12 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
+      flex: 0 0 auto;
     }
 
     .translate-mini button {
       min-width: 30px;
+      min-height: 30px;
       border: 1px solid rgba(23, 19, 13, 0.32);
       border-radius: 999px;
       padding: 5px 7px;
@@ -182,6 +203,7 @@
 
     .search {
       width: min(236px, 24vw);
+      min-height: 42px;
       border: 1px solid var(--ink);
       border-radius: 999px;
       padding: 7px 12px;
@@ -189,6 +211,7 @@
       background: rgba(255, 250, 240, 0.78);
       outline: none;
       font-size: 12px;
+      flex: 0 0 auto;
     }
 
     .search:focus { box-shadow: 0 0 0 3px rgba(0, 47, 167, 0.18); }
@@ -349,6 +372,9 @@
       grid-template-columns: 90px minmax(0, 1fr);
       gap: 18px;
       min-height: 118px;
+      content-visibility: auto;
+      contain-intrinsic-size: auto 140px;
+      scroll-margin-top: 76px;
     }
 
     .rail {
@@ -530,6 +556,7 @@
       background: var(--paper-2);
       font-size: 12px;
       font-weight: 760;
+      min-height: 42px;
       transition: transform 150ms ease, background 150ms ease;
     }
 
@@ -612,6 +639,7 @@
       color: var(--muted);
       background: transparent;
       font-size: 12px;
+      min-height: 40px;
     }
 
     .collapse-event:hover {
@@ -627,11 +655,13 @@
       color: var(--muted);
       background: rgba(255, 250, 240, 0.42);
       font-size: 12px;
+      min-height: 44px;
       text-align: left;
       transition: transform 150ms ease, border-color 150ms ease, background 150ms ease, box-shadow 150ms ease;
     }
 
     .term:hover,
+    .term.found:hover,
     .term.found {
       border-color: rgba(0, 47, 167, 0.62);
       color: var(--ink);
@@ -662,7 +692,8 @@
       transition: color 150ms ease, opacity 150ms ease, transform 150ms ease;
     }
 
-    .term:hover strong::after {
+    .term:hover strong::after,
+    .term.found:hover strong::after {
       color: var(--track);
       opacity: 1;
       transform: translateX(2px);
@@ -675,18 +706,34 @@
       line-height: 1.3;
     }
 
-    .term.review strong::after {
-      content: "  待审卡";
-      color: var(--red);
-      font-size: 10px;
-      font-weight: 800;
+    .term.review,
+    .term.missing {
+      cursor: default;
     }
 
+    .term.review strong::after,
     .term.missing strong::after {
       content: "";
-      color: var(--muted);
+    }
+
+    .term.review span,
+    .term.missing span {
+      color: var(--red);
       font-size: 10px;
-      font-weight: 800;
+      font-weight: 760;
+    }
+
+    .term.review {
+      border-style: dashed;
+    }
+
+    .term.missing {
+      border-style: dashed;
+      background: rgba(255, 250, 240, 0.24);
+    }
+
+    .term.missing strong {
+      color: var(--muted);
     }
 
     .empty,
@@ -752,43 +799,37 @@
 <body>
   <header class="topbar">
     <nav class="shell nav">
-      <a class="brand" href="#" aria-label="AI 时间轴">
+      <a class="brand" href="#" id="brand-link" aria-label="AI 时间轴">
         <span class="brand-mark">AI</span>
-        <span>AI 时间轴</span>
+        <span id="brand-text">AI 时间轴</span>
       </a>
-      <div class="filters" aria-label="筛选时间轴">
-        <button class="chip active" type="button" data-filter="全部">全部</button>
-        <button class="chip" type="button" data-filter="foundational">底层突破</button>
-        <button class="chip" type="button" data-filter="model">模型路线</button>
-        <button class="chip" type="button" data-filter="product">产品爆发</button>
-        <button class="chip" type="button" data-filter="ecosystem">生态扩散</button>
-        <button class="chip" type="button" data-filter="safety">安全治理</button>
-        <button class="chip" type="button" data-filter="culture">文化影响</button>
-        <input class="search" id="search" type="search" placeholder="搜索年份、事件、概念">
-        <span class="translate-mini" aria-label="语言切换">
-          <button type="button" id="translate-zh" title="中文">CH</button>
-          <button type="button" id="translate-en" title="English">EN</button>
+      <div class="filters" id="filters" aria-label="筛选时间轴">
+        <div class="chips" id="filter-chips"></div>
+        <input class="search" id="search" type="search" placeholder="搜索年份、事件、概念" aria-label="搜索年份、事件、概念">
+        <span class="translate-mini" role="group" aria-label="语言切换">
+          <button type="button" id="translate-zh" title="中文" aria-pressed="true">CH</button>
+          <button type="button" id="translate-en" title="English" aria-pressed="false">EN</button>
         </span>
       </div>
     </nav>
   </header>
 
   <section class="shell hero">
-    <div class="kicker">Chronology</div>
+    <div class="kicker" id="kicker">编年史</div>
     <div class="hero-grid">
       <div>
         <h1 id="site-title">AI 编年史</h1>
         <p class="lead" id="site-lead">一百年的 AI 故事，串成一条可追溯的线索，陪你探索 AI 的宇宙。</p>
       </div>
-      <aside class="ledger" aria-label="时间轴统计">
+      <aside class="ledger" id="ledger" aria-label="时间轴统计">
         <div class="ledger-title">
-          <span>Index</span>
+          <span id="ledger-title-text">Index</span>
           <span id="date-range"></span>
         </div>
         <div class="stats">
-          <div class="stat"><strong id="event-count">--</strong><span>历史节点</span></div>
-          <div class="stat"><strong id="term-count">--</strong><span>词典连接</span></div>
-          <div class="stat"><strong id="match-count">--</strong><span>当前显示</span></div>
+          <div class="stat"><strong id="event-count">--</strong><span id="stat-events">历史节点</span></div>
+          <div class="stat"><strong id="term-count">--</strong><span id="stat-terms">词典连接</span></div>
+          <div class="stat"><strong id="match-count">--</strong><span id="stat-visible">当前显示</span></div>
         </div>
       </aside>
     </div>
@@ -798,81 +839,124 @@
     <section class="timeline-wrap">
       <div class="timeline-head">
         <strong>Line</strong>
-        <span>点击年份节点后，可了解相关事件和词典入口。</span>
+        <span id="timeline-hint">点击年份节点后，可了解相关事件和词典入口。</span>
       </div>
       <div class="timeline" id="timeline" aria-label="AI 发展时间轴">
-        <p class="status">正在读取 AI 大事记数据。</p>
+        <p class="status" id="status-loading">正在读取 AI 大事记数据。</p>
       </div>
     </section>
   </main>
 
   <script>
-    function setLang(lang) {
-      if (state.lang === lang) return;
-      state.lang = lang;
-      state.active = -1;
-      if (state.rawEvents) {
-        state.events = state.rawEvents.map(normalizeEvent).sort((a, b) => timelineDateKey(a).localeCompare(timelineDateKey(b)));
-      }
-      const titleEl = document.getElementById("site-title");
-      const leadEl = document.getElementById("site-lead");
-      if (titleEl) titleEl.textContent = lang === "en" ? "AI Chronicle" : "AI 编年史";
-      if (leadEl) leadEl.textContent = lang === "en"
-        ? "A century of AI stories, strung into a traceable thread — explore the universe of AI with me."
-        : "一百年的 AI 故事，串成一条可追溯的线索，陪你探索 AI 的宇宙。";
-      renderAll();
-      const enBtn = document.getElementById("translate-en");
-      const zhBtn = document.getElementById("translate-zh");
-      if (enBtn) enBtn.classList.toggle("active-lang", lang === "en");
-      if (zhBtn) zhBtn.classList.toggle("active-lang", lang === "zh");
-    }
+    const CATEGORY_KEYS = ["research", "model", "product", "infrastructure", "agent", "safety", "business"];
 
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("translate-en")?.addEventListener("click", () => setLang("en"));
-      document.getElementById("translate-zh")?.addEventListener("click", () => setLang("zh"));
-    });
-
-    const TYPE_LABELS = {
-      foundational: "底层突破",
-      model: "模型路线",
-      product: "产品爆发",
-      ecosystem: "生态扩散",
-      industry: "产业化",
-      compute: "算力基础",
-      policy: "治理政策",
-      safety: "安全治理",
-      data: "数据基础",
-      dataset: "数据基础",
-      breakthrough: "重大突破",
-      concept: "概念转折",
-      interface: "交互入口",
-      risk: "风险治理",
-      theme: "主题转折",
-      governance: "治理政策",
-      robotics: "机器人",
-      infrastructure: "基础设施",
-      culture: "文化影响"
+    const CATEGORY_LABELS = {
+      research: { zh: "研究突破", en: "Research" },
+      model: { zh: "模型路线", en: "Models" },
+      product: { zh: "产品爆发", en: "Products" },
+      infrastructure: { zh: "基础设施", en: "Infrastructure" },
+      agent: { zh: "智能体", en: "Agents" },
+      safety: { zh: "安全治理", en: "Safety" },
+      business: { zh: "商业生态", en: "Business" }
     };
 
-    const FILTER_GROUPS = {
-      foundational: new Set(["foundational", "compute", "breakthrough"]),
-      model: new Set(["model", "concept"]),
-      product: new Set(["product", "industry"]),
-      ecosystem: new Set(["ecosystem", "data", "dataset", "infrastructure"]),
-      safety: new Set(["safety", "risk", "governance", "policy"]),
-      culture: new Set(["culture", "interface", "robotics", "theme"])
+    const LOCALES = {
+      zh: {
+        htmlLang: "zh-CN",
+        title: "AI 编年史 · AI Timeline — 一百年 AI 历史时间轴",
+        metaDescription: "从图灵到 Agent，一百年的 AI 历史：116 个有来源依据的精选节点，双语呈现，可追溯、可探索，并连接配套 AI 词典。",
+        ogTitle: "AI 编年史 · AI Timeline",
+        ogDescription: "一百年的 AI 故事，串成一条可追溯的线索，陪你探索 AI 的宇宙。",
+        brandText: "AI 时间轴",
+        brandAria: "AI 时间轴",
+        filterAll: "全部",
+        filtersAria: "筛选时间轴",
+        searchPlaceholder: "搜索年份、事件、概念",
+        searchAria: "搜索年份、事件、概念",
+        langGroupAria: "语言切换",
+        zhTitle: "中文",
+        enTitle: "English",
+        kicker: "编年史",
+        siteTitle: "AI 编年史",
+        siteLead: "一百年的 AI 故事，串成一条可追溯的线索，陪你探索 AI 的宇宙。",
+        ledgerTitle: "索引",
+        ledgerAria: "时间轴统计",
+        statEvents: "历史节点",
+        statTerms: "词典连接",
+        statVisible: "当前显示",
+        timelineHint: "点击年份节点后，可了解相关事件和词典入口。",
+        timelineAria: "AI 发展时间轴",
+        statusLoading: "正在读取 AI 大事记数据。",
+        emptyResult: "没有匹配的历史节点。",
+        loadError: "时间轴数据读取失败，请检查 ai-timeline-public.json。",
+        emptyTerms: "这个节点暂时没有词典连接。",
+        detailBackstory: "背后现场",
+        detailWhy: "为何重要",
+        detailLearning: "继续学习",
+        collapse: "收起",
+        subtimelineExpand: "展开产品线（{n}）",
+        subtimelineOpen: "收起产品线",
+        termOpen: "打开词典词条",
+        termReview: "待审卡，先保留为学习线索。",
+        termReviewBadge: "待审卡",
+        termMissing: "词典暂无此词条"
+      },
+      en: {
+        htmlLang: "en",
+        title: "AI Chronicle · AI Timeline — A Century of AI History",
+        metaDescription: "From Turing to Agents, a century of AI history: 116 sourced, curated milestones, presented bilingually — traceable, explorable, and linked to a companion AI dictionary.",
+        ogTitle: "AI Chronicle · AI Timeline",
+        ogDescription: "A century of AI stories, strung into a traceable thread — explore the universe of AI with me.",
+        brandText: "AI Timeline",
+        brandAria: "AI Timeline",
+        filterAll: "All",
+        filtersAria: "Filter timeline",
+        searchPlaceholder: "Search year, event, concept",
+        searchAria: "Search year, event, concept",
+        langGroupAria: "Switch language",
+        zhTitle: "中文",
+        enTitle: "English",
+        kicker: "Chronology",
+        siteTitle: "AI Chronicle",
+        siteLead: "A century of AI stories, strung into a traceable thread — explore the universe of AI with me.",
+        ledgerTitle: "Index",
+        ledgerAria: "Timeline statistics",
+        statEvents: "Events",
+        statTerms: "Dictionary links",
+        statVisible: "Visible now",
+        timelineHint: "Click a year node to learn about the event and its dictionary entries.",
+        timelineAria: "AI development timeline",
+        statusLoading: "Loading the AI chronicle…",
+        emptyResult: "No matching milestones.",
+        loadError: "Failed to load timeline data — check ai-timeline-public.json.",
+        emptyTerms: "No dictionary links for this milestone yet.",
+        detailBackstory: "Context & Backstory",
+        detailWhy: "Why it matters",
+        detailLearning: "Continue learning",
+        collapse: "Collapse",
+        subtimelineExpand: "Expand product lines ({n})",
+        subtimelineOpen: "Collapse product lines",
+        termOpen: "Open dictionary entry",
+        termReview: "Review draft card, kept as a learning trail.",
+        termReviewBadge: "Review draft",
+        termMissing: "Not in dictionary yet"
+      }
     };
 
     const state = {
       events: [],
       terms: [],
       reviewTerms: [],
-      filter: "全部",
+      rawEvents: null,
+      filter: "all",
       keyword: "",
       active: -1,
       openProductLines: new Set(),
-      lang: "zh"
+      lang: "zh",
+      suppressAutoExpand: false
     };
+
+    const t = () => LOCALES[state.lang];
 
     function escapeHTML(value) {
       return String(value || "").replace(/[&<>"']/g, char => ({
@@ -886,9 +970,125 @@
 
     async function loadJSON(path) {
       const response = await fetch(`${path}?t=${Date.now()}`);
-      if (!response.ok) throw new Error(`无法读取 ${path}`);
+      if (!response.ok) throw new Error(`Failed to load ${path}`);
       return response.json();
     }
+
+    /* ---------- locale / meta ---------- */
+
+    function applyLanguageMeta() {
+      const lang = state.lang;
+      const loc = LOCALES[lang];
+      document.documentElement.lang = loc.htmlLang;
+      document.title = loc.title;
+      document.querySelector('meta[name="description"]').setAttribute("content", loc.metaDescription);
+      document.querySelector('meta[property="og:title"]').setAttribute("content", loc.ogTitle);
+      document.querySelector('meta[property="og:description"]').setAttribute("content", loc.ogDescription);
+      const byId = id => document.getElementById(id);
+      byId("brand-text").textContent = loc.brandText;
+      byId("brand-link").setAttribute("aria-label", loc.brandAria);
+      byId("kicker").textContent = loc.kicker;
+      byId("site-title").textContent = loc.siteTitle;
+      byId("site-lead").textContent = loc.siteLead;
+      byId("ledger-title-text").textContent = loc.ledgerTitle;
+      byId("stat-events").textContent = loc.statEvents;
+      byId("stat-terms").textContent = loc.statTerms;
+      byId("stat-visible").textContent = loc.statVisible;
+      byId("timeline-hint").textContent = loc.timelineHint;
+      byId("filters").setAttribute("aria-label", loc.filtersAria);
+      byId("ledger").setAttribute("aria-label", loc.ledgerAria);
+      byId("timeline").setAttribute("aria-label", loc.timelineAria);
+      const search = byId("search");
+      search.placeholder = loc.searchPlaceholder;
+      search.setAttribute("aria-label", loc.searchAria);
+      const langGroup = byId("filters").querySelector(".translate-mini");
+      langGroup.setAttribute("aria-label", loc.langGroupAria);
+      byId("translate-zh").title = loc.zhTitle;
+      byId("translate-en").title = loc.enTitle;
+      const status = byId("status-loading");
+      if (status) status.textContent = loc.statusLoading;
+    }
+
+    function renderFilterChips() {
+      const container = document.getElementById("filter-chips");
+      const loc = t();
+      const items = [["all", loc.filterAll], ...CATEGORY_KEYS.map(key => [key, CATEGORY_LABELS[key][state.lang]])];
+      container.innerHTML = items.map(([key, label]) =>
+        `<button class="chip ${state.filter === key ? "active" : ""}" type="button" data-filter="${key}" aria-pressed="${state.filter === key}">${escapeHTML(label)}</button>`
+      ).join("");
+    }
+
+    function syncControls() {
+      renderFilterChips();
+      const search = document.getElementById("search");
+      if (search.value !== state.keyword) search.value = state.keyword;
+      document.getElementById("translate-en").classList.toggle("active-lang", state.lang === "en");
+      document.getElementById("translate-zh").classList.toggle("active-lang", state.lang === "zh");
+      document.getElementById("translate-en").setAttribute("aria-pressed", String(state.lang === "en"));
+      document.getElementById("translate-zh").setAttribute("aria-pressed", String(state.lang === "zh"));
+      applyLanguageMeta();
+    }
+
+    function setLang(lang) {
+      if (state.lang === lang) return;
+      state.lang = lang;
+      state.active = -1;
+      if (state.rawEvents) {
+        state.events = state.rawEvents.map(normalizeEvent).sort((a, b) => timelineDateKey(a).localeCompare(timelineDateKey(b)));
+      }
+      syncControls();
+      renderAll();
+      syncURL();
+    }
+
+    /* ---------- URL persistence ---------- */
+
+    function stateToURL() {
+      const params = new URLSearchParams();
+      if (state.lang !== "zh") params.set("lang", state.lang);
+      if (state.filter !== "all") params.set("cat", state.filter);
+      const keyword = state.keyword.trim();
+      if (keyword) params.set("q", keyword);
+      if (state.active !== -1) params.set("e", String(state.active));
+      if (state.openProductLines.size) params.set("open", [...state.openProductLines].join(","));
+      const qs = params.toString();
+      return qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
+    }
+
+    function applyURL(params) {
+      state.filter = "all";
+      state.keyword = "";
+      state.active = -1;
+      state.openProductLines = new Set();
+      state.suppressAutoExpand = true;
+      const lang = params.get("lang");
+      if (lang === "en" || lang === "zh") state.lang = lang;
+      const cat = params.get("cat");
+      if (cat && CATEGORY_KEYS.includes(cat)) state.filter = cat;
+      const keyword = params.get("q") || params.get("search");
+      if (keyword !== null) state.keyword = keyword;
+      const e = params.get("e");
+      if (e !== null && e !== "" && !Number.isNaN(Number(e))) state.active = Number(e);
+      const open = params.get("open");
+      if (open) {
+        open.split(",").forEach(v => {
+          const n = Number(v);
+          if (!Number.isNaN(n)) state.openProductLines.add(n);
+        });
+      }
+    }
+
+    let pushTimer = null;
+    function syncURL() {
+      const url = stateToURL();
+      try {
+        history.pushState({ aiTimeline: true }, "", url);
+      } catch (error) {
+        // 某些 file:// 环境可能禁止改写 URL，静默降级
+      }
+    }
+
+    /* ---------- data normalization ---------- */
 
     function normalizeEvent(event, index) {
       const isEn = state.lang === "en";
@@ -908,6 +1108,8 @@
         sourceName: item.source_name || "",
         sourceUrl: item.source_url || ""
       })) : [];
+      const type = event.type || "research";
+      const labelMap = CATEGORY_LABELS[type];
       return {
         index,
         date,
@@ -915,8 +1117,8 @@
         year,
         title: isEn ? (event.title_en || event.title_zh || "") : (event.title_zh || event.title_en || ""),
         titleEn: event.title_en || "",
-        type: event.type || "foundational",
-        label: TYPE_LABELS[event.type] || event.type || (isEn ? "Milestone" : "历史节点"),
+        type,
+        label: labelMap ? labelMap[isEn ? "en" : "zh"] : (event.type || (isEn ? "Milestone" : "历史节点")),
         summary: makeEventDeck(event, sections),
         what: isEn ? (event.summary_en || sections.what) : sections.what,
         story: isEn ? (event.context_en || event.behind_scenes_zh || sections.story) : (event.behind_scenes_zh || sections.story),
@@ -993,7 +1195,6 @@
 
     async function loadDictionary() {
       try {
-        // 词典公开数据（1327 条索引 + 51 条精选样板），与 ai-dictionary 仓库同源加载
         const data = await loadJSON("https://gengyueworks.github.io/ai-dictionary/ai-dictionary-free.json");
         return (data.terms || []).filter(term => term && term.term);
       } catch (error) {
@@ -1048,16 +1249,6 @@
       "LLM"
     ]);
 
-    function compactSourceName(name) {
-      const clean = String(name || "").trim();
-      if (!clean) return "";
-      return clean
-        .replace(/\s+-\s+.*$/, "")
-        .replace(/^The\s+/i, "")
-        .replace(/\s{2,}/g, " ")
-        .slice(0, 34);
-    }
-
     function eventKeyTerms(event, limit = 3) {
       const uniqueTerms = [...event.missingTerms, ...event.terms]
         .filter(Boolean)
@@ -1067,8 +1258,7 @@
     }
 
     function eventVisible(event) {
-      const filterTypes = FILTER_GROUPS[state.filter];
-      const filterMatch = state.filter === "全部" || event.type === state.filter || filterTypes?.has(event.type);
+      const filterMatch = state.filter === "all" || event.type === state.filter;
       const keyword = state.keyword.trim().toLowerCase();
       const haystack = [
         event.date,
@@ -1104,13 +1294,14 @@
       return 4;
     }
 
+    /* ---------- rendering ---------- */
 
     function renderStats() {
       const visible = visibleEvents();
-      const allTerms = new Set();
-      state.events.forEach(event => event.terms.forEach(term => allTerms.add(term)));
+      let connectionCount = 0;
+      state.events.forEach(event => { connectionCount += event.terms.length; });
       document.getElementById("event-count").textContent = state.events.length;
-      document.getElementById("term-count").textContent = allTerms.size;
+      document.getElementById("term-count").textContent = connectionCount;
       document.getElementById("match-count").textContent = visible.length;
       if (state.events.length) {
         const first = state.events[0].year;
@@ -1120,24 +1311,30 @@
     }
 
     function renderTerms(event) {
+      const loc = t();
       const terms = eventKeyTerms(event, 3);
-      if (!terms.length) return `<span class="empty">这个节点暂时没有词典连接。</span>`;
+      if (!terms.length) return `<span class="empty">${escapeHTML(loc.emptyTerms)}</span>`;
       return terms.map(term => {
         const matched = findTerm(term);
         const review = matched ? null : findReviewTerm(term);
         const label = matched || review;
-        const title = label?.term_zh && label.term_zh !== term ? `${label.term_zh}（${term}）` : term;
-        const subtitle = matched ? "" : review ? "待审卡，先保留为学习线索。" : "";
-        const className = matched ? "found" : review ? "review" : "missing";
-        const attr = matched ? `data-term="${escapeHTML(term)}"` : review ? `data-review-term="${escapeHTML(term)}"` : "";
-        return `<button class="term ${className}" type="button" ${attr}><strong>${escapeHTML(title)}</strong>${subtitle ? `<span>${escapeHTML(subtitle)}</span>` : ""}</button>`;
+        const title = label && label.term_zh && label.term_zh !== term ? `${label.term_zh}（${term}）` : term;
+        const aria = `${escapeHTML(title)}`;
+        if (matched) {
+          return `<button class="term found" type="button" data-term="${escapeHTML(term)}" aria-label="${aria} · ${loc.termOpen}"><strong>${escapeHTML(title)}</strong></button>`;
+        }
+        if (review) {
+          return `<button class="term review" type="button" disabled aria-label="${aria} · ${loc.termReviewBadge}"><strong>${escapeHTML(title)}</strong><span>${escapeHTML(loc.termReview)}</span></button>`;
+        }
+        return `<button class="term missing" type="button" disabled aria-label="${aria} · ${loc.termMissing}"><strong>${escapeHTML(title)}</strong><span>${escapeHTML(loc.termMissing)}</span></button>`;
       }).join("");
     }
 
     function renderSubtimeline(event) {
       if (!event.subtimeline.length) return "";
+      const loc = t();
       const isOpen = state.openProductLines.has(event.index);
-      const label = isOpen ? "收起产品线" : `展开产品线（${event.subtimeline.length}）`;
+      const label = isOpen ? loc.subtimelineOpen : loc.subtimelineExpand.replace("{n}", event.subtimeline.length);
       const list = isOpen ? `
         <div class="subtimeline-list">
           ${event.subtimeline.map(item => `
@@ -1154,7 +1351,7 @@
       ` : "";
       return `
         <div class="subtimeline ${isOpen ? "open" : ""}">
-          <button class="subtimeline-toggle" type="button" data-subtimeline="${event.index}">${escapeHTML(label)}</button>
+          <button class="subtimeline-toggle" type="button" data-subtimeline="${event.index}" aria-expanded="${isOpen}">${escapeHTML(label)}</button>
           ${list}
         </div>
       `;
@@ -1166,7 +1363,6 @@
         .map(paragraph => paragraph.trim())
         .filter(Boolean);
       if (!paragraphs.length) return "";
-      // Pure-Flow: 段内按句子断行，一句一行，保留呼吸感（中英文均支持）
       const sentenceize = paragraph =>
         String(paragraph)
           .split(/(?<=[。！？；])|(?<=[.!?])(?=\s|$)/)
@@ -1183,8 +1379,9 @@
     }
 
     function renderTimeline() {
+      const loc = t();
       const list = visibleEvents();
-      if (state.keyword.trim() && list.length && state.active === -1) {
+      if (state.keyword.trim() && list.length && state.active === -1 && !state.suppressAutoExpand) {
         state.active = list[0].index;
       }
       if (state.active !== -1 && !list.some(event => event.index === state.active)) {
@@ -1193,9 +1390,9 @@
       }
 
       document.getElementById("timeline").innerHTML = list.map(event => `
-        <article class="event">
+        <article class="event" id="ev-${event.index}">
           <div class="rail" aria-hidden="true"></div>
-          <article class="event-card ${event.index === state.active ? "active" : ""}" tabindex="0" data-index="${event.index}">
+          <article class="event-card ${event.index === state.active ? "active" : ""}" tabindex="0" data-index="${event.index}" aria-expanded="${event.index === state.active}">
             <div class="event-inner">
               <div>
                 <span class="year">${escapeHTML(event.year)}</span>
@@ -1206,37 +1403,39 @@
                 <h3>${escapeHTML(event.title)}</h3>
                 <p class="summary">${escapeHTML(event.summary)}</p>
                 <div class="event-detail">
-		                  <div class="detail-grid">
-		                    <div class="detail-main">
-		                      ${renderDetailBlock(state.lang === "en" ? "Context & Backstory" : "背后现场", event.story)}
-		                      ${renderDetailBlock(state.lang === "en" ? "Why it matters" : "为何重要", cleanWhy(event.why, state.lang))}
-		                      ${renderSubtimeline(event)}
+                  <div class="detail-grid">
+                    <div class="detail-main">
+                      ${renderDetailBlock(loc.detailBackstory, event.story)}
+                      ${renderDetailBlock(loc.detailWhy, cleanWhy(event.why, state.lang))}
+                      ${renderSubtimeline(event)}
                     </div>
                     <div class="detail-side">
-                      <p class="detail-label">${state.lang === "en" ? "Continue learning" : "继续学习"}</p>
+                      <p class="detail-label">${loc.detailLearning}</p>
                       <div class="detail-links">${renderTerms(event)}</div>
                     </div>
                   </div>
                   <div class="event-actions">
-                    <button class="collapse-event" type="button" data-collapse="${event.index}">收起</button>
+                    <button class="collapse-event" type="button" data-collapse="${event.index}">${escapeHTML(loc.collapse)}</button>
                   </div>
                 </div>
               </div>
             </div>
           </article>
         </article>
-      `).join("") || `<p class="empty">没有匹配的历史节点。</p>`;
+      `).join("") || `<p class="empty">${escapeHTML(loc.emptyResult)}</p>`;
 
       document.querySelectorAll(".event-card").forEach(card => {
         card.addEventListener("click", () => {
           state.active = Number(card.dataset.index);
           renderAll();
+          syncURL();
         });
         card.addEventListener("keydown", event => {
           if (event.key === "Enter" || event.key === " ") {
             event.preventDefault();
             state.active = Number(card.dataset.index);
             renderAll();
+            syncURL();
           }
         });
       });
@@ -1245,13 +1444,10 @@
         button.addEventListener("click", event => {
           event.stopPropagation();
           const term = findTerm(button.dataset.term);
-          if (term) window.location.href = `https://gengyueworks.github.io/ai-dictionary/ai-dictionary-lab.html?term=${encodeURIComponent(term.term)}&from=timeline`;
-        });
-      });
-
-      document.querySelectorAll("[data-review-term]").forEach(button => {
-        button.addEventListener("click", event => {
-          event.stopPropagation();
+          if (term) {
+            const url = `https://gengyueworks.github.io/ai-dictionary/ai-dictionary-lab.html?term=${encodeURIComponent(term.term)}&from=timeline`;
+            window.location.href = url;
+          }
         });
       });
 
@@ -1265,6 +1461,7 @@
             state.openProductLines.add(index);
           }
           renderAll();
+          syncURL();
         });
       });
 
@@ -1272,7 +1469,9 @@
         button.addEventListener("click", event => {
           event.stopPropagation();
           state.active = -1;
+          state.suppressAutoExpand = true;
           renderAll();
+          syncURL();
         });
       });
     }
@@ -1283,21 +1482,43 @@
     }
 
     function bindEvents() {
-      document.querySelectorAll("[data-filter]").forEach(button => {
-        button.addEventListener("click", () => {
-          state.filter = button.dataset.filter;
-          document.querySelectorAll("[data-filter]").forEach(item => item.classList.toggle("active", item === button));
-          renderAll();
-        });
-      });
-      document.getElementById("search").addEventListener("input", event => {
-        state.keyword = event.target.value;
-        state.active = -1;
+      document.getElementById("filter-chips").addEventListener("click", event => {
+        const chip = event.target.closest("[data-filter]");
+        if (!chip) return;
+        state.filter = chip.dataset.filter;
+        renderFilterChips();
         renderAll();
+        syncURL();
+      });
+
+      const search = document.getElementById("search");
+      search.addEventListener("input", () => {
+        state.keyword = search.value;
+        state.active = -1;
+        state.suppressAutoExpand = false;
+        renderAll();
+        clearTimeout(pushTimer);
+        pushTimer = setTimeout(syncURL, 350);
+      });
+
+      document.getElementById("translate-en").addEventListener("click", () => setLang("en"));
+      document.getElementById("translate-zh").addEventListener("click", () => setLang("zh"));
+
+      window.addEventListener("popstate", () => {
+        const params = new URLSearchParams(window.location.search);
+        applyURL(params);
+        if (state.rawEvents) {
+          state.events = state.rawEvents.map(normalizeEvent).sort((a, b) => timelineDateKey(a).localeCompare(timelineDateKey(b)));
+        }
+        syncControls();
+        renderAll();
+        const active = document.querySelector(`[data-index="${state.active}"]`);
+        if (active) active.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     }
 
     async function main() {
+      applyURL(new URLSearchParams(window.location.search));
       bindEvents();
       try {
         const [timeline, dictionary, reviewTerms] = await Promise.all([loadTimeline(), loadDictionary(), loadReviewTerms()]);
@@ -1305,16 +1526,12 @@
         state.events = timeline.map(normalizeEvent).sort((a, b) => timelineDateKey(a).localeCompare(timelineDateKey(b)));
         state.terms = dictionary;
         state.reviewTerms = reviewTerms;
-        const params = new URLSearchParams(window.location.search);
-        const query = params.get("q") || params.get("search") || "";
-        if (query.trim()) {
-          state.keyword = query.trim();
-          document.getElementById("search").value = state.keyword;
-          state.active = -1;
-        }
+        syncControls();
         renderAll();
+        const active = document.querySelector(`[data-index="${state.active}"]`);
+        if (active) active.scrollIntoView({ behavior: "auto", block: "start" });
       } catch (error) {
-        document.getElementById("timeline").innerHTML = `<p class="empty">时间轴数据读取失败，请检查 ai-timeline-public.json。</p>`;
+        document.getElementById("timeline").innerHTML = `<p class="empty">${escapeHTML(t().loadError)}</p>`;
       }
     }
 

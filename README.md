@@ -10,6 +10,37 @@ A source-backed, bilingual chronology of artificial intelligence—from the theo
 
 **Live demo:** https://gengyueworks.github.io/ai-timeline/
 
+## At a glance
+
+- **272** events in the maintained full collection
+- **116** representative events in this open dataset
+- **1936–2026-08** historical coverage
+- Bilingual (中文 + English)
+- Sources across **55 domains**
+- CI validation · MIT-licensed code · GitHub Pages site
+
+**Get started:** [Open the live timeline](https://gengyueworks.github.io/ai-timeline/) · [Browse the public dataset](./ai-timeline-public.json) · [Contribute](./CONTRIBUTING.md)
+
+## Quick start
+
+Open the [live timeline](https://gengyueworks.github.io/ai-timeline/).
+
+To run locally:
+
+```bash
+git clone https://github.com/gengyueworks/ai-timeline.git
+cd ai-timeline
+python3 -m http.server 8000
+```
+
+Then open http://localhost:8000.
+
+## Use the public data
+
+The public dataset is available at [`ai-timeline-public.json`](./ai-timeline-public.json). The schema is documented in [`ai-timeline-schema.json`](./ai-timeline-schema.json).
+
+Developers can use the dataset to build educational tools, visualizations, research indexes, or timeline-based learning experiences.
+
 ## Why this project exists
 
 This timeline began as a by-product of learning.
@@ -23,18 +54,6 @@ The repository was made public on August 10, 2026, but the project itself has gr
 I came to AI as a liberal-arts writer rather than a computer scientist. That background makes me attentive to language, context, forgotten branches, and the moment when a technical idea enters ordinary life. I do not expect this timeline to be the final or only map; it is one carefully maintained route through a much larger world.
 
 Every map is drawn from somewhere. I live in China and read across Chinese- and English-language sources, so I sometimes notice open models, infrastructure projects, and developer communities that receive less attention in English-language summaries. When they are historically relevant, I include them alongside work from the rest of the world. This is not an argument for one country or company, only a natural part of keeping the view open, plural, and as complete as I can make it.
-
-## At a glance
-
-- **272** events in the maintained full collection
-- **116** representative events in this open dataset
-- **1936–2026-08** historical coverage
-- Updated weekly
-- Static HTML and JSON; no framework or build step required
-
-The public edition is intentionally useful on its own. It provides a working timeline, a documented schema, verifiable sources, minimal dictionary links, and enough coverage to trace the major technical and cultural shifts in AI history.
-
-
 
 ## Repository structure
 
@@ -84,6 +103,15 @@ Corrections and new-event proposals are welcome. Please open an issue or pull re
 4. the reason the event matters to the broader AI timeline.
 
 See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for validation rules and editorial criteria.
+
+## Maintainer resources
+
+- [Maintainer notes](./_meta/MAINTAINER.md) — who maintains this and how
+- [Source and inclusion standard](./_meta/SOURCES.md)
+- [Selection standard](./_meta/SELECTION-STANDARD.md) — how events are chosen
+- [Release checklist](./_meta/RELEASE-CHECKLIST.md)
+- [Maintenance workflow](./_meta/MAINTENANCE.md) — how Codex participates in maintenance
+- [Card copy standard](./CARD-SUMMARY-SPEC.md)
 
 ## Scope and licensing
 

@@ -3,7 +3,7 @@
 **English** · [简体中文](./README.zh-CN.md)
 
 [![Validate](https://github.com/gengyueworks/ai-timeline/actions/workflows/validate-data.yml/badge.svg)](https://github.com/gengyueworks/ai-timeline/actions/workflows/validate-data.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-orange.svg)](./LICENSE)
 [![Dataset: CC BY-NC 4.0](https://img.shields.io/badge/Dataset-CC%20BY--NC%204.0-orange.svg)](./LICENSE-DATA)
 
 A source-backed, bilingual chronology of artificial intelligence—from the theoretical foundations of computation to modern models and agents.
@@ -17,7 +17,7 @@ A source-backed, bilingual chronology of artificial intelligence—from the theo
 - **1936–2026-08** historical coverage
 - Bilingual (中文 + English)
 - Sources across **55 domains**
-- CI validation · MIT-licensed code · GitHub Pages site
+- CI validation · CC BY-NC 4.0 licensed · GitHub Pages site
 
 **Get started:** [Open the live timeline](https://gengyueworks.github.io/ai-timeline/) · [Browse the public dataset](./ai-timeline-public.json) · [Contribute](./CONTRIBUTING.md)
 
@@ -115,12 +115,12 @@ See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for validation rules and editorial cr
 
 ## Scope and licensing
 
-- **Source code:** MIT License.
+- **Source code:** CC BY-NC 4.0 (non-commercial).
 - **Public dataset (`ai-timeline-public.json`):** CC BY-NC 4.0.
 - **What this repository includes:** the timeline page, interactive code, data schema, validation rules, and 116 source-backed representative events — each with a curated card summary, an event overview, a behind-the-scenes narrative, and a "why it matters" note, so the timeline is fully readable on its own.
 - **What this repository does not include:** the complete 272-event dataset, learning paths, relationship graphs, research drafts, and the full AI dictionary cards and paid content — these remain under full copyright unless otherwise stated.
 
-The source code is licensed under MIT. The public dataset is CC BY-NC 4.0. The full timeline data, learning paths, and dictionary entries are not covered by these licenses and remain under full copyright unless otherwise stated.
+The source code and the public dataset are licensed under CC BY-NC 4.0 (non-commercial). The full timeline data, learning paths, and dictionary entries are not covered by these licenses and remain under full copyright unless otherwise stated.
 
 For commercial use of the dataset, please open an issue describing the intended use.
 
@@ -141,7 +141,7 @@ AI Timeline 是一份有来源依据的双语 AI 编年史，从早期计算理�
 - 覆盖跨度为 1936 至 2026 年 8 月
 - 中英双语呈现（中文 + English）
 - 来源覆盖 55 个顶级域名与文献库
-- CI 数据校验 · 代码开源（MIT）· GitHub Pages 自动化部署
+- CI 数据校验 · 代码 CC BY-NC 4.0（非商用）· GitHub Pages 自动化部署
 
 [打开在线时间轴](https://gengyueworks.github.io/ai-timeline/) · [浏览公开数据集](./ai-timeline-public.json) · [参与贡献](./CONTRIBUTING.md)
 
@@ -179,8 +179,8 @@ AI Timeline 是一份有来源依据的双语 AI 编年史，从早期计算理�
 
 ### 授权与使用
 
-- **代码：** MIT 许可证。
-- **公开数据集（`ai-timeline-public.json`）：** CC BY-NC 4.0 许可证。
+- **代码：** CC BY-NC 4.0 许可证（非商用）。
+- **公开数据集（`ai-timeline-public.json`）：** CC BY-NC 4.0 许可证（非商用）。
 - **本仓库包含：** 时间轴页面、交互代码、数据 Schema、校验规则，以及 116 个有来源的代表性事件（每个事件包含卡片摘要、事件概览、背景故事与重要性解析，可独立完整浏览）。
 
 如果需要商业使用数据集，请提交 Issue 说明使用场景。

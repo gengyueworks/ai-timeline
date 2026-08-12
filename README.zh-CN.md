@@ -3,7 +3,7 @@
 [English](./README.md) · **简体中文**
 
 [![校验](https://github.com/gengyueworks/ai-timeline/actions/workflows/validate-data.yml/badge.svg)](https://github.com/gengyueworks/ai-timeline/actions/workflows/validate-data.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-orange.svg)](./LICENSE)
 [![数据: CC BY-NC 4.0](https://img.shields.io/badge/Dataset-CC%20BY--NC%204.0-orange.svg)](./LICENSE-DATA)
 
 一份有来源依据的双语 AI 编年史，从早期计算理论起点记录到今天的模型、产品与 Agent。
@@ -19,7 +19,7 @@
 - 覆盖 **1936–2026 年 8 月** 历史
 - 中英双语呈现（中文 + English）
 - 来源覆盖 **55 个顶级域名** 与文献库
-- CI 数据校验 · 代码开源（MIT）· GitHub Pages 自动化部署
+- CI 数据校验 · 代码 CC BY-NC 4.0（非商用）· GitHub Pages 自动化部署
 
 ---
 
@@ -141,8 +141,8 @@ ai-timeline/
 
 ## 授权与使用
 
-- **代码：** MIT 许可证。
-- **公开数据集（`ai-timeline-public.json`）：** CC BY-NC 4.0 许可证。
+- **代码：** CC BY-NC 4.0 许可证（非商用）。
+- **公开数据集（`ai-timeline-public.json`）：** CC BY-NC 4.0 许可证（非商用）。
 - **本仓库包含：** 时间轴页面、交互代码、数据 Schema、校验规则，以及 116 个有来源的代表性事件（每个事件包含卡片摘要、事件概览、背景故事与重要性解析，可独立完整浏览）。
 
 如果需要商业使用数据集，请提交 Issue 说明使用场景。

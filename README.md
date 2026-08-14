@@ -35,6 +35,12 @@ The timeline records more than dates. It connects papers, models, products, comp
 
 Every map is drawn from somewhere. I live in China and read across Chinese- and English-language sources, so I sometimes notice open models, infrastructure projects, and developer communities that receive less attention in English-language summaries. When they are historically relevant, I include them alongside work from the rest of the world. This is not an argument for one country or company. It is an attempt to keep the view open, plural, and honest about where the map is being drawn from.
 
+### Development trail
+
+- **2026-05-26** · The timeline project began taking structured form.
+- **2026-05-29–06-01** · Data schema, product lines, subtimelines, and interface went through multiple iterations.
+- **2026-08-10–11** · The public bilingual edition, validation workflow, and release materials were prepared and published.
+
 ## The larger vision
 
 The AI Timeline is being built as more than a longer list of events. Its long-term aim is to become a navigable public record of a field that is still inventing itself.

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21",
+  "updated_at": "2026-08-22",
   "schema_version": "ai-timeline-public-v1.1",
   "full_collection_size": 272,
   "public_event_count": 118,
@@ -4610,7 +4610,9 @@
         "Artificial Analysis"
       ],
       "missing_terms": [],
-      "type_legacy": "tooling"
+      "type_legacy": "tooling",
+      "summary_en": "Artificial Analysis launched Search Index, benchmarking retrieval services inside a fixed harness driven by GPT-5.6 Luna through the open-source Stirrup runner: Parallel leads at 75, Exa scores 74 and Firecrawl 73, while a no-retrieval baseline manages only 33.",
+      "card_summary_en": "Search Index turns retrieval from marketing claims into reproducible numbers, and shows better search lowers the total cost of a task."
     },
     {
       "id": "ai-118",
@@ -4640,7 +4642,9 @@
         "MIT"
       ],
       "missing_terms": [],
-      "type_legacy": "data"
+      "type_legacy": "data",
+      "summary_en": "Public AI Observatory, built by MIT, Stanford and partner institutions, went live with 24,521 consented conversations spanning 52 models, nearly 100,000 turns and 145 annotation dimensions, covering real-world AI use from 2023 to 2026.",
+      "card_summary_en": "A public observatory measures AI use with 24.5k real conversations, giving the industry a shared, vendor-independent ruler."
     }
   ]
 }

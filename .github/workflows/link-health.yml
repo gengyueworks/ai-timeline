@@ -1,0 +1,126 @@
+name: Link health check
+
+on:
+  schedule:
+    - cron: "0 2 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run source link health check
+        id: check
+        run: |
+          mkdir -p reports
+          python3 scripts/check-source-links.py --output reports/link-health.json --workers 4 || true
+          cat reports/link-health.json
+          confirmed=$(python3 -c "import json; d=json.load(open('reports/link-health.json')); print(d.get('counts',{}).get('confirmed-dead',0))")
+          candidates=$(python3 -c "import json; d=json.load(open('reports/link-health.json')); print(d.get('counts',{}).get('candidate-dead',0))")
+          review=$(python3 -c "import json; d=json.load(open('reports/link-health.json')); print(d.get('counts',{}).get('review',0))")
+          echo "confirmed=$confirmed" >> "$GITHUB_OUTPUT"
+          echo "candidates=$candidates" >> "$GITHUB_OUTPUT"
+          echo "review=$review" >> "$GITHUB_OUTPUT"
+          echo "confirmed=$confirmed candidates=$candidates review=$review"
+
+      - name: Build issue body
+        if: steps.check.outputs.confirmed != '0'
+        run: |
+          python3 << 'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("reports/link-health.json").read_text(encoding="utf-8"))
+          confirmed = [r for r in data.get("results", []) if r.get("confirmed_dead")]
+          candidates = [r for r in data.get("results", []) if r.get("classification") == "candidate-dead" and not r.get("confirmed_dead")]
+          review = [r for r in data.get("results", []) if r.get("classification") == "review"]
+          blocked = [r for r in data.get("results", []) if r.get("classification") == "blocked"]
+          transient = [r for r in data.get("results", []) if r.get("classification") == "transient"]
+          lines = []
+          lines.append("## 🔗 Link health — confirmed dead links")
+          lines.append("")
+          lines.append(f"- Checked at: `{data.get('checked_at','')}`")
+          lines.append(f"- Total URLs: **{data.get('total_urls',0)}** | confirmed-dead: **{data.get('counts',{}).get('confirmed-dead',0)}** | candidate-dead: {data.get('counts',{}).get('candidate-dead',0)} | review: {data.get('counts',{}).get('review',0)} | blocked: {data.get('counts',{}).get('blocked',0)}")
+          lines.append("")
+          lines.append("> Rule: a URL needs **2 consecutive** 404/410 to become `confirmed-dead` (persistence streak). Network noise / 403 / 429 are not counted as dead.")
+          lines.append("")
+          if confirmed:
+              lines.append("### ❌ Confirmed dead (needs fix)")
+              for r in confirmed:
+                  title = r.get("title","(no title)")[:80]
+                  url = r.get("url","")
+                  streak = r.get("candidate_dead_streak",0)
+                  status = r.get("http_status","?")
+                  lines.append(f"- **{title}** — <{url}> — `{status}` streak={streak}")
+              lines.append("")
+          if candidates:
+              lines.append("### ⚠️ Candidate dead (first 404 — will confirm next run)")
+              for r in candidates[:20]:
+                  title = r.get("title","")[:60]
+                  url = r.get("url","")
+                  status = r.get("http_status","?")
+                  lines.append(f"- {title} — <{url}> — `{status}`")
+              if len(candidates) > 20:
+                  lines.append(f"- _…and {len(candidates)-20} more_")
+              lines.append("")
+          if review or blocked or transient:
+              lines.append("### ℹ️ Other (not dead, for reference)")
+              if review:
+                  lines.append(f"- review: {len(review)}")
+              if blocked:
+                  lines.append(f"- blocked (403/429): {len(blocked)}")
+              if transient:
+                  lines.append(f"- transient (5xx/timeout): {len(transient)}")
+              lines.append("")
+          lines.append("---")
+          lines.append("**Action**: fix or replace `source_url` in `ai-timeline-public.json`, then push — `validate-data.yml` will verify.")
+          lines.append("")
+          lines.append(f"Report: `reports/link-health.json` · Workflow: `link-health.yml` · Next run: next Monday 02:00 UTC")
+          Path("/tmp/link-health-body.md").write_text("\n".join(lines), encoding="utf-8")
+          print("\n".join(lines))
+          PY
+          cat /tmp/link-health-body.md
+
+      - name: Check for existing open link-health issue
+        if: steps.check.outputs.confirmed != '0'
+        id: dedup
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          count=$(gh issue list --state open --search "Link health" --json title --jq 'length' 2>/dev/null || echo "0")
+          echo "open_count=$count" >> "$GITHUB_OUTPUT"
+          echo "Existing open link-health issues: $count"
+
+      - name: Create issue for dead links
+        if: steps.check.outputs.confirmed != '0' && steps.dedup.outputs.open_count == '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title="🔗 Link health: ${{ steps.check.outputs.confirmed }} confirmed dead link(s) — $(date -u +%Y-%m-%d)"
+          gh issue create --title "$title" --body-file /tmp/link-health-body.md --label "maintenance" 2>/dev/null || gh issue create --title "$title" --body-file /tmp/link-health-body.md
+
+      - name: Comment on existing issue instead of duplicating
+        if: steps.check.outputs.confirmed != '0' && steps.dedup.outputs.open_count != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          num=$(gh issue list --state open --search "Link health" --json number --jq '.[0].number' 2>/dev/null || echo "")
+          if [ -n "$num" ]; then
+            gh issue comment "$num" --body-file /tmp/link-health-body.md
+            echo "Commented on existing issue #$num instead of creating duplicate."
+          fi
+
+      - name: Summary when healthy
+        if: steps.check.outputs.confirmed == '0'
+        run: |
+          echo "✅ No confirmed dead links — all clear."
+          python3 -c "import json; d=json.load(open('reports/link-health.json')); print(f\"counts={d.get('counts')}\")"

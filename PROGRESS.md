@@ -9,7 +9,7 @@
 |---|---|
 | 仓库 | `/tmp/ai-timeline/`（remote: gengyueworks/ai-timeline，分支 main） |
 | 入口 | `index.html`（单文件，纯静态，无构建，41,272 字节） |
-| 数据 | `ai-timeline-public.json` — **116 事件** |
+| 数据 | `ai-timeline-public.json` — **118 事件** |
 | 词典连接 | `related_terms` 全量求和 **353**（展示逻辑需用求和，不能用去重 Set=159） |
 | 校验脚本 | `scripts/validate-public-data.py` |
 

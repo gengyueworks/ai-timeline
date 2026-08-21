@@ -32,7 +32,7 @@ def read_full_collection_count(path: Path):
     return len(events)
 
 
-def validate_dataset(data, expected_public_count=116, full_data_path=None):
+def validate_dataset(data, expected_public_count=118, full_data_path=None):
     events = data.get("events", [])
     errors = []
 

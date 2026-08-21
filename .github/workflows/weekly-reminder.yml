@@ -1,0 +1,139 @@
+name: Weekly maintenance reminder
+
+on:
+  schedule:
+    - cron: "0 2 * * 5"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compute week tag and check duplicate
+        id: week
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          WEEK_TAG=$(date -u +%G-W%V)
+          WEEK_DATE=$(date -u +%Y-%m-%d)
+          echo "tag=$WEEK_TAG" >> "$GITHUB_OUTPUT"
+          echo "date=$WEEK_DATE" >> "$GITHUB_OUTPUT"
+          echo "Week tag: $WEEK_TAG ($WEEK_DATE)"
+          # skip if an open issue for this week already exists
+          existing=$(gh issue list --state open --search "$WEEK_TAG" --json title --jq 'length' 2>/dev/null || echo "0")
+          echo "existing=$existing" >> "$GITHUB_OUTPUT"
+          echo "Existing open issues for $WEEK_TAG: $existing"
+
+      - name: Build reminder body
+        if: steps.week.outputs.existing == '0'
+        run: |
+          python3 << 'PY'
+          import json, datetime
+          from pathlib import Path
+
+          data = json.loads(Path("ai-timeline-public.json").read_text(encoding="utf-8"))
+          events = data.get("events", [])
+          today = datetime.date.today()
+          week_tag = today.strftime("%G-W%V")
+
+          # Find events from same week last year (±3 days window around "today minus 52 weeks")
+          # to suggest seasonal candidates.
+          try:
+              # approximate same week last year by subtracting 364 days (52 weeks)
+              target = today - datetime.timedelta(days=364)
+              candidates = []
+              for ev in events:
+                  ds = ev.get("date","")[:10]
+                  try:
+                      # parse YYYY-MM-DD or YYYY-MM or YYYY
+                      if len(ds) == 10:
+                          d = datetime.date.fromisoformat(ds)
+                      elif len(ds) == 7:
+                          d = datetime.date.fromisoformat(ds + "-01")
+                      elif len(ds) == 4:
+                          continue
+                      else:
+                          continue
+                  except Exception:
+                      continue
+                  # compare month-day distance to target's month-day (year-agnostic)
+                  # allow ±7 days window around same week last year
+                  # compute day-of-year distance circularly is complex; simple: check if event's month/day falls within target week
+                  # Build a comparable date with target year but event's month/day
+                  try:
+                      cmp_date = datetime.date(target.year, d.month, d.day)
+                  except ValueError:
+                      continue
+                  delta = abs((cmp_date - target).days)
+                  if delta <= 7:
+                      candidates.append(ev)
+              candidates = sorted(candidates, key=lambda x: x.get("date",""))[:10]
+          except Exception as e:
+              candidates = []
+              print(f"candidate calc error: {e}")
+
+          lines = []
+          lines.append(f"# 📅 Weekly maintenance reminder — {week_tag} ({today.isoformat()})")
+          lines.append("")
+          lines.append("> Auto-reminder per `维护计划-2026-08-11.md`: weekly 2–5 events, link health + validation on autopilot, content by human + Codex.")
+          lines.append("")
+          lines.append("## 去年同周事件候选（灵感提示）")
+          if candidates:
+              lines.append(f"以下 {len(candidates)} 条是去年同周附近（±7 天）的公开事件，可作“今年同周发生了什么”的候选对照。**不自动入库**，仅提示人工筛选。")
+              lines.append("")
+              for ev in candidates:
+                  title = ev.get("title_zh") or ev.get("title_en") or "(untitled)"
+                  date = ev.get("date","")
+                  src = ev.get("source_url","")
+                  src_md = f" [来源]({src})" if src else ""
+                  lines.append(f"- `{date}` **{title}**{src_md}")
+          else:
+              lines.append("暂无去年同周事件（或日期精度仅到年）。可从 HN / 官方博客 / 新闻自行收集本周大事。")
+          lines.append("")
+          lines.append("## 本周维护清单")
+          lines.append("")
+          lines.append("- [ ] 本周新增事件：___ 条（目标 2–5，按 SELECTION-STANDARD.md 六维筛选）")
+          lines.append("- [ ] 事实核查（一手来源：论文/官方公告，非转载）")
+          lines.append("- [ ] 双语完整（title_zh/title_en + summary_zh/why_it_matters_zh 等）")
+          lines.append("- [ ] 来源链接健康检查：查看周一 `Link health` Issue / `reports/link-health.json`")
+          lines.append("- [ ] `python3 scripts/test_maintenance.py && python3 scripts/validate-public-data.py` 本地 PASS")
+          lines.append("- [ ] push 后 Pages 部署成功（Actions → pages-build-deployment）")
+          lines.append("- [ ] 处理积压 Issue（纠错 / 新增 / 失效 / 翻译）")
+          lines.append("")
+          lines.append("## 数据流提醒")
+          lines.append("")
+          lines.append("```")
+          lines.append("SSOT（私有）→ 公开版 ai-timeline-public.json → push → Pages")
+          lines.append("```")
+          lines.append("- 完整版只在私有 SSOT，不入公开仓库；公开版 116 条由完整版挑选。")
+          lines.append("")
+          lines.append("---")
+          lines.append(f"_Generated by `weekly-reminder.yml` · {today.isoformat()} · Next reminder: next Friday 02:00 UTC · Manual trigger: Actions → Weekly maintenance reminder → Run workflow_")
+          Path("/tmp/weekly-body.md").write_text("\n".join(lines), encoding="utf-8")
+          print("\n".join(lines))
+          PY
+          cat /tmp/weekly-body.md
+
+      - name: Create reminder issue
+        if: steps.week.outputs.existing == '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="📅 Weekly maintenance reminder — ${{ steps.week.outputs.tag }} (${{ steps.week.outputs.date }})"
+          gh issue create --title "$TITLE" --body-file /tmp/weekly-body.md --label "maintenance" 2>/dev/null || gh issue create --title "$TITLE" --body-file /tmp/weekly-body.md
+          echo "Created: $TITLE"
+
+      - name: Skip — already reminded this week
+        if: steps.week.outputs.existing != '0'
+        run: |
+          echo "⏭️ An open reminder for ${{ steps.week.outputs.tag }} already exists — skipping."
